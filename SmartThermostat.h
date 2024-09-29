@@ -1,21 +1,21 @@
 // Class definition for Component 1 - Composite (Leaf)
 
-#ifndef DOORLOCK_H
-#define DOORLOCK_H
+#ifndef SMARTTHERMOSTAT_H
+#define SMARTTHERMOSTAT_H
 
 #include "SmartDevice.h"
 #include "DeviceState.h"
 #include <memory>
 #include <string>
 
-class Doorlock : public SmartDevice {
+class SmartThermostat : public SmartDevice {
 
     public:
-        Doorlock();
+        SmartThermostat();
         
         void performAction(const std::string& action) override;
         std::string getStatus() const override;
         std::string getDeviceType() const override;
 };
 
-#endif // DOORLOCK_H
+#endif // SMARTTHERMOSTAT_H

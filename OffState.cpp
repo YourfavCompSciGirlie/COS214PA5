@@ -5,7 +5,7 @@
 #include "OnState.h"
 
 void OffState::performAction(std::shared_ptr<SmartDevice> device, const std::string& action) {
-    if (action == "Toggle") {
+    if (action == "ToggleOn") {
         device->setState(std::make_shared<OnState>());
     }
 }
