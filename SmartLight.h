@@ -1,3 +1,5 @@
+// Class definition for Component 1 - Composite (Leaf)
+
 #ifndef SMARTLIGHT_H
 #define SMARTLIGHT_H
 

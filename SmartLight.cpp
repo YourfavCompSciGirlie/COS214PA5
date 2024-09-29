@@ -1,3 +1,5 @@
+// Class implementation for Component 1 - Composite (Leaf)
+
 #include "SmartLight.h"
 #include "OnState.h"
 #include "OffState.h"

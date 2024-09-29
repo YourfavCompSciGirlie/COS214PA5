@@ -1,3 +1,5 @@
+// Class implementation for Component 1 - Composite (Leaf)
+
 #include "SmartThermostat.h"
 #include "CoolingState.h"
 #include "HeatingState.h"

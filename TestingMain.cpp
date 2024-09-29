@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+
 #include "SmartLight.h"
 #include "SmartDoorlock.h"
 #include "SmartThermostat.h"
@@ -75,7 +76,7 @@ int main () {
 
     statetesting();
 
-    
+
 
     return 0;
 }
