@@ -14,6 +14,11 @@
 #include "House.h"
 #include "Room.h"
 
+#include "SmartThermostatIntegrator.h"
+#include "LegacyThermostat.h"
+#include "Device.h"
+
+
 // Helper function to test device state and actions
 void testDevice(const std::shared_ptr<SmartDevice>& device, const std::string& action) {
     std::cout << "Testing device: " << device->getDeviceType() << std::endl;
@@ -152,16 +157,62 @@ void compositetesting() {
     std::cout << "Final House Status: " << myHouse->getStatus() << "\n"; // Expect combined status
 }
 
+void adaptertesting() {
+    // Create a LegacyThermostat
+    std::shared_ptr<LegacyThermostat> legacyThermostat = std::make_shared<LegacyThermostat>();
+    
+    // Create a SmartThermostatIntegrator to adapt the legacy thermostat
+    SmartThermostatIntegrator smartThermostat(legacyThermostat);
+
+    // Getting an initial temperature
+    std::cout << "Current temperature: " << smartThermostat.getTemperature() << "°C" << std::endl;
 
 
+    // Setting the temperature
+    std::cout << "Setting initial temperature to 20.0°C..." << std::endl;
+    smartThermostat.setTemperature(20.0f);
+    std::cout << "Current temperature: " << smartThermostat.getTemperature() << "°C" << std::endl;
+
+    // Test getting the temperature
+    std::cout << "Getting temperature: " << smartThermostat.getTemperature() << "°C" << std::endl;
+
+    // Multiple increase actions
+    for (int i = 0; i < 3; ++i) {
+        std::cout << "Increasing temperature by 1°C..." << std::endl;
+        smartThermostat.performAction("IncreaseTemperature");
+        std::cout << "Current temperature after increase: " << smartThermostat.getTemperature() << "°C" << std::endl;
+    }
+
+    // Multiple decrease actions
+    for (int i = 0; i < 2; ++i) {
+        std::cout << "Decreasing temperature by 1°C..." << std::endl;
+        smartThermostat.performAction("DecreaseTemperature");
+        std::cout << "Current temperature after decrease: " << smartThermostat.getTemperature() << "°C" << std::endl;
+    }
+
+    // Test invalid action
+    try {
+        std::cout << "Trying to perform an invalid action..." << std::endl;
+        smartThermostat.performAction("InvalidAction"); // No handling for this action
+    } catch (const std::exception& e) {
+        std::cout << "Caught an exception: " << e.what() << std::endl;
+    }
+
+    // Output the device type
+    std::cout << "Device Type: " << smartThermostat.getDeviceType() << std::endl;
+
+    // Output the status of the SmartThermostatIntegrator
+    std::cout << "Status: " << smartThermostat.getStatus() << std::endl;
+}
 
 
 
 
 int main () {
 
-    statetesting();
-    compositetesting();
+    // statetesting();
+    // compositetesting();
+    adaptertesting();
 
 
 

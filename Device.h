@@ -1,4 +1,5 @@
 // Class definition for Component 1 - Composite (Component)
+// Class definition for Component 2 - Adapter (Target)
 
 /**
  * @file Device.h
