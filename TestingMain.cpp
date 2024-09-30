@@ -11,6 +11,9 @@
 #include "CoolingState.h"
 #include "HeatingState.h"
 
+#include "House.h"
+#include "Room.h"
+
 // Helper function to test device state and actions
 void testDevice(const std::shared_ptr<SmartDevice>& device, const std::string& action) {
     std::cout << "Testing device: " << device->getDeviceType() << std::endl;
@@ -66,6 +69,89 @@ void statetesting() {
     std::cout << "\n===== TESTING COMPLETE =====\n" << std::endl;
 }
 
+void compositetesting() {
+    // Create a house
+    auto myHouse = std::make_shared<House>("My Smart House");
+
+    // Create rooms
+    auto livingRoom = std::make_shared<Room>("Living Room");
+    auto kitchen = std::make_shared<Room>("Kitchen");
+
+    // Add rooms to the house
+    myHouse->add(livingRoom);
+    myHouse->add(kitchen);
+
+    // Create smart devices
+    auto smartLight = std::make_shared<SmartLight>();
+    auto smartThermostat = std::make_shared<SmartThermostat>();
+    auto smartDoorLock = std::make_shared<SmartDoorlock>();
+
+    // Add devices to living room
+    livingRoom->add(smartLight);
+    livingRoom->add(smartThermostat);
+    livingRoom->add(smartDoorLock);
+
+    // Test device actions and status
+    std::cout << "Testing Smart Devices in Living Room:\n";
+
+    // Perform actions on the light
+    std::cout << "Performing action: Turn on the light.\n";
+    smartLight->performAction("ToggleOn");
+    std::cout << "Light Status: " << smartLight->getStatus() << "\n"; // Expect "on"
+
+    // Perform action on the thermostat
+    std::cout << "Performing action: Set temperature to 22°C.\n";
+    smartThermostat->performAction("Heat");
+    std::cout << "Thermostat Status: " << smartThermostat->getStatus() << "\n"; // Expect "heating"
+
+    // Perform action on the door lock
+    std::cout << "Performing action: Lock the front door.\n";
+    smartDoorLock->performAction("Lock");
+    std::cout << "Door Lock Status: " << smartDoorLock->getStatus() << "\n"; // Expect "locked"
+
+    // Check room status
+    std::cout << "Living Room Status: " << livingRoom->getStatus() << "\n"; // Expect combined status
+
+    // Test getDeviceType in Room
+    std::cout << "Device Type of Living Room: " << livingRoom->getDeviceType() << "\n"; // Expect "Room"
+
+    // Check house status
+    std::cout << "House Status: " << myHouse->getStatus() << "\n"; // Expect combined status of rooms
+
+    // Test getChild in Room
+    std::cout << "Testing getChild in Living Room:\n";
+    auto retrievedDevice = livingRoom->getChild(0); // Retrieve the first device
+    if (retrievedDevice) {
+        std::cout << "Retrieved Device Type: " << retrievedDevice->getDeviceType() << "\n"; // Should match type of smartLight
+    } else {
+        std::cout << "Failed to retrieve device.\n";
+    }
+
+    // Test getChild in House
+    std::cout << "Testing getChild in House:\n";
+    auto retrievedRoom = myHouse->getChild(0); // Retrieve the first room
+    if (retrievedRoom) {
+        std::cout << "Retrieved Room Name: " << retrievedRoom->getRoomName() << "\n"; // Should call getRoomName()
+    } else {
+        std::cout << "Failed to retrieve room.\n";
+    }
+
+    // Test removing a device from the room
+    std::cout << "Removing the thermostat from the Living Room.\n";
+    livingRoom->remove(smartThermostat);
+    std::cout << "Living Room Status after removal: " << livingRoom->getStatus() << "\n"; // Expect updated status
+
+    // Add another device to kitchen and test
+    auto kitchenLight = std::make_shared<SmartLight>();
+    kitchen->add(kitchenLight);
+    std::cout << "Performing action: Turn on the kitchen light.\n";
+    kitchenLight->performAction("ToggleOn");
+    std::cout << "Kitchen Light Status: " << kitchenLight->getStatus() << "\n"; // Expect "on"
+
+    // Final check on the entire house status
+    std::cout << "Final House Status: " << myHouse->getStatus() << "\n"; // Expect combined status
+}
+
 
 
 
@@ -75,6 +161,7 @@ void statetesting() {
 int main () {
 
     statetesting();
+    compositetesting();
 
 
 
