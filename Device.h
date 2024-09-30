@@ -1,9 +1,10 @@
 // Class definition for Component 1 - Composite (Component)
 // Class definition for Component 2 - Adapter (Target)
+// Class defintion for Component 3  - Command (Command)
 
 /**
  * @file Device.h
- * @brief Defines the abstract Device class, which acts as the Component in the Composite Pattern.
+ * @brief Defines the abstract Device class, which acts as the Component in the Composite Pattern and represents a device that responds to sensor notifications.
  * 
  * The Device class provides an abstract interface for all devices in the composite structure, 
  * representing both individual devices (leaves) and collections of devices (composites). 
@@ -125,6 +126,13 @@ class Device {
          * @return A string representing the room name.
          */
         virtual std::string getRoomName() const { return "Room"; } // Default implementation
+
+
+        // for the Command Design Pattern
+        virtual void execute() = 0;
+
+        // for the Observer Design Pattern
+        virtual void update(const std::string &sensorType, const std::string &sensorData) = 0;
 };
 
 #endif // DEVICE_H
