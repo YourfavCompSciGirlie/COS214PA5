@@ -207,11 +207,10 @@ void adaptertesting() {
 
 
 
-
 int main () {
 
-    // statetesting();
-    // compositetesting();
+    statetesting();
+    compositetesting();
     adaptertesting();
 
 
