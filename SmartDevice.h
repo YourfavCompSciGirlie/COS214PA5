@@ -96,6 +96,20 @@ class SmartDevice : public Device , public std::enable_shared_from_this<SmartDev
          * @return A string representing the device type.
          */
         virtual std::string getDeviceType() const; // Each device specifies its own type
+        
+        /**
+         * @brief Executes the current command on the device (Command pattern).
+         */
+        void execute() override;
+
+        /**
+         * @brief Updates the smart device in response to sensor notifications (Observer pattern).
+         * 
+         * @param sensorType The type of the sensor (e.g., "TemperatureSensor").
+         * @param sensorData The data received from the sensor.
+         */
+        void update(const std::string& sensorType, const std::string& sensorData) override;
+
 };
 
 #endif // SMARTDEVICE_H

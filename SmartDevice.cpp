@@ -69,3 +69,22 @@ std::string SmartDevice::getStatus() const {
 std::string SmartDevice::getDeviceType() const {
     return deviceType;
 }
+
+// Stubbed functions
+
+/**
+ * @brief Executes the current command on the device (Command pattern).
+ */
+void SmartDevice::execute() {
+    // TODO: Implement command execution logic
+}
+
+/**
+ * @brief Updates the smart device in response to sensor notifications (Observer pattern).
+ * 
+ * @param sensorType The type of the sensor.
+ * @param sensorData The data received from the sensor.
+ */
+void SmartDevice::update(const std::string& sensorType, const std::string& sensorData) {
+    // TODO: Implement sensor update logic
+}
