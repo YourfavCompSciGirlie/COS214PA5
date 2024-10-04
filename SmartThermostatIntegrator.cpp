@@ -90,3 +90,21 @@ std::string SmartThermostatIntegrator::getStatus() const {
 std::string SmartThermostatIntegrator::getDeviceType() const {
     return "SmartThermostatIntegrator";
 }
+
+// Stubs for the execute and update methods
+void SmartThermostatIntegrator::execute() {
+    // Stub: To be implemented in future iterations
+}
+
+
+/**
+ * @brief Updates the smart device in response to sensor notifications (Observer pattern).
+ * 
+ * This method will be implemented to handle sensor updates.
+ * 
+ * @param sensorType The type of the sensor (e.g., "TemperatureSensor").
+ * @param sensorData The data received from the sensor.
+ */
+void SmartThermostatIntegrator::update(const std::string& sensorType, const std::string& sensorData) {
+    // Stub: To be implemented in future iterations
+}

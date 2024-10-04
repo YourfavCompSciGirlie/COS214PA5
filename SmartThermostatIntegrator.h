@@ -89,6 +89,24 @@ class SmartThermostatIntegrator : public Device {
          * @return A string representing the device type.
          */
         std::string getDeviceType() const override;
+
+        // Stubs for the execute and update methods
+        /**
+         * @brief Executes the current command on the device (Command pattern).
+         * 
+         * This method will be implemented as part of command execution for the device.
+         */
+        void execute() override;
+
+        /**
+         * @brief Updates the smart device in response to sensor notifications (Observer pattern).
+         * 
+         * This method will be implemented to handle sensor updates.
+         * 
+         * @param sensorType The type of the sensor (e.g., "TemperatureSensor").
+         * @param sensorData The data received from the sensor.
+         */
+        void update(const std::string& sensorType, const std::string& sensorData) override;
 };
 
 #endif // SMARTTHERMOSTATINTEGRATOR_H
