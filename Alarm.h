@@ -9,5 +9,5 @@ class Alarm : public Device
 public:
     //For Observer  pattern
     void execute() override;
-     void update(const std::string& sensorType, const std::string& sensorData);
+    void update(const std::string& sensorType, const std::string& sensorData);
 };
