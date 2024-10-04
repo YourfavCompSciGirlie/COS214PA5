@@ -106,5 +106,7 @@ void SmartThermostatIntegrator::execute() {
  * @param sensorData The data received from the sensor.
  */
 void SmartThermostatIntegrator::update(const std::string& sensorType, const std::string& sensorData) {
+    (void)sensorType;  // Mark sensorType as unused
+    (void)sensorData;  // Mark sensorData as unused
     // Stub: To be implemented in future iterations
 }

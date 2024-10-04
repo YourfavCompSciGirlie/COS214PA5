@@ -86,5 +86,7 @@ void SmartDevice::execute() {
  * @param sensorData The data received from the sensor.
  */
 void SmartDevice::update(const std::string& sensorType, const std::string& sensorData) {
+    (void)sensorType;  // Mark sensorType as unused
+    (void)sensorData;  // Mark sensorData as unused
     // TODO: Implement sensor update logic
 }

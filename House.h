@@ -105,7 +105,7 @@ public:
      * This stub function is part of the Command Design Pattern, and will eventually
      * execute a command that affects all rooms in the house.
      */
-    void House::execute() override {
+    void execute() override {
         // Stub: Implementation for executing commands on the house's rooms will go here.
     }
 
@@ -118,7 +118,9 @@ public:
      * @param sensorType The type of sensor that triggered the update.
      * @param sensorData The data provided by the sensor.
      */
-    void House::update(const std::string &sensorType, const std::string &sensorData) override {
+    void update(const std::string &sensorType, const std::string &sensorData) override {
+        (void)sensorType;  // Mark sensorType as unused
+        (void)sensorData;  // Mark sensorData as unused
         // Stub: Implementation for updating house based on sensor input will go here.
     }
 };

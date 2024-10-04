@@ -118,7 +118,7 @@ class Room : public Device { // Room is now a Device (Composite)
          * This stub function is part of the Command Design Pattern, and will eventually
          * execute a command on the devices within the room.
          */
-        void Room::execute() override {
+        void execute() override {
             // Stub: Implementation for executing commands on the room's devices will go here.
         }
 
@@ -132,7 +132,9 @@ class Room : public Device { // Room is now a Device (Composite)
          * @param sensorType The type of sensor that triggered the update.
          * @param sensorData The data provided by the sensor.
          */
-        void Room::update(const std::string &sensorType, const std::string &sensorData) override {
+        void update(const std::string &sensorType, const std::string &sensorData) override {
+            (void)sensorType;  // Mark sensorType as unused
+            (void)sensorData;  // Mark sensorData as unused
             // Stub: Implementation for updating room based on sensor input will go here.
         }
 };

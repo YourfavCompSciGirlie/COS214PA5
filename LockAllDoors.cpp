@@ -21,6 +21,8 @@ void LockAllDoors::execute()
 
 void LockAllDoors::update(const std::string& sensorType, const std::string& sensorData)
 {
+        (void)sensorType;  // Mark sensorType as unused
+        (void)sensorData;  // Mark sensorData as unused
         std::cout << "The 'update()' method is intended for Observer classes only, not Command classes.\n";
 }
 
