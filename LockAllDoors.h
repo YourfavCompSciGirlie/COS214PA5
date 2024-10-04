@@ -26,6 +26,11 @@ public:
 
     void update(const std::string& sensorType, const std::string& sensorData);
 
+    // New methods for stubbing
+    void performAction(const std::string& action) override;
+    std::string getDeviceType() const override;
+    std::string getStatus() const override;
+
 private:
     SmartDoorLockSystem* locks; ///< Pointer to the smart door lock system.
 };

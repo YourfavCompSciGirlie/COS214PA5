@@ -23,3 +23,17 @@ void LockAllDoors::update(const std::string& sensorType, const std::string& sens
 {
         std::cout << "The 'update()' method is intended for Observer classes only, not Command classes.\n";
 }
+
+// Stubbed functions
+void LockAllDoors::performAction(const std::string& action) {
+    std::cout << "LockAllDoors: Performing action: " << action << std::endl;
+    // Stubbed: Logic for specific actions would go here
+}
+
+std::string LockAllDoors::getDeviceType() const {
+    return "N/A";
+}
+
+std::string LockAllDoors::getStatus() const {
+    return "All doors are currently locked.";
+}

@@ -22,3 +22,17 @@ void TurnOffAllLights::update(const std::string& sensorType, const std::string& 
 {
         std::cout << "The 'update()' method is intended for Observer classes only, not Command classes.\n";
 }
+
+// Stubbed functions
+void TurnOffAllLights::performAction(const std::string& action) {
+    std::cout << "TurnOffAllLights: Performing action: " << action << std::endl;
+    // Stubbed: Logic for specific actions would go here
+}
+
+std::string TurnOffAllLights::getDeviceType() const {
+    return "N/A";
+}
+
+std::string TurnOffAllLights::getStatus() const {
+    return "All lights are currently off.";
+}
