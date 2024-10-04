@@ -98,6 +98,29 @@ public:
      * @return std::string "House", specifying the device type.
      */
     std::string getDeviceType() const override { return "House"; } // Return "House" as the device type
+
+    /**
+     * @brief Executes a command on the house.
+     * 
+     * This stub function is part of the Command Design Pattern, and will eventually
+     * execute a command that affects all rooms in the house.
+     */
+    void House::execute() override {
+        // Stub: Implementation for executing commands on the house's rooms will go here.
+    }
+
+    /**
+     * @brief Updates the house based on sensor data.
+     * 
+     * This stub function is part of the Observer Design Pattern, and will eventually
+     * handle updates from sensors, affecting the rooms and devices in the house.
+     * 
+     * @param sensorType The type of sensor that triggered the update.
+     * @param sensorData The data provided by the sensor.
+     */
+    void House::update(const std::string &sensorType, const std::string &sensorData) override {
+        // Stub: Implementation for updating house based on sensor input will go here.
+    }
 };
 
 #endif // HOUSE_H

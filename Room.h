@@ -111,6 +111,30 @@ class Room : public Device { // Room is now a Device (Composite)
          * @return std::string The name of the room.
          */
         std::string getRoomName() const { return roomName; }
+
+        /**
+         * @brief Executes a command on the room.
+         * 
+         * This stub function is part of the Command Design Pattern, and will eventually
+         * execute a command on the devices within the room.
+         */
+        void Room::execute() override {
+            // Stub: Implementation for executing commands on the room's devices will go here.
+        }
+
+        /**
+         * @brief Updates the room based on sensor data.
+         * 
+         * This stub function is part of the Observer Design Pattern, and will eventually
+         * handle updates from sensors, such as temperature or motion detectors, affecting
+         * the devices within the room.
+         * 
+         * @param sensorType The type of sensor that triggered the update.
+         * @param sensorData The data provided by the sensor.
+         */
+        void Room::update(const std::string &sensorType, const std::string &sensorData) override {
+            // Stub: Implementation for updating room based on sensor input will go here.
+        }
 };
 
 #endif // ROOM_H
