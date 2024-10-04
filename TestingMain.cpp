@@ -340,14 +340,19 @@ void testingObserver()
 
 int main () {
 
+    std::cout << "TESTING STATE DESIGN PATTERN\n" << std::endl;
     statetesting();
+    std::cout << "TESTING COMPOSITE DESIGN PATTERN\n" << std::endl;
     compositetesting();
+    std::cout << "TESTING ADAPTER DESIGN PATTERN\n" << std::endl;
     adaptertesting();
-
-    std::cout << "TESTING COMMAND DESIGN PATTERN " << std::endl;
+    std::cout << "TESTING COMMAND DESIGN PATTERN\n" << std::endl;
     testingCommand();
-    std::cout << "TESTING OBSERVER DESIGN PATTERN " << std::endl;
+    std::cout << "TESTING OBSERVER DESIGN PATTERN\n" << std::endl;
     testingObserver();
+
+    std::cout << "ADDED TESTING FOR COVERAGE " << std::endl;
+
 
     return 0;
 }
