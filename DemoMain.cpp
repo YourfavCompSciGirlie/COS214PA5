@@ -68,9 +68,6 @@ void displayMenu() {
     std::cout << "6️⃣  Exit\n";
     std::cout << "👉 Enter your choice: ";
 }
-
-
-
 // Helper function to simulate a loading animation
 void loadingAnimation(const std::string& message) {
     std::cout << message << " ";
@@ -143,7 +140,6 @@ void adaptertesting() {
     std::cout << "📟 Device Type: " << smartThermostat.getDeviceType() << "\n";
     std::cout << "ℹ️  Status: " << smartThermostat.getStatus() << "\n\n";
 }
-
 
 void statetesting() {
     std::cout << "🏠 ===== SMART HOME DEVICE TESTING =====\n" << std::endl;
@@ -353,7 +349,6 @@ void executeChoice(int choice) {
             break;
     }
 }
-
 
 int main() 
 {
