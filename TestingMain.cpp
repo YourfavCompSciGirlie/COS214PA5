@@ -43,7 +43,7 @@ void testDevice(const std::shared_ptr<SmartDevice>& device, const std::string& a
     std::cout << "------------------------------------" << std::endl;
 }
 
-void statetesting() { // Edited
+void statetesting() {
     std::cout << "===== SMART HOME DEVICE TESTING =====\n" << std::endl;
 
     // Create smart devices
@@ -85,6 +85,7 @@ void statetesting() { // Edited
 
     std::cout << "\n===== TESTING COMPLETE =====\n" << std::endl;
 }
+
 
 void compositetesting() { // Edited
     // Create a house
@@ -179,6 +180,7 @@ void compositetesting() { // Edited
     livingRoom->update("MotionSensor", "Detected");
 }
 
+
 void adaptertesting() { // Edited
     // Create a LegacyThermostat
     std::shared_ptr<LegacyThermostat> legacyThermostat = std::make_shared<LegacyThermostat>();
@@ -248,98 +250,52 @@ void adaptertesting() { // Edited
     std::cout << "Final status: " << smartThermostat.getStatus() << std::endl;
 }
 
-void testingCommand() { // Edited
-    // Testing Smart Door Lock System
+
+void testingCommand() { // Old Command Testing Used
     std::cout << "=== Testing Smart Door Lock System ===" << std::endl;
     SmartDoorLockSystem doorLockSystem;
     LockAllDoors lockDoorsCommand(&doorLockSystem);
-    
-    // Test executing the command to lock all doors
-    lockDoorsCommand.execute();  
-    std::cout << "Current status after executing LockAllDoors: " << lockDoorsCommand.getStatus() << std::endl;
-
-    // Test updating with sensor data
-    std::cout << "Updating door lock system status..." << std::endl;
-    lockDoorsCommand.update("DoorSensor", "All doors locked");
-    std::cout << "Current status after update: " << lockDoorsCommand.getStatus() << std::endl;
-
-    // Testing performAction, getStatus, and getDeviceType methods for LockAllDoors
-    std::cout << "\nTesting performAction, getStatus, getDeviceType for LockAllDoors..." << std::endl;
-    lockDoorsCommand.performAction("Lock all doors");
-    std::cout << "Action performed: Lock all doors\n";
-    std::cout << "LockAllDoors Status: " << lockDoorsCommand.getStatus() << std::endl;
-    std::cout << "LockAllDoors Device Type: " << lockDoorsCommand.getDeviceType() << std::endl;
+    lockDoorsCommand.execute();  // This should lock all doors and print status
 
     std::cout << std::endl;
 
-    // Testing Smart Lighting System
     std::cout << "=== Testing Smart Lighting System ===" << std::endl;
     SmartLightingSystem lightingSystem;
     TurnOffAllLights turnOffLightsCommand(&lightingSystem);
-    
-    // Test executing the command to turn off all lights
-    turnOffLightsCommand.execute();  
-    std::cout << "Current status after executing TurnOffAllLights: " << turnOffLightsCommand.getStatus() << std::endl;
-
-    // Test updating with sensor data
-    std::cout << "Updating lighting system status..." << std::endl;
-    turnOffLightsCommand.update("LightingSensor", "All lights turned off");
-    std::cout << "Current status after update: " << turnOffLightsCommand.getStatus() << std::endl;
-
-    // Testing performAction, getStatus, and getDeviceType methods for TurnOffAllLights
-    std::cout << "\nTesting performAction, getStatus, getDeviceType for TurnOffAllLights..." << std::endl;
-    turnOffLightsCommand.performAction("Turn off all lights");
-    std::cout << "Action performed: Turn off all lights\n";
-    std::cout << "TurnOffAllLights Status: " << turnOffLightsCommand.getStatus() << std::endl;
-    std::cout << "TurnOffAllLights Device Type: " << turnOffLightsCommand.getDeviceType() << std::endl;
+    turnOffLightsCommand.execute();  // This should turn off all lights and print status
 
     std::cout << std::endl;
 
-    // Testing Macro Routine
     std::cout << "=== Testing Macro Routine ===" << std::endl;
     MacroRoutine macro("Night Routine");
 
-    // Adding procedures to the macro
     macro.addProcedure(&lockDoorsCommand);
     macro.addProcedure(&turnOffLightsCommand);
-    std::cout << "Added procedures to the macro." << std::endl;
 
-    // Saving the macro
     MacroRoutine::saveMacro("Night Routine", &macro);
-    std::cout << "Saved macro: Night Routine." << std::endl;
+
     MacroRoutine::listSavedMacros();
 
     std::cout << std::endl;
 
-    // Testing Executing Macro
-    std::cout << "=== Testing Executing the Macro Routine ===" << std::endl;
-    std::cout << "Executing Night Routine..." << std::endl;
-    macro.execute();
-
-    std::cout << std::endl;
-
-    // Testing Loaded Macro
     std::cout << "=== Testing Loaded Macro ===" << std::endl;
-    std::cout << "Loading and executing the saved Night Routine..." << std::endl;
-    MacroRoutine* loadedMacro = MacroRoutine::loadMacro("Night Routine");
+    std::cout << "\nLoading and executing the saved Goodnight Routine..." << std::endl;
+    MacroRoutine* loadedMacro = MacroRoutine::loadMacro("Goodnight");
+    
     if (loadedMacro) {
         loadedMacro->execute();
-        std::cout << "Executed the loaded macro: " << std::endl;
-    } else {
-        std::cout << "Failed to load macro." << std::endl;
     }
 
     std::cout << std::endl;
 
-    // Testing Removing Procedures from Macro
     std::cout << "=== Testing Removing Procedures from Macro ===" << std::endl;
     macro.removeProcedure(&lockDoorsCommand);
     macro.removeProcedure(&turnOffLightsCommand);
-    std::cout << "Removed procedures from the macro." << std::endl;
 
     // Ensure macros still list correctly after removal
     MacroRoutine::listSavedMacros();
 }
+
 
 void testingObserver() { // Edited
     // Testing Motion Sensor
@@ -444,17 +400,17 @@ void testingObserver() { // Edited
 }
 
 
-int main () {
 
-    std::cout << "TESTING STATE DESIGN PATTERN\n" << std::endl;
+int main () {
+    std::cout << "TESTING STATE DESIGN PATTERN " << std::endl;
     statetesting();
-    std::cout << "TESTING COMPOSITE DESIGN PATTERN\n" << std::endl;
+    std::cout << "TESTING COMPOSITE DESIGN PATTERN " << std::endl;
     compositetesting();
-    std::cout << "\nTESTING ADAPTER DESIGN PATTERN\n" << std::endl;
+    std::cout << "TESTING ADAPTER DESIGN PATTERN " << std::endl;
     adaptertesting();
-    std::cout << "\nTESTING COMMAND DESIGN PATTERN\n" << std::endl;
+    std::cout << "TESTING COMMAND DESIGN PATTERN " << std::endl;
     testingCommand();
-    std::cout << "\nTESTING OBSERVER DESIGN PATTERN\n" << std::endl;
+    std::cout << "TESTING OBSERVER DESIGN PATTERN " << std::endl;
     testingObserver();
 
     return 0;
