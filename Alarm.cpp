@@ -2,6 +2,7 @@
 
 
 /**
+ * @file Alarm.cpp
  * @brief Responds to a sensor notification.
  * 
  * This function is triggered when a sensor detects a change in its state.

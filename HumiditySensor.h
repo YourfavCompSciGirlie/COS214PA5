@@ -8,6 +8,7 @@
 #include <string>
 
 /**
+ * @file HumiditySensor.h
  * @brief The HumiditySensor class, a concrete subject that detects and notifies devices about humidity changes.
  * 
  * This class inherits from the Sensor class and represents a humidity sensor. It maintains a list of 

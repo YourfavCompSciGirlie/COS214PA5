@@ -2,6 +2,7 @@
 #include "HumiditySensor.h"
 
 /**
+ * @file HumiditySensor.cpp
  * @brief Adds a device to the list of observers.
  * 
  * This method registers a device (observer) to the humidity sensor, allowing

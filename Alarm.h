@@ -2,6 +2,7 @@
 #include <iostream>
 
 /**
+ * @file Alarm.h
  * @brief Concrete Alarm class that responds to sensor notifications by triggering an alarm.
  */
 class Alarm : public Device 

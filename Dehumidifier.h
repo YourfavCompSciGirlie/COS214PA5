@@ -6,6 +6,7 @@
 #include "Device.h"
 
 /**
+ * @file Dehumidifier.h
  * @brief The Dehumidifier class, a concrete observer that reacts to changes in sensor data.
  * 
  * This class inherits from the Device class and represents a dehumidifier. It responds
