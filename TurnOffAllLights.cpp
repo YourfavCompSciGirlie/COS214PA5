@@ -1,6 +1,7 @@
 #include "TurnOffAllLights.h"
 
 /**
+ * @file TurnOffAllLights.cpp
  * @brief Constructs a TurnOffAllLights command.
  * @param lights Pointer to the SmartLightingSystem that manages the lights.
  */

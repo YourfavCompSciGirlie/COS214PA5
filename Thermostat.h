@@ -1,12 +1,35 @@
+/**
+ * @file Thermostat.h
+ * @brief Defines the Thermostat class, a concrete observer and device, 
+ *        inheriting from the base Device class. This class is responsible for 
+ *        performing thermostat-related actions and responding to sensor updates.
+ */
+
 #ifndef THERMOSTAT_H
 #define THERMOSTAT_H
 
 #include "Device.h"
 
-// Concrete Observer (Thermostat)
+/**
+ * @class Thermostat
+ * @brief Concrete Observer and Device class representing a thermostat in the system.
+ * 
+ * The Thermostat class inherits from Device and implements methods for performing actions,
+ * getting status updates, and responding to sensor notifications.
+ */
 class Thermostat : public Device {
 public:
+    /**
+     * @brief Executes the primary function of the thermostat (e.g., adjust temperature).
+     */
     void execute() override;
+
+    /**
+     * @brief Updates the thermostat based on sensor data.
+     * 
+     * @param sensorType The type of sensor triggering the update (e.g., "Temperature").
+     * @param sensorData The data received from the sensor (e.g., "25°C").
+     */
     void update(const std::string& sensorType, const std::string& sensorData) override;
 
     /**
@@ -31,4 +54,4 @@ public:
     std::string getDeviceType() const override;
 };
 
-#endif 
+#endif // THERMOSTAT_H

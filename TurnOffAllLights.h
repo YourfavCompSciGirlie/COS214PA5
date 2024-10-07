@@ -7,6 +7,7 @@
 #include "Device.h"
 
 /**
+ * @file  TurnOffAllLights.h
  * @brief Command to turn off all lights in a smart lighting system.
  */
 class TurnOffAllLights : public Device 

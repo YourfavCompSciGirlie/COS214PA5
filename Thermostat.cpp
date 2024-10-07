@@ -4,6 +4,7 @@
 // Implementation of Thermostat
 
 /**
+ * @file Thermostat.cpp
  * @brief Updates the thermostat based on the sensor's notification.
  * 
  * This function adjusts the thermostat settings based on the sensor type and data received.
