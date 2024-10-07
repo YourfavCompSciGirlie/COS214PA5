@@ -1,10 +1,16 @@
-#include "Device.h"
-#include <iostream>
 
 /**
  * @file Alarm.h
  * @brief Concrete Alarm class that responds to sensor notifications by triggering an alarm.
  */
+
+
+#ifndef ALARM_H
+#define ALARM_H
+
+#include "Device.h"
+#include <iostream>
+
 class Alarm : public Device
 {
 public:
@@ -33,3 +39,4 @@ public:
      */
     std::string getDeviceType() const override;
 };
+#endif

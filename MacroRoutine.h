@@ -1,5 +1,12 @@
 // Class definition for Component 3 - Command (Invoker)
 
+
+/**
+ *
+ * @file LockAllDoors.h
+ * @brief Implementation of the MacroRoutine class methods 
+ */
+
 #ifndef MACROROUTINE_H
 #define MACROROUTINE_H
 

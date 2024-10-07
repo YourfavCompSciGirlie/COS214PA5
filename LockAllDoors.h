@@ -1,16 +1,18 @@
 // Class defintion for Component 3  - Command(ConcreteCommand)
 
+/**
+ *
+ * @file LockAllDoors.h
+ * @brief Command to lock all doors in a smart door lock system.
+ */
+
 #ifndef LOCKALLDOORS_H
 #define LOCKALLDOORS_H
 
 #include "SmartDoorLockSystem.h"
 #include "Device.h"
 
-/**
- *
- * @file LockAllDoors.h
- * @brief Command to lock all doors in a smart door lock system.
- */
+
 class LockAllDoors : public Device
 {
 public:

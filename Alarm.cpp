@@ -1,3 +1,10 @@
+/**
+ * @file Alarm.cpp
+ * @brief Implementation of the alarm class methods 
+ *
+ * 
+ */
+
 #include "Alarm.h"
 
 /**

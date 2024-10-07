@@ -1,10 +1,5 @@
 // Class definition for Component 4 - Observer (ConcreteObserver)
 
-#ifndef DEHUMIDIFIER_H
-#define DEHUMIDIFIER_H
-
-#include "Device.h"
-
 /**
  * @file Dehumidifier.h
  * @brief The Dehumidifier class, a concrete observer that reacts to changes in sensor data.
@@ -13,6 +8,14 @@
  * to changes in humidity levels and takes actions accordingly, such as activating or
  * deactivating the dehumidifier.
  */
+
+
+#ifndef DEHUMIDIFIER_H
+#define DEHUMIDIFIER_H
+
+#include "Device.h"
+
+
 class Dehumidifier : public Device
 {
 public:

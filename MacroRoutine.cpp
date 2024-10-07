@@ -1,3 +1,9 @@
+/**
+ *
+ * @file MacroRoutine..cpp
+ * @brief Command to lock all doors in a smart door lock system.
+ */
+
 #include "MacroRoutine.h"
 #include <algorithm> // for std::remove
 #include "Device.h"

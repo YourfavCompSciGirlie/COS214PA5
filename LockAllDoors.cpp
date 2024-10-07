@@ -1,3 +1,10 @@
+/**
+ * @file LockAllDoors.h
+ * @brief The LockAllDoors class, a concrete command.
+ *
+ * 
+ */
+
 #include "LockAllDoors.h"
 
 /**

@@ -1,5 +1,12 @@
 // Class definition for Component 4 - Observer (ConcreteObserver)
 
+/**
+ * @file Dehumidifier.cpp
+ * @brief Implementation of the dehumidifier class methods 
+ *
+ * 
+ */
+
 #include "Dehumidifier.h"
 #include <iostream>
 

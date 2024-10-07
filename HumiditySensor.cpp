@@ -1,4 +1,13 @@
 // Class definition for Component 4 - Observer (ConcreteSubject)
+/**
+ * @file HumiditySensor.h
+ * @brief The HumiditySensor class, a concrete subjects that reacts to changes in sensor data.
+ *
+ * This class inherits from the Device class and represents a dehumidifier. It responds
+ * to changes in humidity levels and takes actions accordingly, such as activating or
+ * deactivating the dehumidifier.
+ */
+
 #include "HumiditySensor.h"
 
 /**

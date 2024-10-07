@@ -1,12 +1,5 @@
 // Class definition for Component 4 - Observer (ConcreteSubject)
 
-#ifndef HUMIDITYSENSOR_H
-#define HUMIDITYSENSOR_H
-
-#include "Sensor.h"
-#include <vector>
-#include <string>
-
 /**
  * @file HumiditySensor.h
  * @brief The HumiditySensor class, a concrete subject that detects and notifies devices about humidity changes.
@@ -14,6 +7,15 @@
  * This class inherits from the Sensor class and represents a humidity sensor. It maintains a list of
  * registered devices (observers) and notifies them when humidity levels change, triggering specific actions.
  */
+
+#ifndef HUMIDITYSENSOR_H
+#define HUMIDITYSENSOR_H
+
+#include "Sensor.h"
+#include <vector>
+#include <string>
+
+
 class HumiditySensor : public Sensor
 {
 private:
