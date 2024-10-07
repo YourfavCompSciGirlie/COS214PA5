@@ -2,15 +2,6 @@
 \label{classHumiditySensor}\index{HumiditySensor@{HumiditySensor}}
 
 
-The \mbox{\hyperlink{classHumiditySensor}{Humidity\+Sensor}} class, a concrete subject that detects and notifies devices about humidity changes.  
-
-
-
-
-{\ttfamily \#include $<$Humidity\+Sensor.\+h$>$}
-
-
-
 Inheritance diagram for Humidity\+Sensor\+:
 % FIG 0
 
@@ -32,11 +23,6 @@ void \mbox{\hyperlink{classHumiditySensor_a302a8c7cf8a759d2d444ba6b61091f86}{det
 \begin{DoxyCompactList}\small\item\em Simulates detection of low humidity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-The \mbox{\hyperlink{classHumiditySensor}{Humidity\+Sensor}} class, a concrete subject that detects and notifies devices about humidity changes. 
-
-This class inherits from the \mbox{\hyperlink{classSensor}{Sensor}} class and represents a humidity sensor. It maintains a list of registered devices (observers) and notifies them when humidity levels change, triggering specific actions. 
-
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classHumiditySensor_a6af07f76aafcc1ce85792ae75171ce6b}\label{classHumiditySensor_a6af07f76aafcc1ce85792ae75171ce6b}} 
 \index{HumiditySensor@{HumiditySensor}!addDevice@{addDevice}}
@@ -52,14 +38,7 @@ Registers a device to be notified when a change in humidity is detected.
 
 
 \begin{DoxyParams}{Parameters}
-{\em device} & A pointer to the device that should be added to the observer list.\\
-\hline
-\end{DoxyParams}
-This method registers a device (observer) to the humidity sensor, allowing the sensor to notify the device when a change in humidity is detected.
-
-
-\begin{DoxyParams}{Parameters}
-{\em device} & A pointer to the device that needs to be added. \\
+{\em device} & A pointer to the device that should be added to the observer list. \\
 \hline
 \end{DoxyParams}
 
@@ -138,5 +117,5 @@ Implements \mbox{\hyperlink{classSensor_aed23ce034c7354ef46dcb24312ef4c3a}{Senso
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Humidity\+Sensor.\+h\item 
-Humidity\+Sensor.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{HumiditySensor_8h}{Humidity\+Sensor.\+h}}\item 
+\mbox{\hyperlink{HumiditySensor_8cpp}{Humidity\+Sensor.\+cpp}}\end{DoxyCompactItemize}

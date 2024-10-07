@@ -1,0 +1,26 @@
+\hypertarget{Alarm_8cpp}{}\doxysection{Alarm.\+cpp File Reference}
+\label{Alarm_8cpp}\index{Alarm.cpp@{Alarm.cpp}}
+
+
+Implementation of the alarm class methods.  
+
+
+{\ttfamily \#include \char`\"{}Alarm.\+h\char`\"{}}\newline
+Include dependency graph for Alarm.\+cpp\+:
+% FIG 0
+
+
+\doxysubsection{Detailed Description}
+Implementation of the alarm class methods. 
+
+Responds to a sensor notification.
+
+This function is triggered when a sensor detects a change in its state. Depending on the type of alert and data received, it will simulate an alarm being triggered or cleared.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & The type of sensor (e.\+g., \char`\"{}motion\char`\"{}). \\
+\hline
+{\em sensor\+Data} & The data received from the sensor (e.\+g., \char`\"{}detected\char`\"{}, \char`\"{}clear\char`\"{}). \\
+\hline
+\end{DoxyParams}

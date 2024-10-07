@@ -2,15 +2,6 @@
 \label{classMotionSensor}\index{MotionSensor@{MotionSensor}}
 
 
-Concrete Subject class that represents a motion sensor in an Observer pattern.  
-
-
-
-
-{\ttfamily \#include $<$Motion\+Sensor.\+h$>$}
-
-
-
 Inheritance diagram for Motion\+Sensor\+:
 % FIG 0
 
@@ -32,11 +23,6 @@ void \mbox{\hyperlink{classMotionSensor_a30f8f8c3f70dd67f0337cf1eafd7fb74}{clear
 \begin{DoxyCompactList}\small\item\em Simulates the clearing of motion detection by the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-Concrete Subject class that represents a motion sensor in an Observer pattern. 
-
-The \mbox{\hyperlink{classMotionSensor}{Motion\+Sensor}} class is responsible for detecting motion and notifying all registered devices (observers) of any changes in motion state (e.\+g., detected or clear). 
-
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classMotionSensor_a5526468f37c38ef69553743ab2558fcf}\label{classMotionSensor_a5526468f37c38ef69553743ab2558fcf}} 
 \index{MotionSensor@{MotionSensor}!addDevice@{addDevice}}
@@ -48,18 +34,9 @@ The \mbox{\hyperlink{classMotionSensor}{Motion\+Sensor}} class is responsible fo
 
 Registers a device to receive motion notifications. 
 
-Registers a device to the motion sensor.
-
 
 \begin{DoxyParams}{Parameters}
-{\em device} & Pointer to the device that should be notified of motion changes.\\
-\hline
-\end{DoxyParams}
-This function adds a device to the list of devices that will be notified when motion is detected or cleared.
-
-
-\begin{DoxyParams}{Parameters}
-{\em device} & Pointer to the device to be added. \\
+{\em device} & Pointer to the device that should be notified of motion changes. \\
 \hline
 \end{DoxyParams}
 
@@ -142,5 +119,5 @@ Implements \mbox{\hyperlink{classSensor_aed23ce034c7354ef46dcb24312ef4c3a}{Senso
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Motion\+Sensor.\+h\item 
-Motion\+Sensor.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{MotionSensor_8h}{Motion\+Sensor.\+h}}\item 
+\mbox{\hyperlink{MotionSensor_8cpp}{Motion\+Sensor.\+cpp}}\end{DoxyCompactItemize}

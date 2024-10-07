@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>COS214 - Laiks and Ma&#39;Nobs Smart Home Automation System :): Lights Class Reference</title>
+<title>COS214 - Laiks and Hlehle Smart Home Automation System :): Lights Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">COS214 - Laiks and Ma&#39;Nobs Smart Home Automation System :)
+   <div id="projectname">COS214 - Laiks and Hlehle Smart Home Automation System :)
    </div>
   </td>
  </tr>
@@ -68,11 +68,6 @@ $(function() {
 <div class="title">Lights Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Concrete Light class that responds to sensor notifications by turning on/off.  
- <a href="classLights.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="Lights_8h_source.html">Lights.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Lights:</div>
 <div class="dyncontent">
@@ -89,8 +84,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afd593e0f08e7b85668ae4e611be44db7"><td class="memItemLeft" align="right" valign="top"><a id="afd593e0f08e7b85668ae4e611be44db7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> () override</td></tr>
 <tr class="separator:afd593e0f08e7b85668ae4e611be44db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedb7e8fc8cc21f365f95d1ba51514ec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLights.html#aedb7e8fc8cc21f365f95d1ba51514ec3">update</a> (const std::string &amp;sensorType, const std::string &amp;sensorData) override</td></tr>
-<tr class="memdesc:aedb7e8fc8cc21f365f95d1ba51514ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Responds to a sensor notification.  <a href="classLights.html#aedb7e8fc8cc21f365f95d1ba51514ec3">More...</a><br /></td></tr>
+<tr class="memitem:aedb7e8fc8cc21f365f95d1ba51514ec3"><td class="memItemLeft" align="right" valign="top"><a id="aedb7e8fc8cc21f365f95d1ba51514ec3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (const std::string &amp;sensorType, const std::string &amp;sensorData) override</td></tr>
 <tr class="separator:aedb7e8fc8cc21f365f95d1ba51514ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5474f5fbbb108bc596ec074ac9e2423d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLights.html#a5474f5fbbb108bc596ec074ac9e2423d">performAction</a> (const std::string &amp;action) override</td></tr>
 <tr class="memdesc:a5474f5fbbb108bc596ec074ac9e2423d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stub method to perform an action on the lights (e.g., Turn On, Turn Off).  <a href="classLights.html#a5474f5fbbb108bc596ec074ac9e2423d">More...</a><br /></td></tr>
@@ -118,9 +113,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> () overri
 <tr class="memdesc:af3125e9431b731e44eb53715119b9364 inherit pub_methods_classDevice"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method to retrieve the name of the room the device is in.  <a href="classDevice.html#af3125e9431b731e44eb53715119b9364">More...</a><br /></td></tr>
 <tr class="separator:af3125e9431b731e44eb53715119b9364 inherit pub_methods_classDevice"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Concrete Light class that responds to sensor notifications by turning on/off. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a39da75e6e515aba2019405b3f2a135d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39da75e6e515aba2019405b3f2a135d3">&#9670;&nbsp;</a></span>getDeviceType()</h2>
 
@@ -224,50 +217,9 @@ A string representing the current status of the lights. </dd></dl>
 
 </div>
 </div>
-<a id="aedb7e8fc8cc21f365f95d1ba51514ec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedb7e8fc8cc21f365f95d1ba51514ec3">&#9670;&nbsp;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Lights::update </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>sensorType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>sensorData</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Responds to a sensor notification. </p>
-<p>This function simulates the light turning on in response to movement detected by a sensor. It could also print different levels of brightness depending on the time of day. </p>
-
-<p>Implements <a class="el" href="classDevice.html">Device</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Lights_8h_source.html">Lights.h</a></li>
-<li>Lights.cpp</li>
+<li><a class="el" href="Lights_8cpp.html">Lights.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

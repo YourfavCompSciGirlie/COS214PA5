@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>COS214 - Laiks and Ma&#39;Nobs Smart Home Automation System :): MotionSensor.h Source File</title>
+<title>COS214 - Laiks and Hlehle Smart Home Automation System :): MotionSensor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">COS214 - Laiks and Ma&#39;Nobs Smart Home Automation System :)
+   <div id="projectname">COS214 - Laiks and Hlehle Smart Home Automation System :)
    </div>
   </td>
  </tr>
@@ -65,38 +65,39 @@ $(function() {
 <div class="title">MotionSensor.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MOTIONSENSOR_H</span></div>
+<a href="MotionSensor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MOTIONSENSOR_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MOTIONSENSOR_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Sensor.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Sensor_8h.html">Sensor.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classMotionSensor.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMotionSensor.html">MotionSensor</a> : <span class="keyword">public</span> <a class="code" href="classSensor.html">Sensor</a> </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::vector&lt;Device*&gt; devices; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string sensorState = <span class="stringliteral">&quot;clear&quot;</span>; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a5526468f37c38ef69553743ab2558fcf">addDevice</a>(<a class="code" href="classDevice.html">Device</a>* device) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a2283d0bb5f1067ec6680b0964508d3f5">removeDevice</a>(<a class="code" href="classDevice.html">Device</a>* device) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a1b3dcb9e0db1469b616d30780dd37941">notifyDevices</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a0ff9b9aaeaef899f021a40a534a6094b">detectMotion</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a30f8f8c3f70dd67f0337cf1eafd7fb74">clearMotion</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MOTIONSENSOR_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classMotionSensor.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMotionSensor.html">MotionSensor</a> : <span class="keyword">public</span> <a class="code" href="classSensor.html">Sensor</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::vector&lt;Device *&gt; devices;     </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string sensorState = <span class="stringliteral">&quot;clear&quot;</span>; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a5526468f37c38ef69553743ab2558fcf">addDevice</a>(<a class="code" href="classDevice.html">Device</a> *device) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a2283d0bb5f1067ec6680b0964508d3f5">removeDevice</a>(<a class="code" href="classDevice.html">Device</a> *device) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a1b3dcb9e0db1469b616d30780dd37941">notifyDevices</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a0ff9b9aaeaef899f021a40a534a6094b">detectMotion</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMotionSensor.html#a30f8f8c3f70dd67f0337cf1eafd7fb74">clearMotion</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MOTIONSENSOR_H</span></div>
+<div class="ttc" id="aSensor_8h_html"><div class="ttname"><a href="Sensor_8h.html">Sensor.h</a></div><div class="ttdoc">Abstract Subject class in the Observer pattern.</div></div>
 <div class="ttc" id="aclassDevice_html"><div class="ttname"><a href="classDevice.html">Device</a></div><div class="ttdoc">Abstract base class for all devices in the composite structure.</div><div class="ttdef"><b>Definition:</b> Device.h:32</div></div>
-<div class="ttc" id="aclassMotionSensor_html"><div class="ttname"><a href="classMotionSensor.html">MotionSensor</a></div><div class="ttdoc">Concrete Subject class that represents a motion sensor in an Observer pattern.</div><div class="ttdef"><b>Definition:</b> MotionSensor.h:13</div></div>
-<div class="ttc" id="aclassMotionSensor_html_a0ff9b9aaeaef899f021a40a534a6094b"><div class="ttname"><a href="classMotionSensor.html#a0ff9b9aaeaef899f021a40a534a6094b">MotionSensor::detectMotion</a></div><div class="ttdeci">void detectMotion()</div><div class="ttdoc">Simulates the detection of motion by the sensor.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:48</div></div>
-<div class="ttc" id="aclassMotionSensor_html_a1b3dcb9e0db1469b616d30780dd37941"><div class="ttname"><a href="classMotionSensor.html#a1b3dcb9e0db1469b616d30780dd37941">MotionSensor::notifyDevices</a></div><div class="ttdeci">void notifyDevices() override</div><div class="ttdoc">Notifies all registered devices of motion state changes.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:35</div></div>
-<div class="ttc" id="aclassMotionSensor_html_a2283d0bb5f1067ec6680b0964508d3f5"><div class="ttname"><a href="classMotionSensor.html#a2283d0bb5f1067ec6680b0964508d3f5">MotionSensor::removeDevice</a></div><div class="ttdeci">void removeDevice(Device *device) override</div><div class="ttdoc">Unregisters a device so it no longer receives motion notifications.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:24</div></div>
-<div class="ttc" id="aclassMotionSensor_html_a30f8f8c3f70dd67f0337cf1eafd7fb74"><div class="ttname"><a href="classMotionSensor.html#a30f8f8c3f70dd67f0337cf1eafd7fb74">MotionSensor::clearMotion</a></div><div class="ttdeci">void clearMotion()</div><div class="ttdoc">Simulates the clearing of motion detection by the sensor.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:60</div></div>
-<div class="ttc" id="aclassMotionSensor_html_a5526468f37c38ef69553743ab2558fcf"><div class="ttname"><a href="classMotionSensor.html#a5526468f37c38ef69553743ab2558fcf">MotionSensor::addDevice</a></div><div class="ttdeci">void addDevice(Device *device) override</div><div class="ttdoc">Registers a device to receive motion notifications.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:11</div></div>
-<div class="ttc" id="aclassSensor_html"><div class="ttname"><a href="classSensor.html">Sensor</a></div><div class="ttdoc">Abstract Subject class in the Observer pattern.</div><div class="ttdef"><b>Definition:</b> Sensor.h:15</div></div>
+<div class="ttc" id="aclassMotionSensor_html"><div class="ttname"><a href="classMotionSensor.html">MotionSensor</a></div><div class="ttdef"><b>Definition:</b> MotionSensor.h:14</div></div>
+<div class="ttc" id="aclassMotionSensor_html_a0ff9b9aaeaef899f021a40a534a6094b"><div class="ttname"><a href="classMotionSensor.html#a0ff9b9aaeaef899f021a40a534a6094b">MotionSensor::detectMotion</a></div><div class="ttdeci">void detectMotion()</div><div class="ttdoc">Simulates the detection of motion by the sensor.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:52</div></div>
+<div class="ttc" id="aclassMotionSensor_html_a1b3dcb9e0db1469b616d30780dd37941"><div class="ttname"><a href="classMotionSensor.html#a1b3dcb9e0db1469b616d30780dd37941">MotionSensor::notifyDevices</a></div><div class="ttdeci">void notifyDevices() override</div><div class="ttdoc">Notifies all registered devices of motion state changes.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:38</div></div>
+<div class="ttc" id="aclassMotionSensor_html_a2283d0bb5f1067ec6680b0964508d3f5"><div class="ttname"><a href="classMotionSensor.html#a2283d0bb5f1067ec6680b0964508d3f5">MotionSensor::removeDevice</a></div><div class="ttdeci">void removeDevice(Device *device) override</div><div class="ttdoc">Unregisters a device so it no longer receives motion notifications.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:27</div></div>
+<div class="ttc" id="aclassMotionSensor_html_a30f8f8c3f70dd67f0337cf1eafd7fb74"><div class="ttname"><a href="classMotionSensor.html#a30f8f8c3f70dd67f0337cf1eafd7fb74">MotionSensor::clearMotion</a></div><div class="ttdeci">void clearMotion()</div><div class="ttdoc">Simulates the clearing of motion detection by the sensor.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:64</div></div>
+<div class="ttc" id="aclassMotionSensor_html_a5526468f37c38ef69553743ab2558fcf"><div class="ttname"><a href="classMotionSensor.html#a5526468f37c38ef69553743ab2558fcf">MotionSensor::addDevice</a></div><div class="ttdeci">void addDevice(Device *device) override</div><div class="ttdoc">Registers a device to receive motion notifications.</div><div class="ttdef"><b>Definition:</b> MotionSensor.cpp:14</div></div>
+<div class="ttc" id="aclassSensor_html"><div class="ttname"><a href="classSensor.html">Sensor</a></div><div class="ttdef"><b>Definition:</b> Sensor.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

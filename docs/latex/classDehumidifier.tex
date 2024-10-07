@@ -2,15 +2,6 @@
 \label{classDehumidifier}\index{Dehumidifier@{Dehumidifier}}
 
 
-The \mbox{\hyperlink{classDehumidifier}{Dehumidifier}} class, a concrete observer that reacts to changes in sensor data.  
-
-
-
-
-{\ttfamily \#include $<$Dehumidifier.\+h$>$}
-
-
-
 Inheritance diagram for Dehumidifier\+:
 % FIG 0
 
@@ -31,11 +22,6 @@ std\+::string \mbox{\hyperlink{classDehumidifier_a18397fadce54e6f70275bbfbb9414d
 std\+::string \mbox{\hyperlink{classDehumidifier_ad3cd60c8569cbcbaa7a3a07ffd08c5cd}{get\+Device\+Type}} () const override
 \begin{DoxyCompactList}\small\item\em Get the device type (e.\+g., \char`\"{}\+Dehumidifier\char`\"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-
-\doxysubsection{Detailed Description}
-The \mbox{\hyperlink{classDehumidifier}{Dehumidifier}} class, a concrete observer that reacts to changes in sensor data. 
-
-This class inherits from the \mbox{\hyperlink{classDevice}{Device}} class and represents a dehumidifier. It responds to changes in humidity levels and takes actions accordingly, such as activating or deactivating the dehumidifier. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classDehumidifier_ab5270e93ea6acf57e036f47774aafaf2}\label{classDehumidifier_ab5270e93ea6acf57e036f47774aafaf2}} 
@@ -146,18 +132,7 @@ Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Devic
 
 Respond to a sensor notification. 
 
-Responds to a sensor notification.
-
 This function is called when the dehumidifier receives an update from the sensor. It checks the type of sensor and the associated data to either activate or deactivate the dehumidifier based on humidity levels.
-
-
-\begin{DoxyParams}{Parameters}
-{\em sensor\+Type} & The type of sensor (e.\+g., \char`\"{}humidity\char`\"{}). \\
-\hline
-{\em sensor\+Data} & The data received from the sensor (e.\+g., \char`\"{}high\char`\"{}, \char`\"{}low\char`\"{}).\\
-\hline
-\end{DoxyParams}
-This function is triggered when a sensor detects a change in humidity levels. Based on the sensor data, the dehumidifier either activates or deactivates.
 
 
 \begin{DoxyParams}{Parameters}
@@ -174,5 +149,5 @@ Implements \mbox{\hyperlink{classDevice}{Device}}.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Dehumidifier.\+h\item 
-Dehumidifier.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{Dehumidifier_8h}{Dehumidifier.\+h}}\item 
+\mbox{\hyperlink{Dehumidifier_8cpp}{Dehumidifier.\+cpp}}\end{DoxyCompactItemize}

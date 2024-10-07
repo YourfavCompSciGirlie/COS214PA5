@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>COS214 - Laiks and Ma&#39;Nobs Smart Home Automation System :): Thermostat Class Reference</title>
+<title>COS214 - Laiks and Hlehle Smart Home Automation System :): Thermostat Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">COS214 - Laiks and Ma&#39;Nobs Smart Home Automation System :)
+   <div id="projectname">COS214 - Laiks and Hlehle Smart Home Automation System :)
    </div>
   </td>
  </tr>
@@ -68,6 +68,11 @@ $(function() {
 <div class="title">Thermostat Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Concrete Observer and <a class="el" href="classDevice.html" title="Abstract base class for all devices in the composite structure.">Device</a> class representing a thermostat in the system.  
+ <a href="classThermostat.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Thermostat_8h_source.html">Thermostat.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Thermostat:</div>
 <div class="dyncontent">
@@ -82,10 +87,10 @@ Collaboration diagram for Thermostat:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa823249127cc845c651b34230675478a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThermostat.html#aa823249127cc845c651b34230675478a">execute</a> () override</td></tr>
-<tr class="memdesc:aa823249127cc845c651b34230675478a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the thermostat's actions based on notifications received from sensors.  <a href="classThermostat.html#aa823249127cc845c651b34230675478a">More...</a><br /></td></tr>
+<tr class="memdesc:aa823249127cc845c651b34230675478a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the primary function of the thermostat (e.g., adjust temperature).  <a href="classThermostat.html#aa823249127cc845c651b34230675478a">More...</a><br /></td></tr>
 <tr class="separator:aa823249127cc845c651b34230675478a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15d14739bb0592898419786c4c97c6c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThermostat.html#a15d14739bb0592898419786c4c97c6c0">update</a> (const std::string &amp;sensorType, const std::string &amp;sensorData) override</td></tr>
-<tr class="memdesc:a15d14739bb0592898419786c4c97c6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the thermostat based on the sensor's notification.  <a href="classThermostat.html#a15d14739bb0592898419786c4c97c6c0">More...</a><br /></td></tr>
+<tr class="memdesc:a15d14739bb0592898419786c4c97c6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the thermostat based on sensor data.  <a href="classThermostat.html#a15d14739bb0592898419786c4c97c6c0">More...</a><br /></td></tr>
 <tr class="separator:a15d14739bb0592898419786c4c97c6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a216f08f8efeaecda81ac9e3a0191365c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThermostat.html#a216f08f8efeaecda81ac9e3a0191365c">performAction</a> (const std::string &amp;action) override</td></tr>
 <tr class="memdesc:a216f08f8efeaecda81ac9e3a0191365c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an action on the thermostat (e.g., Adjust Temperature).  <a href="classThermostat.html#a216f08f8efeaecda81ac9e3a0191365c">More...</a><br /></td></tr>
@@ -113,7 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af3125e9431b731e44eb53715119b9364 inherit pub_methods_classDevice"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method to retrieve the name of the room the device is in.  <a href="classDevice.html#af3125e9431b731e44eb53715119b9364">More...</a><br /></td></tr>
 <tr class="separator:af3125e9431b731e44eb53715119b9364 inherit pub_methods_classDevice"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Concrete Observer and <a class="el" href="classDevice.html" title="Abstract base class for all devices in the composite structure.">Device</a> class representing a thermostat in the system. </p>
+<p>The <a class="el" href="classThermostat.html" title="Concrete Observer and Device class representing a thermostat in the system.">Thermostat</a> class inherits from <a class="el" href="classDevice.html" title="Abstract base class for all devices in the composite structure.">Device</a> and implements methods for performing actions, getting status updates, and responding to sensor notifications. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa823249127cc845c651b34230675478a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa823249127cc845c651b34230675478a">&#9670;&nbsp;</a></span>execute()</h2>
 
@@ -137,7 +145,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Executes the thermostat's actions based on notifications received from sensors. </p>
+<p>Executes the primary function of the thermostat (e.g., adjust temperature). </p>
+<p>Executes the thermostat's actions based on notifications received from sensors.</p>
 <p>This function will be called to perform any necessary adjustments based on the sensor's input. </p>
 
 <p>Implements <a class="el" href="classDevice.html">Device</a>.</p>
@@ -278,12 +287,11 @@ A string representing the type of the device. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Updates the thermostat based on the sensor's notification. </p>
-<p>This function adjusts the thermostat settings based on the sensor type and data received.</p>
+<p>Updates the thermostat based on sensor data. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sensorType</td><td>Type of the sensor that triggered the update. </td></tr>
-    <tr><td class="paramname">sensorData</td><td>Data indicating the sensor's state (e.g., "high", "low"). </td></tr>
+    <tr><td class="paramname">sensorType</td><td>The type of sensor triggering the update (e.g., "Temperature"). </td></tr>
+    <tr><td class="paramname">sensorData</td><td>The data received from the sensor (e.g., "25°C"). </td></tr>
   </table>
   </dd>
 </dl>
@@ -294,7 +302,7 @@ A string representing the type of the device. </dd></dl>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Thermostat_8h_source.html">Thermostat.h</a></li>
-<li>Thermostat.cpp</li>
+<li><a class="el" href="Thermostat_8cpp.html">Thermostat.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

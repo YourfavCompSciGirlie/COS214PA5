@@ -1,0 +1,29 @@
+\hypertarget{HumiditySensor_8h}{}\doxysection{Humidity\+Sensor.\+h File Reference}
+\label{HumiditySensor_8h}\index{HumiditySensor.h@{HumiditySensor.h}}
+
+
+The \mbox{\hyperlink{classHumiditySensor}{Humidity\+Sensor}} class, a concrete subjects that reacts to changes in sensor data.  
+
+
+{\ttfamily \#include \char`\"{}Sensor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Humidity\+Sensor.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classHumiditySensor}{Humidity\+Sensor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classHumiditySensor}{Humidity\+Sensor}} class, a concrete subjects that reacts to changes in sensor data. 
+
+The \mbox{\hyperlink{classHumiditySensor}{Humidity\+Sensor}} class, a concrete subject that detects and notifies devices about humidity changes.
+
+This class inherits from the \mbox{\hyperlink{classDevice}{Device}} class and represents a dehumidifier. It responds to changes in humidity levels and takes actions accordingly, such as activating or deactivating the dehumidifier.
+
+This class inherits from the \mbox{\hyperlink{classSensor}{Sensor}} class and represents a humidity sensor. It maintains a list of registered devices (observers) and notifies them when humidity levels change, triggering specific actions. 

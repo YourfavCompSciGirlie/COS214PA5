@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>COS214 - Laiks and Ma&#39;Nobs Smart Home Automation System :): LockAllDoors.h Source File</title>
+<title>COS214 - Laiks and Hlehle Smart Home Automation System :): LockAllDoors.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">COS214 - Laiks and Ma&#39;Nobs Smart Home Automation System :)
+   <div id="projectname">COS214 - Laiks and Hlehle Smart Home Automation System :)
    </div>
   </td>
  </tr>
@@ -65,44 +65,45 @@ $(function() {
 <div class="title">LockAllDoors.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Class defintion for Component 3  - Command(ConcreteCommand)</span></div>
+<a href="LockAllDoors_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Class defintion for Component 3  - Command(ConcreteCommand)</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef LOCKALLDOORS_H</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define LOCKALLDOORS_H</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;SmartDoorLockSystem.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Device_8h.html">Device.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classLockAllDoors.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLockAllDoors.html">LockAllDoors</a> : <span class="keyword">public</span> <a class="code" href="classDevice.html">Device</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classLockAllDoors.html#a7d53022c28662ddf48cb2eb35e986f53">LockAllDoors</a>(<a class="code" href="classSmartDoorLockSystem.html">SmartDoorLockSystem</a>* locks);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLockAllDoors.html#a97a7bfdafa08d47bd101aa885ef6b8d7">execute</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLockAllDoors.html#aee6a5afbdd8d27b14e45b9a8a5530dfd">update</a>(<span class="keyword">const</span> std::string&amp; sensorType, <span class="keyword">const</span> std::string&amp; sensorData);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// New methods for stubbing</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLockAllDoors.html#a3745a66bfa5a779ff480ff9906c3f22d">performAction</a>(<span class="keyword">const</span> std::string&amp; action) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::string <a class="code" href="classLockAllDoors.html#a0dbb6e7e7809f1a6674da001cd2141ea">getDeviceType</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::string <a class="code" href="classLockAllDoors.html#a21c3ba43678b62cf13df0a6da09e122e">getStatus</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classSmartDoorLockSystem.html">SmartDoorLockSystem</a>* locks; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef LOCKALLDOORS_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define LOCKALLDOORS_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SmartDoorLockSystem_8h.html">SmartDoorLockSystem.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Device_8h.html">Device.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classLockAllDoors.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLockAllDoors.html">LockAllDoors</a> : <span class="keyword">public</span> <a class="code" href="classDevice.html">Device</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classLockAllDoors.html#a7d53022c28662ddf48cb2eb35e986f53">LockAllDoors</a>(<a class="code" href="classSmartDoorLockSystem.html">SmartDoorLockSystem</a> *locks);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLockAllDoors.html#a97a7bfdafa08d47bd101aa885ef6b8d7">execute</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLockAllDoors.html#aee6a5afbdd8d27b14e45b9a8a5530dfd">update</a>(<span class="keyword">const</span> std::string &amp;sensorType, <span class="keyword">const</span> std::string &amp;sensorData);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// New methods for stubbing</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLockAllDoors.html#a3745a66bfa5a779ff480ff9906c3f22d">performAction</a>(<span class="keyword">const</span> std::string &amp;action) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string <a class="code" href="classLockAllDoors.html#a0dbb6e7e7809f1a6674da001cd2141ea">getDeviceType</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::string <a class="code" href="classLockAllDoors.html#a21c3ba43678b62cf13df0a6da09e122e">getStatus</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classSmartDoorLockSystem.html">SmartDoorLockSystem</a> *locks; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aDevice_8h_html"><div class="ttname"><a href="Device_8h.html">Device.h</a></div><div class="ttdoc">Defines the abstract Device class, which acts as the Component in the Composite Pattern and represent...</div></div>
+<div class="ttc" id="aSmartDoorLockSystem_8h_html"><div class="ttname"><a href="SmartDoorLockSystem_8h.html">SmartDoorLockSystem.h</a></div><div class="ttdoc">Class representing a smart door lock system.</div></div>
 <div class="ttc" id="aclassDevice_html"><div class="ttname"><a href="classDevice.html">Device</a></div><div class="ttdoc">Abstract base class for all devices in the composite structure.</div><div class="ttdef"><b>Definition:</b> Device.h:32</div></div>
-<div class="ttc" id="aclassLockAllDoors_html"><div class="ttname"><a href="classLockAllDoors.html">LockAllDoors</a></div><div class="ttdoc">Command to lock all doors in a smart door lock system.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.h:13</div></div>
-<div class="ttc" id="aclassLockAllDoors_html_a0dbb6e7e7809f1a6674da001cd2141ea"><div class="ttname"><a href="classLockAllDoors.html#a0dbb6e7e7809f1a6674da001cd2141ea">LockAllDoors::getDeviceType</a></div><div class="ttdeci">std::string getDeviceType() const override</div><div class="ttdoc">Returns the type of device, which is not applicable for this class.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:62</div></div>
-<div class="ttc" id="aclassLockAllDoors_html_a21c3ba43678b62cf13df0a6da09e122e"><div class="ttname"><a href="classLockAllDoors.html#a21c3ba43678b62cf13df0a6da09e122e">LockAllDoors::getStatus</a></div><div class="ttdeci">std::string getStatus() const override</div><div class="ttdoc">Returns the current status of the LockAllDoors command.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:73</div></div>
-<div class="ttc" id="aclassLockAllDoors_html_a3745a66bfa5a779ff480ff9906c3f22d"><div class="ttname"><a href="classLockAllDoors.html#a3745a66bfa5a779ff480ff9906c3f22d">LockAllDoors::performAction</a></div><div class="ttdeci">void performAction(const std::string &amp;action) override</div><div class="ttdoc">Stubbed function for performing specific actions on the system.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:50</div></div>
-<div class="ttc" id="aclassLockAllDoors_html_a7d53022c28662ddf48cb2eb35e986f53"><div class="ttname"><a href="classLockAllDoors.html#a7d53022c28662ddf48cb2eb35e986f53">LockAllDoors::LockAllDoors</a></div><div class="ttdeci">LockAllDoors(SmartDoorLockSystem *locks)</div><div class="ttdoc">Constructs a LockAllDoors command.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:11</div></div>
-<div class="ttc" id="aclassLockAllDoors_html_a97a7bfdafa08d47bd101aa885ef6b8d7"><div class="ttname"><a href="classLockAllDoors.html#a97a7bfdafa08d47bd101aa885ef6b8d7">LockAllDoors::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">Executes the command to lock all doors. This function locks all doors in the SmartDoorLockSystem.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:19</div></div>
-<div class="ttc" id="aclassLockAllDoors_html_aee6a5afbdd8d27b14e45b9a8a5530dfd"><div class="ttname"><a href="classLockAllDoors.html#aee6a5afbdd8d27b14e45b9a8a5530dfd">LockAllDoors::update</a></div><div class="ttdeci">void update(const std::string &amp;sensorType, const std::string &amp;sensorData)</div><div class="ttdoc">This update function is not used by the LockAllDoors class.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:35</div></div>
-<div class="ttc" id="aclassSmartDoorLockSystem_html"><div class="ttname"><a href="classSmartDoorLockSystem.html">SmartDoorLockSystem</a></div><div class="ttdoc">Class representing a smart door lock system.</div><div class="ttdef"><b>Definition:</b> SmartDoorLockSystem.h:11</div></div>
+<div class="ttc" id="aclassLockAllDoors_html"><div class="ttname"><a href="classLockAllDoors.html">LockAllDoors</a></div><div class="ttdef"><b>Definition:</b> LockAllDoors.h:17</div></div>
+<div class="ttc" id="aclassLockAllDoors_html_a0dbb6e7e7809f1a6674da001cd2141ea"><div class="ttname"><a href="classLockAllDoors.html#a0dbb6e7e7809f1a6674da001cd2141ea">LockAllDoors::getDeviceType</a></div><div class="ttdeci">std::string getDeviceType() const override</div><div class="ttdoc">Returns the type of device, which is not applicable for this class.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:71</div></div>
+<div class="ttc" id="aclassLockAllDoors_html_a21c3ba43678b62cf13df0a6da09e122e"><div class="ttname"><a href="classLockAllDoors.html#a21c3ba43678b62cf13df0a6da09e122e">LockAllDoors::getStatus</a></div><div class="ttdeci">std::string getStatus() const override</div><div class="ttdoc">Returns the current status of the LockAllDoors command.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:83</div></div>
+<div class="ttc" id="aclassLockAllDoors_html_a3745a66bfa5a779ff480ff9906c3f22d"><div class="ttname"><a href="classLockAllDoors.html#a3745a66bfa5a779ff480ff9906c3f22d">LockAllDoors::performAction</a></div><div class="ttdeci">void performAction(const std::string &amp;action) override</div><div class="ttdoc">Stubbed function for performing specific actions on the system.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:58</div></div>
+<div class="ttc" id="aclassLockAllDoors_html_a7d53022c28662ddf48cb2eb35e986f53"><div class="ttname"><a href="classLockAllDoors.html#a7d53022c28662ddf48cb2eb35e986f53">LockAllDoors::LockAllDoors</a></div><div class="ttdeci">LockAllDoors(SmartDoorLockSystem *locks)</div><div class="ttdoc">Constructs a LockAllDoors command.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:19</div></div>
+<div class="ttc" id="aclassLockAllDoors_html_a97a7bfdafa08d47bd101aa885ef6b8d7"><div class="ttname"><a href="classLockAllDoors.html#a97a7bfdafa08d47bd101aa885ef6b8d7">LockAllDoors::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">Executes the command to lock all doors. This function locks all doors in the SmartDoorLockSystem.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:27</div></div>
+<div class="ttc" id="aclassLockAllDoors_html_aee6a5afbdd8d27b14e45b9a8a5530dfd"><div class="ttname"><a href="classLockAllDoors.html#aee6a5afbdd8d27b14e45b9a8a5530dfd">LockAllDoors::update</a></div><div class="ttdeci">void update(const std::string &amp;sensorType, const std::string &amp;sensorData)</div><div class="ttdoc">This update function is not used by the LockAllDoors class.</div><div class="ttdef"><b>Definition:</b> LockAllDoors.cpp:43</div></div>
+<div class="ttc" id="aclassSmartDoorLockSystem_html"><div class="ttname"><a href="classSmartDoorLockSystem.html">SmartDoorLockSystem</a></div><div class="ttdef"><b>Definition:</b> SmartDoorLockSystem.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

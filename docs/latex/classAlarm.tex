@@ -2,15 +2,6 @@
 \label{classAlarm}\index{Alarm@{Alarm}}
 
 
-Concrete \mbox{\hyperlink{classAlarm}{Alarm}} class that responds to sensor notifications by triggering an alarm.  
-
-
-
-
-{\ttfamily \#include $<$Alarm.\+h$>$}
-
-
-
 Inheritance diagram for Alarm\+:
 % FIG 0
 
@@ -22,8 +13,9 @@ Collaboration diagram for Alarm\+:
 \item 
 void \mbox{\hyperlink{classAlarm_a4d367c7af3f6801bc4abc1f8b4fa5034}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the alarm\textquotesingle{}s core functionality. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classAlarm_a32f5a8b26cf95ce2e53e18d3c3618fc8}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data)
-\begin{DoxyCompactList}\small\item\em Responds to a sensor notification. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAlarm_a32f5a8b26cf95ce2e53e18d3c3618fc8}\label{classAlarm_a32f5a8b26cf95ce2e53e18d3c3618fc8}} 
+void {\bfseries update} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data)
+\item 
 void \mbox{\hyperlink{classAlarm_aff0ab6eaa8b057d7fd7d71a92aa65824}{perform\+Action}} (const std\+::string \&action) override
 \begin{DoxyCompactList}\small\item\em Stub method to perform an action on the alarm. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classAlarm_abfbf0e39c57ae097e9b199a2162bca06}{get\+Status}} () const override
@@ -31,9 +23,6 @@ std\+::string \mbox{\hyperlink{classAlarm_abfbf0e39c57ae097e9b199a2162bca06}{get
 std\+::string \mbox{\hyperlink{classAlarm_a49b45c29a4ebc05552a47c690dab0957}{get\+Device\+Type}} () const override
 \begin{DoxyCompactList}\small\item\em Stub method to get the device type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-
-\doxysubsection{Detailed Description}
-Concrete \mbox{\hyperlink{classAlarm}{Alarm}} class that responds to sensor notifications by triggering an alarm. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classAlarm_a4d367c7af3f6801bc4abc1f8b4fa5034}\label{classAlarm_a4d367c7af3f6801bc4abc1f8b4fa5034}} 
@@ -126,32 +115,9 @@ This method takes a string action and performs the respective operation on the a
 
 Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
 
-\mbox{\Hypertarget{classAlarm_a32f5a8b26cf95ce2e53e18d3c3618fc8}\label{classAlarm_a32f5a8b26cf95ce2e53e18d3c3618fc8}} 
-\index{Alarm@{Alarm}!update@{update}}
-\index{update@{update}!Alarm@{Alarm}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Alarm\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Responds to a sensor notification. 
-
-This function is triggered when a sensor detects a change in its state. Depending on the type of alert and data received, it will simulate an alarm being triggered or cleared.
-
-
-\begin{DoxyParams}{Parameters}
-{\em sensor\+Type} & The type of sensor (e.\+g., \char`\"{}motion\char`\"{}). \\
-\hline
-{\em sensor\+Data} & The data received from the sensor (e.\+g., \char`\"{}detected\char`\"{}, \char`\"{}clear\char`\"{}). \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classDevice}{Device}}.
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Alarm.\+h\item 
-Alarm.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{Alarm_8h}{Alarm.\+h}}\item 
+\mbox{\hyperlink{Alarm_8cpp}{Alarm.\+cpp}}\end{DoxyCompactItemize}
