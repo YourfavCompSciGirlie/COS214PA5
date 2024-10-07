@@ -1,0 +1,122 @@
+\hypertarget{classLights}{}\doxysection{Lights Class Reference}
+\label{classLights}\index{Lights@{Lights}}
+
+
+Concrete Light class that responds to sensor notifications by turning on/off.  
+
+
+
+
+{\ttfamily \#include $<$Lights.\+h$>$}
+
+
+
+Inheritance diagram for Lights\+:
+% FIG 0
+
+
+Collaboration diagram for Lights\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLights_afd593e0f08e7b85668ae4e611be44db7}\label{classLights_afd593e0f08e7b85668ae4e611be44db7}} 
+void {\bfseries execute} () override
+\item 
+void \mbox{\hyperlink{classLights_aedb7e8fc8cc21f365f95d1ba51514ec3}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data) override
+\begin{DoxyCompactList}\small\item\em Responds to a sensor notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLights_a5474f5fbbb108bc596ec074ac9e2423d}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Stub method to perform an action on the lights (e.\+g., Turn On, Turn Off). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLights_af16c1f72a904233c05c4028e96b0515d}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Stub method to get the current status of the lights. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLights_a39da75e6e515aba2019405b3f2a135d3}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Stub method to get the device type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete Light class that responds to sensor notifications by turning on/off. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLights_a39da75e6e515aba2019405b3f2a135d3}\label{classLights_a39da75e6e515aba2019405b3f2a135d3}} 
+\index{Lights@{Lights}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!Lights@{Lights}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Lights\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stub method to get the device type. 
+
+Get the device type (e.\+g., \char`\"{}\+Lights\char`\"{}).
+
+\begin{DoxyReturn}{Returns}
+A string representing the device type (e.\+g., \char`\"{}\+Lights\char`\"{}).
+
+A string representing the type of the device. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+\mbox{\Hypertarget{classLights_af16c1f72a904233c05c4028e96b0515d}\label{classLights_af16c1f72a904233c05c4028e96b0515d}} 
+\index{Lights@{Lights}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Lights@{Lights}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Lights\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stub method to get the current status of the lights. 
+
+Get the current status of the lights (e.\+g., On or Off).
+
+\begin{DoxyReturn}{Returns}
+A string representing the status (e.\+g., \char`\"{}\+On\char`\"{}, \char`\"{}\+Off\char`\"{}).
+
+A string representing the current status of the lights. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+\mbox{\Hypertarget{classLights_a5474f5fbbb108bc596ec074ac9e2423d}\label{classLights_a5474f5fbbb108bc596ec074ac9e2423d}} 
+\index{Lights@{Lights}!performAction@{performAction}}
+\index{performAction@{performAction}!Lights@{Lights}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Lights\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stub method to perform an action on the lights (e.\+g., Turn On, Turn Off). 
+
+Perform an action on the lights (e.\+g., Turn On or Turn Off).
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the lights. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+\mbox{\Hypertarget{classLights_aedb7e8fc8cc21f365f95d1ba51514ec3}\label{classLights_aedb7e8fc8cc21f365f95d1ba51514ec3}} 
+\index{Lights@{Lights}!update@{update}}
+\index{update@{update}!Lights@{Lights}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Lights\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Responds to a sensor notification. 
+
+This function simulates the light turning on in response to movement detected by a sensor. It could also print different levels of brightness depending on the time of day. 
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lights.\+h\item 
+Lights.\+cpp\end{DoxyCompactItemize}

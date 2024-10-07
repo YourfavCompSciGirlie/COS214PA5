@@ -1,0 +1,136 @@
+\hypertarget{classSmartThermostat}{}\doxysection{Smart\+Thermostat Class Reference}
+\label{classSmartThermostat}\index{SmartThermostat@{SmartThermostat}}
+
+
+A concrete class representing a smart thermostat device.  
+
+
+
+
+{\ttfamily \#include $<$Smart\+Thermostat.\+h$>$}
+
+
+
+Inheritance diagram for Smart\+Thermostat\+:
+% FIG 0
+
+
+Collaboration diagram for Smart\+Thermostat\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSmartThermostat_a89d2af8d8b857d2cb0f51e1b172d8ac7}{Smart\+Thermostat}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classSmartThermostat}{Smart\+Thermostat}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartThermostat_a319b2a22636d9e566872d626a805e5b8}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Perform an action on the smart thermostat. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSmartThermostat_a60bffba5135886647c554ab45651e5bb}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current status of the smart thermostat. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSmartThermostat_a3ade09f909c966fea0ed425fdf0695aa}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the device type of the smart thermostat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A concrete class representing a smart thermostat device. 
+
+The \mbox{\hyperlink{classSmartThermostat}{Smart\+Thermostat}} class inherits from \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} and represents a single smart thermostat. It implements methods for performing actions and retrieving the current status based on the state pattern. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSmartThermostat_a89d2af8d8b857d2cb0f51e1b172d8ac7}\label{classSmartThermostat_a89d2af8d8b857d2cb0f51e1b172d8ac7}} 
+\index{SmartThermostat@{SmartThermostat}!SmartThermostat@{SmartThermostat}}
+\index{SmartThermostat@{SmartThermostat}!SmartThermostat@{SmartThermostat}}
+\doxysubsubsection{\texorpdfstring{SmartThermostat()}{SmartThermostat()}}
+{\footnotesize\ttfamily Smart\+Thermostat\+::\+Smart\+Thermostat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classSmartThermostat}{Smart\+Thermostat}} object. 
+
+The constructor initializes the smart thermostat with a cooling state.
+
+Initializes a new \mbox{\hyperlink{classSmartThermostat}{Smart\+Thermostat}} device and sets its initial state to \char`\"{}cooling\char`\"{} by associating it with the \mbox{\hyperlink{classCoolingState}{Cooling\+State}} object. The device can transition between heating and cooling states using the perform\+Action method. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSmartThermostat_a3ade09f909c966fea0ed425fdf0695aa}\label{classSmartThermostat_a3ade09f909c966fea0ed425fdf0695aa}} 
+\index{SmartThermostat@{SmartThermostat}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!SmartThermostat@{SmartThermostat}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Smart\+Thermostat\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the device type of the smart thermostat. 
+
+This method returns the type of device, which is \char`\"{}\+Smart\+Thermostat\char`\"{} for this class.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The string \char`\"{}\+Smart\+Thermostat\char`\"{}.
+\end{DoxyReturn}
+This method returns a string indicating the type of device, which is \char`\"{}\+Smart\+Thermostat\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The string \char`\"{}\+Smart\+Thermostat\char`\"{}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_ae6e419f8c43ec9c3f25d6e5dc3e3ccc4}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classSmartThermostat_a60bffba5135886647c554ab45651e5bb}\label{classSmartThermostat_a60bffba5135886647c554ab45651e5bb}} 
+\index{SmartThermostat@{SmartThermostat}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!SmartThermostat@{SmartThermostat}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Smart\+Thermostat\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current status of the smart thermostat. 
+
+This method retrieves the status of the smart thermostat based on its current state, such as whether it is in heating or cooling mode.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current status of the smart thermostat (e.\+g., \char`\"{}cooling\char`\"{} or \char`\"{}heating\char`\"{}).
+\end{DoxyReturn}
+This method retrieves and returns the current status of the smart thermostat, which is determined by the device\textquotesingle{}s current state. The possible statuses include \char`\"{}cooling\char`\"{} or \char`\"{}heating\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current status of the smart thermostat. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_aa27c3aa04aaafebfd8c59830e28730b3}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classSmartThermostat_a319b2a22636d9e566872d626a805e5b8}\label{classSmartThermostat_a319b2a22636d9e566872d626a805e5b8}} 
+\index{SmartThermostat@{SmartThermostat}!performAction@{performAction}}
+\index{performAction@{performAction}!SmartThermostat@{SmartThermostat}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Smart\+Thermostat\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform an action on the smart thermostat. 
+
+This method delegates the provided action to the current state of the smart thermostat. Possible actions include switching between heating and cooling modes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the smart thermostat.\\
+\hline
+\end{DoxyParams}
+This method delegates the provided action to the current state of the smart thermostat. Depending on the action, the state may toggle between heating and cooling modes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed, such as \char`\"{}\+Switch\+To\+Heating\char`\"{} or \char`\"{}\+Switch\+To\+Cooling\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_a2f42c12c61a9e94d1e86f459c2ea2ab0}{Smart\+Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SmartThermostat_8h}{Smart\+Thermostat.\+h}}\item 
+\mbox{\hyperlink{SmartThermostat_8cpp}{Smart\+Thermostat.\+cpp}}\end{DoxyCompactItemize}

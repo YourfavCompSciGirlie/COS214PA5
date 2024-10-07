@@ -1,0 +1,238 @@
+\hypertarget{classSmartDevice}{}\doxysection{Smart\+Device Class Reference}
+\label{classSmartDevice}\index{SmartDevice@{SmartDevice}}
+
+
+Context class in the State Pattern that represents a smart device.  
+
+
+
+
+{\ttfamily \#include $<$Smart\+Device.\+h$>$}
+
+
+
+Inheritance diagram for Smart\+Device\+:
+% FIG 0
+
+
+Collaboration diagram for Smart\+Device\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSmartDevice_a8cd7798cd8ad23576aa4c2d8d9ec4bf1}{Smart\+Device}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object and sets its initial state. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSmartDevice_a1dc719fc9802d21ef8c10d17993f6adf}{$\sim$\+Smart\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \mbox{\hyperlink{classSmartDevice}{Smart\+Device}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartDevice_a1cd89e1984b6c29e0cc6117d8ab7a05d}{set\+State}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDeviceState}{Device\+State}} $>$ \&new\+State)
+\begin{DoxyCompactList}\small\item\em Sets a new state for the smart device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSmartDevice_a2f42c12c61a9e94d1e86f459c2ea2ab0}{perform\+Action}} (const std\+::string \&action)
+\begin{DoxyCompactList}\small\item\em Performs an action based on the current state of the device. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classSmartDevice_aa27c3aa04aaafebfd8c59830e28730b3}{get\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the smart device. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classSmartDevice_ae6e419f8c43ec9c3f25d6e5dc3e3ccc4}{get\+Device\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the smart device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSmartDevice_a6c8547c1b00ca47645ebd93fc3c9c3bd}\label{classSmartDevice_a6c8547c1b00ca47645ebd93fc3c9c3bd}} 
+void \mbox{\hyperlink{classSmartDevice_a6c8547c1b00ca47645ebd93fc3c9c3bd}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the current command on the device (Command pattern). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartDevice_acdb275561fab887fd83f7df5651474cb}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data) override
+\begin{DoxyCompactList}\small\item\em Updates the smart device in response to sensor notifications (Observer pattern). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSmartDevice_ad33168b1bc7c1b6a92b82235d2ff1ab4}\label{classSmartDevice_ad33168b1bc7c1b6a92b82235d2ff1ab4}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDeviceState}{Device\+State}} $>$ \mbox{\hyperlink{classSmartDevice_ad33168b1bc7c1b6a92b82235d2ff1ab4}{state}}
+\begin{DoxyCompactList}\small\item\em Smart pointer to the current state of the device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSmartDevice_a76a5d7aee9f74353799f2d41b799724d}\label{classSmartDevice_a76a5d7aee9f74353799f2d41b799724d}} 
+std\+::string \mbox{\hyperlink{classSmartDevice_a76a5d7aee9f74353799f2d41b799724d}{device\+Type}}
+\begin{DoxyCompactList}\small\item\em String representing the type of the device (e.\+g., \char`\"{}\+Smart\+Light\char`\"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Context class in the State Pattern that represents a smart device. 
+
+The \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} class is the context that interacts with various device states (e.\+g., \mbox{\hyperlink{classOnState}{On\+State}}, \mbox{\hyperlink{classOffState}{Off\+State}}). It allows for state transitions and delegates actions to the active state. This class provides common functionality for all smart devices by inheriting from the \mbox{\hyperlink{classDevice}{Device}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSmartDevice_a8cd7798cd8ad23576aa4c2d8d9ec4bf1}\label{classSmartDevice_a8cd7798cd8ad23576aa4c2d8d9ec4bf1}} 
+\index{SmartDevice@{SmartDevice}!SmartDevice@{SmartDevice}}
+\index{SmartDevice@{SmartDevice}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{SmartDevice()}{SmartDevice()}}
+{\footnotesize\ttfamily Smart\+Device\+::\+Smart\+Device (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object and sets its initial state. 
+
+Constructs a \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object and sets its initial state to \mbox{\hyperlink{classOffState}{Off\+State}}.
+
+The constructor initializes the device type and sets the default state (e.\+g., \mbox{\hyperlink{classOffState}{Off\+State}}) for the smart device. It serves as the base class for all specific smart devices (e.\+g., \mbox{\hyperlink{classSmartLight}{Smart\+Light}}, Smart\+Door\+Lock).
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & A string representing the specific device type (e.\+g., \char`\"{}\+Smart\+Light\char`\"{}).\\
+\hline
+{\em type} & A string representing the type of the smart device. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSmartDevice_a1dc719fc9802d21ef8c10d17993f6adf}\label{classSmartDevice_a1dc719fc9802d21ef8c10d17993f6adf}} 
+\index{SmartDevice@{SmartDevice}!````~SmartDevice@{$\sim$SmartDevice}}
+\index{````~SmartDevice@{$\sim$SmartDevice}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{$\sim$SmartDevice()}{~SmartDevice()}}
+{\footnotesize\ttfamily virtual Smart\+Device\+::$\sim$\+Smart\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \mbox{\hyperlink{classSmartDevice}{Smart\+Device}}. 
+
+Ensures proper cleanup of derived classes and state pointers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSmartDevice_ae6e419f8c43ec9c3f25d6e5dc3e3ccc4}\label{classSmartDevice_ae6e419f8c43ec9c3f25d6e5dc3e3ccc4}} 
+\index{SmartDevice@{SmartDevice}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Smart\+Device\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the type of the smart device. 
+
+Retrieves the type of the device.
+
+This method returns the type of the device, allowing identification of the specific type of smart device (e.\+g., \char`\"{}\+Smart\+Light\char`\"{}, \char`\"{}\+Smart\+Door\+Lock\char`\"{}).
+
+\begin{DoxyReturn}{Returns}
+A string representing the device type.
+
+A string representing the type of the smart device (e.\+g., \char`\"{}\+Smart\+Light\char`\"{}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classSmartThermostat_a3ade09f909c966fea0ed425fdf0695aa}{Smart\+Thermostat}}, \mbox{\hyperlink{classSmartLight_adf4a924ef3a1e200f97150b262c85f92}{Smart\+Light}}, and \mbox{\hyperlink{classSmartDoorlock_a7f4b1daa1be6e75e934cffd8da787928}{Smart\+Doorlock}}.
+
+\mbox{\Hypertarget{classSmartDevice_aa27c3aa04aaafebfd8c59830e28730b3}\label{classSmartDevice_aa27c3aa04aaafebfd8c59830e28730b3}} 
+\index{SmartDevice@{SmartDevice}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Smart\+Device\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the current status of the smart device. 
+
+Retrieves the current status of the device.
+
+This method queries the current state of the device and returns its status, such as whether the device is on or off.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status of the device (e.\+g., \char`\"{}\+On\char`\"{}, \char`\"{}\+Off\char`\"{}).
+\end{DoxyReturn}
+This method queries the current state of the device and returns its status as a string.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status (e.\+g., \char`\"{}on\char`\"{} or \char`\"{}off\char`\"{}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classSmartThermostat_a60bffba5135886647c554ab45651e5bb}{Smart\+Thermostat}}, \mbox{\hyperlink{classSmartLight_aa5983e332551cc021845540e6f335689}{Smart\+Light}}, and \mbox{\hyperlink{classSmartDoorlock_aac79c7e177838f4c36fd280616817d97}{Smart\+Doorlock}}.
+
+\mbox{\Hypertarget{classSmartDevice_a2f42c12c61a9e94d1e86f459c2ea2ab0}\label{classSmartDevice_a2f42c12c61a9e94d1e86f459c2ea2ab0}} 
+\index{SmartDevice@{SmartDevice}!performAction@{performAction}}
+\index{performAction@{performAction}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Smart\+Device\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs an action based on the current state of the device. 
+
+Performs an action based on the current state.
+
+This method delegates the action to the current state of the device, such as turning the device on or off, depending on its state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & A string representing the action to be performed (e.\+g., \char`\"{}\+Turn\+On\char`\"{}, \char`\"{}\+Turn\+Off\char`\"{}).\\
+\hline
+\end{DoxyParams}
+This method passes the action to the current state, which determines how the device should behave in response.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & A string representing the action (e.\+g., \char`\"{}\+Toggle\+On\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classSmartThermostat_a319b2a22636d9e566872d626a805e5b8}{Smart\+Thermostat}}, \mbox{\hyperlink{classSmartLight_a2c17834c6005c5cbe070abb292f9a625}{Smart\+Light}}, and \mbox{\hyperlink{classSmartDoorlock_a2a0b2e203c39d26d7fda50ab9c69173d}{Smart\+Doorlock}}.
+
+\mbox{\Hypertarget{classSmartDevice_a1cd89e1984b6c29e0cc6117d8ab7a05d}\label{classSmartDevice_a1cd89e1984b6c29e0cc6117d8ab7a05d}} 
+\index{SmartDevice@{SmartDevice}!setState@{setState}}
+\index{setState@{setState}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Smart\+Device\+::set\+State (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDeviceState}{Device\+State}} $>$ \&}]{new\+State }\end{DoxyParamCaption})}
+
+
+
+Sets a new state for the smart device. 
+
+Sets a new state for the device.
+
+This method changes the current state of the device, allowing it to transition between states (e.\+g., switching between \mbox{\hyperlink{classOnState}{On\+State}} and \mbox{\hyperlink{classOffState}{Off\+State}}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & A shared pointer to the new \mbox{\hyperlink{classDeviceState}{Device\+State}} object representing the new state.\\
+\hline
+\end{DoxyParams}
+This method changes the current state of the device to a new state by updating the state pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & A shared pointer to the new state to which the device will transition. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSmartDevice_acdb275561fab887fd83f7df5651474cb}\label{classSmartDevice_acdb275561fab887fd83f7df5651474cb}} 
+\index{SmartDevice@{SmartDevice}!update@{update}}
+\index{update@{update}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Smart\+Device\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the smart device in response to sensor notifications (Observer pattern). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & The type of the sensor (e.\+g., \char`\"{}\+Temperature\+Sensor\char`\"{}). \\
+\hline
+{\em sensor\+Data} & The data received from the sensor.\\
+\hline
+{\em sensor\+Type} & The type of the sensor. \\
+\hline
+{\em sensor\+Data} & The data received from the sensor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SmartDevice_8h}{Smart\+Device.\+h}}\item 
+\mbox{\hyperlink{SmartDevice_8cpp}{Smart\+Device.\+cpp}}\end{DoxyCompactItemize}

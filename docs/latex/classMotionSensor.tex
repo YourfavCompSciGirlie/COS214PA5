@@ -1,0 +1,146 @@
+\hypertarget{classMotionSensor}{}\doxysection{Motion\+Sensor Class Reference}
+\label{classMotionSensor}\index{MotionSensor@{MotionSensor}}
+
+
+Concrete Subject class that represents a motion sensor in an Observer pattern.  
+
+
+
+
+{\ttfamily \#include $<$Motion\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Motion\+Sensor\+:
+% FIG 0
+
+
+Collaboration diagram for Motion\+Sensor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMotionSensor_a5526468f37c38ef69553743ab2558fcf}{add\+Device}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Registers a device to receive motion notifications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotionSensor_a2283d0bb5f1067ec6680b0964508d3f5}{remove\+Device}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Unregisters a device so it no longer receives motion notifications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotionSensor_a1b3dcb9e0db1469b616d30780dd37941}{notify\+Devices}} () override
+\begin{DoxyCompactList}\small\item\em Notifies all registered devices of motion state changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotionSensor_a0ff9b9aaeaef899f021a40a534a6094b}{detect\+Motion}} ()
+\begin{DoxyCompactList}\small\item\em Simulates the detection of motion by the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotionSensor_a30f8f8c3f70dd67f0337cf1eafd7fb74}{clear\+Motion}} ()
+\begin{DoxyCompactList}\small\item\em Simulates the clearing of motion detection by the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete Subject class that represents a motion sensor in an Observer pattern. 
+
+The \mbox{\hyperlink{classMotionSensor}{Motion\+Sensor}} class is responsible for detecting motion and notifying all registered devices (observers) of any changes in motion state (e.\+g., detected or clear). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMotionSensor_a5526468f37c38ef69553743ab2558fcf}\label{classMotionSensor_a5526468f37c38ef69553743ab2558fcf}} 
+\index{MotionSensor@{MotionSensor}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}}
+{\footnotesize\ttfamily void Motion\+Sensor\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Registers a device to receive motion notifications. 
+
+Registers a device to the motion sensor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device that should be notified of motion changes.\\
+\hline
+\end{DoxyParams}
+This function adds a device to the list of devices that will be notified when motion is detected or cleared.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensor_a20ad14293b71dbd6244b72390c0916c5}{Sensor}}.
+
+\mbox{\Hypertarget{classMotionSensor_a30f8f8c3f70dd67f0337cf1eafd7fb74}\label{classMotionSensor_a30f8f8c3f70dd67f0337cf1eafd7fb74}} 
+\index{MotionSensor@{MotionSensor}!clearMotion@{clearMotion}}
+\index{clearMotion@{clearMotion}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{clearMotion()}{clearMotion()}}
+{\footnotesize\ttfamily void Motion\+Sensor\+::clear\+Motion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simulates the clearing of motion detection by the sensor. 
+
+Simulates clearing the motion detection.
+
+Changes the sensor state to \char`\"{}clear\char`\"{} and notifies all registered devices.
+
+This function sets the sensor state to \char`\"{}clear\char`\"{} and notifies all registered devices that motion is no longer detected. \mbox{\Hypertarget{classMotionSensor_a0ff9b9aaeaef899f021a40a534a6094b}\label{classMotionSensor_a0ff9b9aaeaef899f021a40a534a6094b}} 
+\index{MotionSensor@{MotionSensor}!detectMotion@{detectMotion}}
+\index{detectMotion@{detectMotion}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{detectMotion()}{detectMotion()}}
+{\footnotesize\ttfamily void Motion\+Sensor\+::detect\+Motion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simulates the detection of motion by the sensor. 
+
+Simulates motion detection by the sensor.
+
+Changes the sensor state to \char`\"{}detected\char`\"{} and notifies all registered devices.
+
+This function sets the sensor state to \char`\"{}detected\char`\"{} and notifies all registered devices that motion has been detected. \mbox{\Hypertarget{classMotionSensor_a1b3dcb9e0db1469b616d30780dd37941}\label{classMotionSensor_a1b3dcb9e0db1469b616d30780dd37941}} 
+\index{MotionSensor@{MotionSensor}!notifyDevices@{notifyDevices}}
+\index{notifyDevices@{notifyDevices}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{notifyDevices()}{notifyDevices()}}
+{\footnotesize\ttfamily void Motion\+Sensor\+::notify\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Notifies all registered devices of motion state changes. 
+
+This method iterates through all registered devices and calls their update function, passing the current motion state.
+
+This function iterates over all devices registered to the motion sensor and calls their {\ttfamily update()} method, passing the current motion state. 
+
+Implements \mbox{\hyperlink{classSensor_a129501bd5f35310e8a155d8758b16f80}{Sensor}}.
+
+\mbox{\Hypertarget{classMotionSensor_a2283d0bb5f1067ec6680b0964508d3f5}\label{classMotionSensor_a2283d0bb5f1067ec6680b0964508d3f5}} 
+\index{MotionSensor@{MotionSensor}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}}
+{\footnotesize\ttfamily void Motion\+Sensor\+::remove\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Unregisters a device so it no longer receives motion notifications. 
+
+Removes a device from the motion sensor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device to be removed from the notification list.\\
+\hline
+\end{DoxyParams}
+This function removes a device from the list of devices that are notified about motion changes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensor_aed23ce034c7354ef46dcb24312ef4c3a}{Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Motion\+Sensor.\+h\item 
+Motion\+Sensor.\+cpp\end{DoxyCompactItemize}

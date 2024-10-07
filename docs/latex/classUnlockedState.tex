@@ -1,0 +1,93 @@
+\hypertarget{classUnlockedState}{}\doxysection{Unlocked\+State Class Reference}
+\label{classUnlockedState}\index{UnlockedState@{UnlockedState}}
+
+
+Concrete state representing the \char`\"{}\+Unlocked\char`\"{} state of a smart device.  
+
+
+
+
+{\ttfamily \#include $<$Unlocked\+State.\+h$>$}
+
+
+
+Inheritance diagram for Unlocked\+State\+:
+% FIG 0
+
+
+Collaboration diagram for Unlocked\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUnlockedState_ad3312542cea8ba7f243b46042dee1172}{perform\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} $>$ device, const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Handles the action when the device is in the \char`\"{}\+Unlocked\char`\"{} state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classUnlockedState_acb5171d77cef0636c204ff07a4fff797}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the current status of the device in the \char`\"{}\+Unlocked\char`\"{} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete state representing the \char`\"{}\+Unlocked\char`\"{} state of a smart device. 
+
+The \mbox{\hyperlink{classUnlockedState}{Unlocked\+State}} class is responsible for handling actions when a device is currently unlocked. It implements the perform\+Action and get\+Status methods for this specific state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUnlockedState_acb5171d77cef0636c204ff07a4fff797}\label{classUnlockedState_acb5171d77cef0636c204ff07a4fff797}} 
+\index{UnlockedState@{UnlockedState}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!UnlockedState@{UnlockedState}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Unlocked\+State\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current status of the device in the \char`\"{}\+Unlocked\char`\"{} state. 
+
+Returns the status of the device in the \char`\"{}\+Unlocked\char`\"{} state.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status, which is \char`\"{}unlocked\char`\"{}.
+
+A string \char`\"{}unlocked\char`\"{} representing the current status of the device. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDeviceState_a842ceb468fae2550bf21678ed56d7e7d}{Device\+State}}.
+
+\mbox{\Hypertarget{classUnlockedState_ad3312542cea8ba7f243b46042dee1172}\label{classUnlockedState_ad3312542cea8ba7f243b46042dee1172}} 
+\index{UnlockedState@{UnlockedState}!performAction@{performAction}}
+\index{performAction@{performAction}!UnlockedState@{UnlockedState}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Unlocked\+State\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} $>$}]{device,  }\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles the action when the device is in the \char`\"{}\+Unlocked\char`\"{} state. 
+
+If the action is \char`\"{}\+Lock\char`\"{}, the device state is switched to \mbox{\hyperlink{classLockedState}{Locked\+State}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object. \\
+\hline
+{\em action} & The action to be performed on the device.\\
+\hline
+\end{DoxyParams}
+If the action is \char`\"{}\+Lock\char`\"{}, the device\textquotesingle{}s state changes to \mbox{\hyperlink{classLockedState}{Locked\+State}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object. \\
+\hline
+{\em action} & The action to be performed (e.\+g., \char`\"{}\+Lock\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDeviceState_ac36f071fd8bb60d90f5895033ca41f8c}{Device\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UnlockedState_8h}{Unlocked\+State.\+h}}\item 
+\mbox{\hyperlink{UnlockedState_8cpp}{Unlocked\+State.\+cpp}}\end{DoxyCompactItemize}

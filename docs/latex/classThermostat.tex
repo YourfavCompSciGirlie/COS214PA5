@@ -1,0 +1,128 @@
+\hypertarget{classThermostat}{}\doxysection{Thermostat Class Reference}
+\label{classThermostat}\index{Thermostat@{Thermostat}}
+
+
+Inheritance diagram for Thermostat\+:
+% FIG 0
+
+
+Collaboration diagram for Thermostat\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classThermostat_aa823249127cc845c651b34230675478a}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the thermostat\textquotesingle{}s actions based on notifications received from sensors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThermostat_a15d14739bb0592898419786c4c97c6c0}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data) override
+\begin{DoxyCompactList}\small\item\em Updates the thermostat based on the sensor\textquotesingle{}s notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThermostat_a216f08f8efeaecda81ac9e3a0191365c}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Perform an action on the thermostat (e.\+g., Adjust Temperature). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classThermostat_a39c9935af657bf40969f35421842f753}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current status of the thermostat (e.\+g., Current Temperature). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classThermostat_a4708d00554ad6afe224f087e4bbaf078}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the device type (e.\+g., \char`\"{}\+Thermostat\char`\"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classThermostat_aa823249127cc845c651b34230675478a}\label{classThermostat_aa823249127cc845c651b34230675478a}} 
+\index{Thermostat@{Thermostat}!execute@{execute}}
+\index{execute@{execute}!Thermostat@{Thermostat}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Thermostat\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the thermostat\textquotesingle{}s actions based on notifications received from sensors. 
+
+This function will be called to perform any necessary adjustments based on the sensor\textquotesingle{}s input. 
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+\mbox{\Hypertarget{classThermostat_a4708d00554ad6afe224f087e4bbaf078}\label{classThermostat_a4708d00554ad6afe224f087e4bbaf078}} 
+\index{Thermostat@{Thermostat}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!Thermostat@{Thermostat}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Thermostat\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the device type (e.\+g., \char`\"{}\+Thermostat\char`\"{}). 
+
+\begin{DoxyReturn}{Returns}
+A string representing the device type.
+
+A string representing the type of the device. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+\mbox{\Hypertarget{classThermostat_a39c9935af657bf40969f35421842f753}\label{classThermostat_a39c9935af657bf40969f35421842f753}} 
+\index{Thermostat@{Thermostat}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Thermostat@{Thermostat}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Thermostat\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current status of the thermostat (e.\+g., Current Temperature). 
+
+Get the current status of the thermostat (e.\+g., Current temperature).
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status of the thermostat. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+\mbox{\Hypertarget{classThermostat_a216f08f8efeaecda81ac9e3a0191365c}\label{classThermostat_a216f08f8efeaecda81ac9e3a0191365c}} 
+\index{Thermostat@{Thermostat}!performAction@{performAction}}
+\index{performAction@{performAction}!Thermostat@{Thermostat}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Thermostat\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform an action on the thermostat (e.\+g., Adjust Temperature). 
+
+Perform an action on the thermostat (e.\+g., Adjust temperature).
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the thermostat. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+\mbox{\Hypertarget{classThermostat_a15d14739bb0592898419786c4c97c6c0}\label{classThermostat_a15d14739bb0592898419786c4c97c6c0}} 
+\index{Thermostat@{Thermostat}!update@{update}}
+\index{update@{update}!Thermostat@{Thermostat}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Thermostat\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the thermostat based on the sensor\textquotesingle{}s notification. 
+
+This function adjusts the thermostat settings based on the sensor type and data received.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & Type of the sensor that triggered the update. \\
+\hline
+{\em sensor\+Data} & Data indicating the sensor\textquotesingle{}s state (e.\+g., \char`\"{}high\char`\"{}, \char`\"{}low\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thermostat.\+h\item 
+Thermostat.\+cpp\end{DoxyCompactItemize}

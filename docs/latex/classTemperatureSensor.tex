@@ -1,0 +1,129 @@
+\hypertarget{classTemperatureSensor}{}\doxysection{Temperature\+Sensor Class Reference}
+\label{classTemperatureSensor}\index{TemperatureSensor@{TemperatureSensor}}
+
+
+The \mbox{\hyperlink{classTemperatureSensor}{Temperature\+Sensor}} class is a concrete subject in the Observer pattern.  
+
+
+
+
+{\ttfamily \#include $<$Temperature\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Temperature\+Sensor\+:
+% FIG 0
+
+
+Collaboration diagram for Temperature\+Sensor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTemperatureSensor_a337d52cabed8172713df9fa0e38a3294}{add\+Device}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Adds a device to the list of observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTemperatureSensor_a8b333e74b7b411fe2edf22283eca1c62}{remove\+Device}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Removes a device from the list of observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTemperatureSensor_a72db78d6302b3c28c68674e068eb6290}{notify\+Devices}} () override
+\begin{DoxyCompactList}\small\item\em Notifies all registered devices of a temperature change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTemperatureSensor_a66a68ba68909383e6e3a5679daab2cc7}{detect\+High\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Simulates the detection of high temperature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTemperatureSensor_a59f8da27b4babc99fcdc973d8a41e29d}{detect\+Low\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Simulates the detection of low temperature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classTemperatureSensor}{Temperature\+Sensor}} class is a concrete subject in the Observer pattern. 
+
+This class is responsible for monitoring temperature changes and notifying registered devices (observers) about these changes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTemperatureSensor_a337d52cabed8172713df9fa0e38a3294}\label{classTemperatureSensor_a337d52cabed8172713df9fa0e38a3294}} 
+\index{TemperatureSensor@{TemperatureSensor}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}}
+{\footnotesize\ttfamily void Temperature\+Sensor\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a device to the list of observers. 
+
+This function registers a device (observer) to be notified of temperature changes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device (observer) to be added.\\
+\hline
+\end{DoxyParams}
+This function registers a device (observer) to be notified of changes in temperature.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device (observer) to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensor_a20ad14293b71dbd6244b72390c0916c5}{Sensor}}.
+
+\mbox{\Hypertarget{classTemperatureSensor_a66a68ba68909383e6e3a5679daab2cc7}\label{classTemperatureSensor_a66a68ba68909383e6e3a5679daab2cc7}} 
+\index{TemperatureSensor@{TemperatureSensor}!detectHighTemperature@{detectHighTemperature}}
+\index{detectHighTemperature@{detectHighTemperature}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{detectHighTemperature()}{detectHighTemperature()}}
+{\footnotesize\ttfamily void Temperature\+Sensor\+::detect\+High\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simulates the detection of high temperature. 
+
+This function changes the sensor state to \char`\"{}high\char`\"{} and notifies all registered devices. \mbox{\Hypertarget{classTemperatureSensor_a59f8da27b4babc99fcdc973d8a41e29d}\label{classTemperatureSensor_a59f8da27b4babc99fcdc973d8a41e29d}} 
+\index{TemperatureSensor@{TemperatureSensor}!detectLowTemperature@{detectLowTemperature}}
+\index{detectLowTemperature@{detectLowTemperature}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{detectLowTemperature()}{detectLowTemperature()}}
+{\footnotesize\ttfamily void Temperature\+Sensor\+::detect\+Low\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simulates the detection of low temperature. 
+
+This function changes the sensor state to \char`\"{}low\char`\"{} and notifies all registered devices. \mbox{\Hypertarget{classTemperatureSensor_a72db78d6302b3c28c68674e068eb6290}\label{classTemperatureSensor_a72db78d6302b3c28c68674e068eb6290}} 
+\index{TemperatureSensor@{TemperatureSensor}!notifyDevices@{notifyDevices}}
+\index{notifyDevices@{notifyDevices}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{notifyDevices()}{notifyDevices()}}
+{\footnotesize\ttfamily void Temperature\+Sensor\+::notify\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Notifies all registered devices of a temperature change. 
+
+This function iterates over all devices (observers) and updates them with the new temperature state. 
+
+Implements \mbox{\hyperlink{classSensor_a129501bd5f35310e8a155d8758b16f80}{Sensor}}.
+
+\mbox{\Hypertarget{classTemperatureSensor_a8b333e74b7b411fe2edf22283eca1c62}\label{classTemperatureSensor_a8b333e74b7b411fe2edf22283eca1c62}} 
+\index{TemperatureSensor@{TemperatureSensor}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}}
+{\footnotesize\ttfamily void Temperature\+Sensor\+::remove\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a device from the list of observers. 
+
+This function unregisters a device (observer) so it no longer receives updates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device (observer) to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensor_aed23ce034c7354ef46dcb24312ef4c3a}{Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Temperature\+Sensor.\+h\item 
+Temperature\+Sensor.\+cpp\end{DoxyCompactItemize}

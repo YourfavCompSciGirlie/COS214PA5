@@ -1,0 +1,108 @@
+\hypertarget{classSensor}{}\doxysection{Sensor Class Reference}
+\label{classSensor}\index{Sensor@{Sensor}}
+
+
+Abstract Subject class in the Observer pattern.  
+
+
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Sensor\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classSensor_a20ad14293b71dbd6244b72390c0916c5}{add\+Device}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device)=0
+\begin{DoxyCompactList}\small\item\em Registers a device to receive notifications when the sensor state changes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSensor_aed23ce034c7354ef46dcb24312ef4c3a}{remove\+Device}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device)=0
+\begin{DoxyCompactList}\small\item\em Unregisters a device from receiving notifications. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSensor_a129501bd5f35310e8a155d8758b16f80}{notify\+Devices}} ()=0
+\begin{DoxyCompactList}\small\item\em Notifies all registered devices of a change in the sensor state. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSensor_aa730e9961dd645e9df9644c52b6e72eb}{$\sim$\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \mbox{\hyperlink{classSensor}{Sensor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract Subject class in the Observer pattern. 
+
+The \mbox{\hyperlink{classSensor}{Sensor}} class acts as a base class for concrete sensor types (e.\+g., motion sensor, humidity sensor). It maintains a list of devices (observers) that are interested in receiving updates when the sensor state changes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSensor_aa730e9961dd645e9df9644c52b6e72eb}\label{classSensor_aa730e9961dd645e9df9644c52b6e72eb}} 
+\index{Sensor@{Sensor}!````~Sensor@{$\sim$Sensor}}
+\index{````~Sensor@{$\sim$Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sensor()}{~Sensor()}}
+{\footnotesize\ttfamily virtual Sensor\+::$\sim$\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \mbox{\hyperlink{classSensor}{Sensor}}. 
+
+Ensures proper cleanup when a derived class object is deleted. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSensor_a20ad14293b71dbd6244b72390c0916c5}\label{classSensor_a20ad14293b71dbd6244b72390c0916c5}} 
+\index{Sensor@{Sensor}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}}
+{\footnotesize\ttfamily virtual void Sensor\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Registers a device to receive notifications when the sensor state changes. 
+
+This method should be overridden in derived classes to add a device to the list of observers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device (observer) to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTemperatureSensor_a337d52cabed8172713df9fa0e38a3294}{Temperature\+Sensor}}, \mbox{\hyperlink{classMotionSensor_a5526468f37c38ef69553743ab2558fcf}{Motion\+Sensor}}, and \mbox{\hyperlink{classHumiditySensor_a6af07f76aafcc1ce85792ae75171ce6b}{Humidity\+Sensor}}.
+
+\mbox{\Hypertarget{classSensor_a129501bd5f35310e8a155d8758b16f80}\label{classSensor_a129501bd5f35310e8a155d8758b16f80}} 
+\index{Sensor@{Sensor}!notifyDevices@{notifyDevices}}
+\index{notifyDevices@{notifyDevices}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{notifyDevices()}{notifyDevices()}}
+{\footnotesize\ttfamily virtual void Sensor\+::notify\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Notifies all registered devices of a change in the sensor state. 
+
+This method should be overridden in derived classes to notify each observer about the change in sensor state. 
+
+Implemented in \mbox{\hyperlink{classTemperatureSensor_a72db78d6302b3c28c68674e068eb6290}{Temperature\+Sensor}}, \mbox{\hyperlink{classMotionSensor_a1b3dcb9e0db1469b616d30780dd37941}{Motion\+Sensor}}, and \mbox{\hyperlink{classHumiditySensor_a2a3d16483f3a972c0005907ac72e316d}{Humidity\+Sensor}}.
+
+\mbox{\Hypertarget{classSensor_aed23ce034c7354ef46dcb24312ef4c3a}\label{classSensor_aed23ce034c7354ef46dcb24312ef4c3a}} 
+\index{Sensor@{Sensor}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}}
+{\footnotesize\ttfamily virtual void Sensor\+::remove\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Unregisters a device from receiving notifications. 
+
+This method should be overridden in derived classes to remove a device from the list of observers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the device (observer) to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTemperatureSensor_a8b333e74b7b411fe2edf22283eca1c62}{Temperature\+Sensor}}, \mbox{\hyperlink{classMotionSensor_a2283d0bb5f1067ec6680b0964508d3f5}{Motion\+Sensor}}, and \mbox{\hyperlink{classHumiditySensor_abc1c8602faa97e1b3b425c15bd29a039}{Humidity\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sensor.\+h\end{DoxyCompactItemize}

@@ -86,8 +86,6 @@ void statetesting() { // Edited
     std::cout << "\n===== TESTING COMPLETE =====\n" << std::endl;
 }
 
-
-
 void compositetesting() { // Edited
     // Create a house
     auto myHouse = std::make_shared<House>("My Smart House");
@@ -181,8 +179,6 @@ void compositetesting() { // Edited
     livingRoom->update("MotionSensor", "Detected");
 }
 
-
-
 void adaptertesting() { // Edited
     // Create a LegacyThermostat
     std::shared_ptr<LegacyThermostat> legacyThermostat = std::make_shared<LegacyThermostat>();
@@ -251,8 +247,6 @@ void adaptertesting() { // Edited
     // Final status check
     std::cout << "Final status: " << smartThermostat.getStatus() << std::endl;
 }
-
-
 
 void testingCommand() { // Edited
     // Testing Smart Door Lock System
@@ -346,8 +340,6 @@ void testingCommand() { // Edited
     // Ensure macros still list correctly after removal
     MacroRoutine::listSavedMacros();
 }
-
-
 
 void testingObserver() { // Edited
     // Testing Motion Sensor
@@ -450,8 +442,6 @@ void testingObserver() { // Edited
     std::cout << "Device Type: " << dehumidifier.getDeviceType() << std::endl;
     dehumidifier.execute();
 }
-
-
 
 
 int main () {

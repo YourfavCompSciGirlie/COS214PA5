@@ -1,0 +1,169 @@
+\hypertarget{classLockAllDoors}{}\doxysection{Lock\+All\+Doors Class Reference}
+\label{classLockAllDoors}\index{LockAllDoors@{LockAllDoors}}
+
+
+Command to lock all doors in a smart door lock system.  
+
+
+
+
+{\ttfamily \#include $<$Lock\+All\+Doors.\+h$>$}
+
+
+
+Inheritance diagram for Lock\+All\+Doors\+:
+% FIG 0
+
+
+Collaboration diagram for Lock\+All\+Doors\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLockAllDoors_a7d53022c28662ddf48cb2eb35e986f53}{Lock\+All\+Doors}} (\mbox{\hyperlink{classSmartDoorLockSystem}{Smart\+Door\+Lock\+System}} $\ast$locks)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLockAllDoors_a97a7bfdafa08d47bd101aa885ef6b8d7}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the command to lock all doors. This function locks all doors in the \mbox{\hyperlink{classSmartDoorLockSystem}{Smart\+Door\+Lock\+System}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLockAllDoors_aee6a5afbdd8d27b14e45b9a8a5530dfd}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data)
+\begin{DoxyCompactList}\small\item\em This update function is not used by the \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLockAllDoors_a3745a66bfa5a779ff480ff9906c3f22d}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Stubbed function for performing specific actions on the system. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLockAllDoors_a0dbb6e7e7809f1a6674da001cd2141ea}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the type of device, which is not applicable for this class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLockAllDoors_a21c3ba43678b62cf13df0a6da09e122e}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the current status of the \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Command to lock all doors in a smart door lock system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLockAllDoors_a7d53022c28662ddf48cb2eb35e986f53}\label{classLockAllDoors_a7d53022c28662ddf48cb2eb35e986f53}} 
+\index{LockAllDoors@{LockAllDoors}!LockAllDoors@{LockAllDoors}}
+\index{LockAllDoors@{LockAllDoors}!LockAllDoors@{LockAllDoors}}
+\doxysubsubsection{\texorpdfstring{LockAllDoors()}{LockAllDoors()}}
+{\footnotesize\ttfamily Lock\+All\+Doors\+::\+Lock\+All\+Doors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSmartDoorLockSystem}{Smart\+Door\+Lock\+System}} $\ast$}]{locks }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locks} & Pointer to the \mbox{\hyperlink{classSmartDoorLockSystem}{Smart\+Door\+Lock\+System}} that manages the locks.\\
+\hline
+\end{DoxyParams}
+This constructor initializes the \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} command with a reference to the \mbox{\hyperlink{classSmartDoorLockSystem}{Smart\+Door\+Lock\+System}}, which manages the locking mechanism for all doors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em locks} & Pointer to the \mbox{\hyperlink{classSmartDoorLockSystem}{Smart\+Door\+Lock\+System}} that manages the locks. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLockAllDoors_a97a7bfdafa08d47bd101aa885ef6b8d7}\label{classLockAllDoors_a97a7bfdafa08d47bd101aa885ef6b8d7}} 
+\index{LockAllDoors@{LockAllDoors}!execute@{execute}}
+\index{execute@{execute}!LockAllDoors@{LockAllDoors}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Lock\+All\+Doors\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the command to lock all doors. This function locks all doors in the \mbox{\hyperlink{classSmartDoorLockSystem}{Smart\+Door\+Lock\+System}}. 
+
+Executes the command to lock all doors.
+
+This function triggers the \mbox{\hyperlink{classSmartDoorLockSystem}{Smart\+Door\+Lock\+System}} to lock all connected doors and prints status messages indicating that the command has been executed. 
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+\mbox{\Hypertarget{classLockAllDoors_a0dbb6e7e7809f1a6674da001cd2141ea}\label{classLockAllDoors_a0dbb6e7e7809f1a6674da001cd2141ea}} 
+\index{LockAllDoors@{LockAllDoors}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!LockAllDoors@{LockAllDoors}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Lock\+All\+Doors\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the type of device, which is not applicable for this class. 
+
+Since \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} is a command class, it returns \char`\"{}\+N/\+A\char`\"{} for the device type.
+
+\begin{DoxyReturn}{Returns}
+A string representing the device type (always \char`\"{}\+N/\+A\char`\"{}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+\mbox{\Hypertarget{classLockAllDoors_a21c3ba43678b62cf13df0a6da09e122e}\label{classLockAllDoors_a21c3ba43678b62cf13df0a6da09e122e}} 
+\index{LockAllDoors@{LockAllDoors}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!LockAllDoors@{LockAllDoors}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Lock\+All\+Doors\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current status of the \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} command. 
+
+This function returns a message indicating that all doors are currently locked.
+
+\begin{DoxyReturn}{Returns}
+A string representing the status of the command (always \char`\"{}\+All doors are currently locked.\char`\"{}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+\mbox{\Hypertarget{classLockAllDoors_a3745a66bfa5a779ff480ff9906c3f22d}\label{classLockAllDoors_a3745a66bfa5a779ff480ff9906c3f22d}} 
+\index{LockAllDoors@{LockAllDoors}!performAction@{performAction}}
+\index{performAction@{performAction}!LockAllDoors@{LockAllDoors}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Lock\+All\+Doors\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stubbed function for performing specific actions on the system. 
+
+This function would handle specific actions related to the \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} command, but it is currently a stub with no implemented logic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+\mbox{\Hypertarget{classLockAllDoors_aee6a5afbdd8d27b14e45b9a8a5530dfd}\label{classLockAllDoors_aee6a5afbdd8d27b14e45b9a8a5530dfd}} 
+\index{LockAllDoors@{LockAllDoors}!update@{update}}
+\index{update@{update}!LockAllDoors@{LockAllDoors}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Lock\+All\+Doors\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This update function is not used by the \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} class. 
+
+Since \mbox{\hyperlink{classLockAllDoors}{Lock\+All\+Doors}} is a command class and not an observer class, the update method is stubbed out and prints a message indicating it is not applicable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & The type of sensor that triggered the update. \\
+\hline
+{\em sensor\+Data} & The data sent by the sensor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lock\+All\+Doors.\+h\item 
+Lock\+All\+Doors.\+cpp\end{DoxyCompactItemize}

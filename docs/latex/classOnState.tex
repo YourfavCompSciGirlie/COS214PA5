@@ -1,0 +1,93 @@
+\hypertarget{classOnState}{}\doxysection{On\+State Class Reference}
+\label{classOnState}\index{OnState@{OnState}}
+
+
+Concrete state representing the \char`\"{}\+On\char`\"{} state of a smart device.  
+
+
+
+
+{\ttfamily \#include $<$On\+State.\+h$>$}
+
+
+
+Inheritance diagram for On\+State\+:
+% FIG 0
+
+
+Collaboration diagram for On\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classOnState_a2b6a280f623a6feafc1eec272e112eee}{perform\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} $>$ device, const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Handles the action when the device is in the \char`\"{}\+On\char`\"{} state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classOnState_ac45d53c3c509bd6e5f603ed720740eea}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the current status of the device in the \char`\"{}\+On\char`\"{} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete state representing the \char`\"{}\+On\char`\"{} state of a smart device. 
+
+The \mbox{\hyperlink{classOnState}{On\+State}} class is responsible for handling actions when a device is currently in the \char`\"{}on\char`\"{} state. It implements the perform\+Action and get\+Status methods for this specific state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOnState_ac45d53c3c509bd6e5f603ed720740eea}\label{classOnState_ac45d53c3c509bd6e5f603ed720740eea}} 
+\index{OnState@{OnState}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!OnState@{OnState}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string On\+State\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current status of the device in the \char`\"{}\+On\char`\"{} state. 
+
+Returns the status of the device in the \char`\"{}\+On\char`\"{} state.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status, which is \char`\"{}on\char`\"{}.
+
+A string \char`\"{}on\char`\"{} representing the current status of the device. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDeviceState_a842ceb468fae2550bf21678ed56d7e7d}{Device\+State}}.
+
+\mbox{\Hypertarget{classOnState_a2b6a280f623a6feafc1eec272e112eee}\label{classOnState_a2b6a280f623a6feafc1eec272e112eee}} 
+\index{OnState@{OnState}!performAction@{performAction}}
+\index{performAction@{performAction}!OnState@{OnState}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void On\+State\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} $>$}]{device,  }\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles the action when the device is in the \char`\"{}\+On\char`\"{} state. 
+
+If the action is \char`\"{}\+Toggle\+Off\char`\"{}, the device state is switched to the \mbox{\hyperlink{classOffState}{Off\+State}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object. \\
+\hline
+{\em action} & The action to be performed on the device.\\
+\hline
+\end{DoxyParams}
+If the action is \char`\"{}\+Toggle\+Off\char`\"{}, the device\textquotesingle{}s state changes to \mbox{\hyperlink{classOffState}{Off\+State}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object. \\
+\hline
+{\em action} & The action to be performed (e.\+g., \char`\"{}\+Toggle\+Off\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDeviceState_ac36f071fd8bb60d90f5895033ca41f8c}{Device\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{OnState_8h}{On\+State.\+h}}\item 
+\mbox{\hyperlink{OnState_8cpp}{On\+State.\+cpp}}\end{DoxyCompactItemize}

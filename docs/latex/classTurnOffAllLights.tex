@@ -1,0 +1,138 @@
+\hypertarget{classTurnOffAllLights}{}\doxysection{Turn\+Off\+All\+Lights Class Reference}
+\label{classTurnOffAllLights}\index{TurnOffAllLights@{TurnOffAllLights}}
+
+
+Command to turn off all lights in a smart lighting system.  
+
+
+
+
+{\ttfamily \#include $<$Turn\+Off\+All\+Lights.\+h$>$}
+
+
+
+Inheritance diagram for Turn\+Off\+All\+Lights\+:
+% FIG 0
+
+
+Collaboration diagram for Turn\+Off\+All\+Lights\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTurnOffAllLights_ade2aa8bb7078045a2e21f70ffc856847}{Turn\+Off\+All\+Lights}} (\mbox{\hyperlink{classSmartLightingSystem}{Smart\+Lighting\+System}} $\ast$lights)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classTurnOffAllLights}{Turn\+Off\+All\+Lights}} command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTurnOffAllLights_a846b1fd82f5324fa1882319900cb3f21}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the command to turn off all lights. This function turns off all lights in the \mbox{\hyperlink{classSmartLightingSystem}{Smart\+Lighting\+System}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTurnOffAllLights_a62d5e41a8cdf988382c7df6372889f89}\label{classTurnOffAllLights_a62d5e41a8cdf988382c7df6372889f89}} 
+void {\bfseries update} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data)
+\item 
+void \mbox{\hyperlink{classTurnOffAllLights_a9786a847bd7b5f743be22d2b544aa80f}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Pure virtual method to perform an action on the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTurnOffAllLights_a372c2fda637b7fcebd8eb209f1e8e4c3}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Pure virtual method to retrieve the device type. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTurnOffAllLights_a25780381d8ba8e8e57b17b353c77e5e3}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Pure virtual method to retrieve the current status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Command to turn off all lights in a smart lighting system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTurnOffAllLights_ade2aa8bb7078045a2e21f70ffc856847}\label{classTurnOffAllLights_ade2aa8bb7078045a2e21f70ffc856847}} 
+\index{TurnOffAllLights@{TurnOffAllLights}!TurnOffAllLights@{TurnOffAllLights}}
+\index{TurnOffAllLights@{TurnOffAllLights}!TurnOffAllLights@{TurnOffAllLights}}
+\doxysubsubsection{\texorpdfstring{TurnOffAllLights()}{TurnOffAllLights()}}
+{\footnotesize\ttfamily Turn\+Off\+All\+Lights\+::\+Turn\+Off\+All\+Lights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSmartLightingSystem}{Smart\+Lighting\+System}} $\ast$}]{lights }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classTurnOffAllLights}{Turn\+Off\+All\+Lights}} command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lights} & Pointer to the \mbox{\hyperlink{classSmartLightingSystem}{Smart\+Lighting\+System}} that manages the lights. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTurnOffAllLights_a846b1fd82f5324fa1882319900cb3f21}\label{classTurnOffAllLights_a846b1fd82f5324fa1882319900cb3f21}} 
+\index{TurnOffAllLights@{TurnOffAllLights}!execute@{execute}}
+\index{execute@{execute}!TurnOffAllLights@{TurnOffAllLights}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Turn\+Off\+All\+Lights\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the command to turn off all lights. This function turns off all lights in the \mbox{\hyperlink{classSmartLightingSystem}{Smart\+Lighting\+System}}. 
+
+Executes the command to turn off all lights. This function turns off all lights in the \mbox{\hyperlink{classSmartLightingSystem}{Smart\+Lighting\+System}} and prints status messages to the console. 
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+\mbox{\Hypertarget{classTurnOffAllLights_a372c2fda637b7fcebd8eb209f1e8e4c3}\label{classTurnOffAllLights_a372c2fda637b7fcebd8eb209f1e8e4c3}} 
+\index{TurnOffAllLights@{TurnOffAllLights}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!TurnOffAllLights@{TurnOffAllLights}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Turn\+Off\+All\+Lights\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pure virtual method to retrieve the device type. 
+
+This method must be implemented by derived classes to return the type of the device (e.\+g., \char`\"{}\+Smart\+Light\char`\"{}).
+
+\begin{DoxyReturn}{Returns}
+A string representing the device type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+\mbox{\Hypertarget{classTurnOffAllLights_a25780381d8ba8e8e57b17b353c77e5e3}\label{classTurnOffAllLights_a25780381d8ba8e8e57b17b353c77e5e3}} 
+\index{TurnOffAllLights@{TurnOffAllLights}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!TurnOffAllLights@{TurnOffAllLights}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Turn\+Off\+All\+Lights\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pure virtual method to retrieve the current status of the device. 
+
+This method must be implemented by derived classes to return the status of the device (e.\+g., on/off).
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status of the device. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+\mbox{\Hypertarget{classTurnOffAllLights_a9786a847bd7b5f743be22d2b544aa80f}\label{classTurnOffAllLights_a9786a847bd7b5f743be22d2b544aa80f}} 
+\index{TurnOffAllLights@{TurnOffAllLights}!performAction@{performAction}}
+\index{performAction@{performAction}!TurnOffAllLights@{TurnOffAllLights}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Turn\+Off\+All\+Lights\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pure virtual method to perform an action on the device. 
+
+This method must be implemented by derived classes to perform an action (e.\+g., turning a device on/off).
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & A string representing the action to be performed on the device. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Turn\+Off\+All\+Lights.\+h\item 
+Turn\+Off\+All\+Lights.\+cpp\end{DoxyCompactItemize}

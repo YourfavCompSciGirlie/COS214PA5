@@ -1,0 +1,24 @@
+\hypertarget{DeviceState_8h}{}\doxysection{Device\+State.\+h File Reference}
+\label{DeviceState_8h}\index{DeviceState.h@{DeviceState.h}}
+
+
+Abstract class representing the state of a smart device in the Smart Home Automation System.  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Device\+State.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDeviceState}{Device\+State}}
+\begin{DoxyCompactList}\small\item\em Abstract base class representing a generic state of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class representing the state of a smart device in the Smart Home Automation System. 
+
+This class defines the interface for different states that a \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} can be in. Each concrete state (such as \mbox{\hyperlink{classOnState}{On\+State}}, \mbox{\hyperlink{classOffState}{Off\+State}}, etc.) will inherit from this class and implement its own behavior for the methods declared here. It uses the State design pattern. 

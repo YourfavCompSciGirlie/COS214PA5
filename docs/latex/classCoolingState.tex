@@ -1,0 +1,93 @@
+\hypertarget{classCoolingState}{}\doxysection{Cooling\+State Class Reference}
+\label{classCoolingState}\index{CoolingState@{CoolingState}}
+
+
+Concrete state representing the \char`\"{}\+Cooling\char`\"{} state of a smart device.  
+
+
+
+
+{\ttfamily \#include $<$Cooling\+State.\+h$>$}
+
+
+
+Inheritance diagram for Cooling\+State\+:
+% FIG 0
+
+
+Collaboration diagram for Cooling\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCoolingState_a78e88e68cfcdc844150eb202eb980448}{perform\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} $>$ device, const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Handles the action when the device is in the \char`\"{}\+Cooling\char`\"{} state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCoolingState_aab66b63d067a81571640d0c17bf4c997}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the current status of the device in the \char`\"{}\+Cooling\char`\"{} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete state representing the \char`\"{}\+Cooling\char`\"{} state of a smart device. 
+
+The \mbox{\hyperlink{classCoolingState}{Cooling\+State}} class is responsible for handling actions when a device is currently cooling. It implements the perform\+Action and get\+Status methods for this specific state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCoolingState_aab66b63d067a81571640d0c17bf4c997}\label{classCoolingState_aab66b63d067a81571640d0c17bf4c997}} 
+\index{CoolingState@{CoolingState}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!CoolingState@{CoolingState}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Cooling\+State\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current status of the device in the \char`\"{}\+Cooling\char`\"{} state. 
+
+Returns the status of the device in the \char`\"{}\+Cooling\char`\"{} state.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status, which is \char`\"{}cooling\char`\"{}.
+
+A string \char`\"{}cooling\char`\"{} representing the current status of the device. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDeviceState_a842ceb468fae2550bf21678ed56d7e7d}{Device\+State}}.
+
+\mbox{\Hypertarget{classCoolingState_a78e88e68cfcdc844150eb202eb980448}\label{classCoolingState_a78e88e68cfcdc844150eb202eb980448}} 
+\index{CoolingState@{CoolingState}!performAction@{performAction}}
+\index{performAction@{performAction}!CoolingState@{CoolingState}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Cooling\+State\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} $>$}]{device,  }\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles the action when the device is in the \char`\"{}\+Cooling\char`\"{} state. 
+
+If the action is \char`\"{}\+Heat\char`\"{}, the device state is switched to the \mbox{\hyperlink{classHeatingState}{Heating\+State}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object. \\
+\hline
+{\em action} & The action to be performed on the device.\\
+\hline
+\end{DoxyParams}
+If the action is \char`\"{}\+Heat\char`\"{}, the device\textquotesingle{}s state changes to \mbox{\hyperlink{classHeatingState}{Heating\+State}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} object. \\
+\hline
+{\em action} & The action to be performed (e.\+g., \char`\"{}\+Heat\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDeviceState_ac36f071fd8bb60d90f5895033ca41f8c}{Device\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CoolingState_8h}{Cooling\+State.\+h}}\item 
+\mbox{\hyperlink{CoolingState_8cpp}{Cooling\+State.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\hypertarget{classSmartDoorlock}{}\doxysection{Smart\+Doorlock Class Reference}
+\label{classSmartDoorlock}\index{SmartDoorlock@{SmartDoorlock}}
+
+
+A concrete class representing a smart door lock device.  
+
+
+
+
+{\ttfamily \#include $<$Smart\+Doorlock.\+h$>$}
+
+
+
+Inheritance diagram for Smart\+Doorlock\+:
+% FIG 0
+
+
+Collaboration diagram for Smart\+Doorlock\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSmartDoorlock_aeeea579fc196b89590324760cc2b41b7}{Smart\+Doorlock}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classSmartDoorlock}{Smart\+Doorlock}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartDoorlock_a2a0b2e203c39d26d7fda50ab9c69173d}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Perform an action on the smart door lock. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSmartDoorlock_aac79c7e177838f4c36fd280616817d97}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current status of the smart door lock. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSmartDoorlock_a7f4b1daa1be6e75e934cffd8da787928}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the device type of the smart door lock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A concrete class representing a smart door lock device. 
+
+The \mbox{\hyperlink{classSmartDoorlock}{Smart\+Doorlock}} class inherits from \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} and represents a single smart door lock. It implements methods for performing actions and retrieving the current status based on the state pattern. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSmartDoorlock_aeeea579fc196b89590324760cc2b41b7}\label{classSmartDoorlock_aeeea579fc196b89590324760cc2b41b7}} 
+\index{SmartDoorlock@{SmartDoorlock}!SmartDoorlock@{SmartDoorlock}}
+\index{SmartDoorlock@{SmartDoorlock}!SmartDoorlock@{SmartDoorlock}}
+\doxysubsubsection{\texorpdfstring{SmartDoorlock()}{SmartDoorlock()}}
+{\footnotesize\ttfamily Smart\+Doorlock\+::\+Smart\+Doorlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classSmartDoorlock}{Smart\+Doorlock}} object. 
+
+The constructor initializes the smart door lock with an unlocked state.
+
+Initializes a new \mbox{\hyperlink{classSmartDoorlock}{Smart\+Doorlock}} device and sets its initial state to \char`\"{}unlocked\char`\"{} by associating it with the \mbox{\hyperlink{classUnlockedState}{Unlocked\+State}} object. The device can transition between locked and unlocked states using the perform\+Action method. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSmartDoorlock_a7f4b1daa1be6e75e934cffd8da787928}\label{classSmartDoorlock_a7f4b1daa1be6e75e934cffd8da787928}} 
+\index{SmartDoorlock@{SmartDoorlock}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!SmartDoorlock@{SmartDoorlock}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Smart\+Doorlock\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the device type of the smart door lock. 
+
+This method returns the type of device, which is \char`\"{}\+Smart\+Door\+Lock\char`\"{} for this class.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The string \char`\"{}\+Smart\+Door\+Lock\char`\"{}.
+\end{DoxyReturn}
+This method returns a string indicating the type of device, which is \char`\"{}\+Smart\+Door\+Lock\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The string \char`\"{}\+Smart\+Door\+Lock\char`\"{}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_ae6e419f8c43ec9c3f25d6e5dc3e3ccc4}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classSmartDoorlock_aac79c7e177838f4c36fd280616817d97}\label{classSmartDoorlock_aac79c7e177838f4c36fd280616817d97}} 
+\index{SmartDoorlock@{SmartDoorlock}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!SmartDoorlock@{SmartDoorlock}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Smart\+Doorlock\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current status of the smart door lock. 
+
+This method retrieves the status of the smart door lock based on its current state, such as whether the door is locked or unlocked.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current status of the smart door lock (e.\+g., \char`\"{}locked\char`\"{} or \char`\"{}unlocked\char`\"{}).
+\end{DoxyReturn}
+This method retrieves and returns the current status of the smart door lock, which is determined by the device\textquotesingle{}s current state. The possible statuses include \char`\"{}locked\char`\"{} or \char`\"{}unlocked\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current status of the smart door lock. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_aa27c3aa04aaafebfd8c59830e28730b3}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classSmartDoorlock_a2a0b2e203c39d26d7fda50ab9c69173d}\label{classSmartDoorlock_a2a0b2e203c39d26d7fda50ab9c69173d}} 
+\index{SmartDoorlock@{SmartDoorlock}!performAction@{performAction}}
+\index{performAction@{performAction}!SmartDoorlock@{SmartDoorlock}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Smart\+Doorlock\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform an action on the smart door lock. 
+
+This method delegates the provided action to the current state of the smart door lock. Possible actions include locking or unlocking the door.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the smart door lock.\\
+\hline
+\end{DoxyParams}
+This method delegates the provided action to the current state of the smart door lock. Depending on the action, the state may toggle between locked and unlocked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed, such as \char`\"{}\+Lock\char`\"{} or \char`\"{}\+Unlock\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_a2f42c12c61a9e94d1e86f459c2ea2ab0}{Smart\+Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SmartDoorlock_8h}{Smart\+Doorlock.\+h}}\item 
+\mbox{\hyperlink{SmartDoorlock_8cpp}{Smart\+Doorlock.\+cpp}}\end{DoxyCompactItemize}
