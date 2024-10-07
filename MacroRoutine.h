@@ -10,6 +10,7 @@
 #include <iostream>
 
 /**
+ * @file MacroRoutine.h
  * @brief Class representing a macro routine that can execute a series of Devices.
  * 
  * This class allows users to create macros composed of multiple Device procedures, 

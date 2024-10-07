@@ -1,6 +1,7 @@
 #include "MotionSensor.h"
 
 /**
+ * @file MotionSensor.cpp
  * @brief Registers a device to the motion sensor.
  * 
  * This function adds a device to the list of devices that will be notified 

@@ -6,6 +6,8 @@
 std::map<std::string, MacroRoutine*> MacroRoutine::savedMacros;
 
 /**
+ * 
+ * @file MacroRoutine.cpp
  * @brief Constructs a MacroRoutine with a given name.
  * 
  * @param name Name of the macro routine.

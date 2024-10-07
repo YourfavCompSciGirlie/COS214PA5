@@ -4,6 +4,7 @@
 #include "Sensor.h"
 
 /**
+ * @file MotionSensor.h
  * @brief Concrete Subject class that represents a motion sensor in an Observer pattern.
  * 
  * The MotionSensor class is responsible for detecting motion and notifying all registered 

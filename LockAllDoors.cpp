@@ -1,6 +1,7 @@
 #include "LockAllDoors.h"
 
 /**
+ * @file LockAllDoors.cpp
  * @brief Constructs a LockAllDoors command.
  * 
  * This constructor initializes the LockAllDoors command with a reference to 

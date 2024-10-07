@@ -7,6 +7,8 @@
 #include "Device.h"
 
 /**
+ * 
+ * @file LockAllDoors.h
  * @brief Command to lock all doors in a smart door lock system.
  */
 class LockAllDoors : public Device

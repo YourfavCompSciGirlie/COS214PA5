@@ -2,6 +2,7 @@
 #include <iostream>
 
 /**
+ * @file Lights.h
  * @brief Concrete Light class that responds to sensor notifications by turning on/off.
  */
 class Lights : public Device 

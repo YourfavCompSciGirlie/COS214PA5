@@ -2,6 +2,7 @@
 
 
 /**
+ * @file Lights.cpp
  * @brief Responds to a sensor notification.
  * 
  * This function simulates the light turning on in response to movement detected by a sensor. 
