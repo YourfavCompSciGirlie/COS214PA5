@@ -1,4 +1,4 @@
-//Class defintion for Component 3  - Command(Receiver)
+// Class defintion for Component 3  - Command(Receiver)
 
 #ifndef SMARTLIGHTINGSYSTEM_H
 #define SMARTLIGHTINGSYSTEM_H
@@ -9,15 +9,15 @@
  * @file SmartLightingSystem.h
  * @brief Class representing a smart lighting system.
  */
-class SmartLightingSystem {
+class SmartLightingSystem
+{
 public:
     /**
      * @brief Turns off all lights in the smart lighting system.
-     * Simulates the process of turning off the lights with delays 
+     * Simulates the process of turning off the lights with delays
      * and status messages.
      */
     void turnOff();
 };
 
 #endif // SMARTLIGHTINGSYSTEM_H
-
