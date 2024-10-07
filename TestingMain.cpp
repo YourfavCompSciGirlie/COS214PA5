@@ -43,7 +43,7 @@ void testDevice(const std::shared_ptr<SmartDevice>& device, const std::string& a
     std::cout << "------------------------------------" << std::endl;
 }
 
-void statetesting() {
+void statetesting() { // Edited
     std::cout << "===== SMART HOME DEVICE TESTING =====\n" << std::endl;
 
     // Create smart devices
@@ -86,7 +86,9 @@ void statetesting() {
     std::cout << "\n===== TESTING COMPLETE =====\n" << std::endl;
 }
 
-void compositetesting() {
+
+
+void compositetesting() { // Edited
     // Create a house
     auto myHouse = std::make_shared<House>("My Smart House");
 
@@ -101,7 +103,7 @@ void compositetesting() {
     // Create smart devices
     auto smartLight = std::make_shared<SmartLight>();
     auto smartThermostat = std::make_shared<SmartThermostat>();
-    auto smartDoorLock = std::make_shared<SmartDoorlock>();
+    auto smartDoorLock = std::make_shared<SmartDoorlock>(); // Fixed spelling
 
     // Add devices to living room
     livingRoom->add(smartLight);
@@ -167,35 +169,56 @@ void compositetesting() {
 
     // Final check on the entire house status
     std::cout << "Final House Status: " << myHouse->getStatus() << "\n"; // Expect combined status
+
+    // Testing execute method for both House and Room
+    std::cout << "Executing commands for the House and Rooms:\n";
+    myHouse->execute(); // Should perform commands on all rooms
+    livingRoom->execute(); // Should perform commands on devices in living room
+
+    // Testing update method for both House and Room
+    std::cout << "Updating House and Room with sensor data:\n";
+    myHouse->update("TemperatureSensor", "25°C");
+    livingRoom->update("MotionSensor", "Detected");
 }
 
-void adaptertesting() {
+
+
+void adaptertesting() { // Edited
     // Create a LegacyThermostat
     std::shared_ptr<LegacyThermostat> legacyThermostat = std::make_shared<LegacyThermostat>();
     
     // Create a SmartThermostatIntegrator to adapt the legacy thermostat
     SmartThermostatIntegrator smartThermostat(legacyThermostat);
 
-    // Getting an initial temperature
+    // Initial state check
+    std::cout << "Testing initial temperature retrieval:" << std::endl;
     std::cout << "Current temperature: " << smartThermostat.getTemperature() << "°C" << std::endl;
 
-
-    // Setting the temperature
+    // Setting the initial temperature
     std::cout << "Setting initial temperature to 20.0°C..." << std::endl;
     smartThermostat.setTemperature(20.0f);
-    std::cout << "Current temperature: " << smartThermostat.getTemperature() << "°C" << std::endl;
+    std::cout << "Current temperature after setting: " << smartThermostat.getTemperature() << "°C" << std::endl;
 
     // Test getting the temperature
     std::cout << "Getting temperature: " << smartThermostat.getTemperature() << "°C" << std::endl;
 
-    // Multiple increase actions
+    // Test increasing temperature
+    std::cout << "Increasing temperature by 1°C..." << std::endl;
+    smartThermostat.performAction("IncreaseTemperature");
+    std::cout << "Current temperature after increase: " << smartThermostat.getTemperature() << "°C" << std::endl;
+
+    // Test decreasing temperature
+    std::cout << "Decreasing temperature by 1°C..." << std::endl;
+    smartThermostat.performAction("DecreaseTemperature");
+    std::cout << "Current temperature after decrease: " << smartThermostat.getTemperature() << "°C" << std::endl;
+
+    // Test multiple actions
     for (int i = 0; i < 3; ++i) {
         std::cout << "Increasing temperature by 1°C..." << std::endl;
         smartThermostat.performAction("IncreaseTemperature");
         std::cout << "Current temperature after increase: " << smartThermostat.getTemperature() << "°C" << std::endl;
     }
 
-    // Multiple decrease actions
     for (int i = 0; i < 2; ++i) {
         std::cout << "Decreasing temperature by 1°C..." << std::endl;
         smartThermostat.performAction("DecreaseTemperature");
@@ -205,7 +228,7 @@ void adaptertesting() {
     // Test invalid action
     try {
         std::cout << "Trying to perform an invalid action..." << std::endl;
-        smartThermostat.performAction("InvalidAction"); // No handling for this action
+        smartThermostat.performAction("InvalidAction"); // This should throw an exception
     } catch (const std::exception& e) {
         std::cout << "Caught an exception: " << e.what() << std::endl;
     }
@@ -215,126 +238,219 @@ void adaptertesting() {
 
     // Output the status of the SmartThermostatIntegrator
     std::cout << "Status: " << smartThermostat.getStatus() << std::endl;
+
+    // Test the update method with a sensor notification
+    std::cout << "Updating temperature from sensor to 25.0°C..." << std::endl;
+    smartThermostat.update("TemperatureSensor", "25.0");
+    std::cout << "Current temperature after sensor update: " << smartThermostat.getTemperature() << "°C" << std::endl;
+
+    // Test the execute method (assuming no specific command implemented yet)
+    std::cout << "Executing current command (no command implemented yet, should do nothing)..." << std::endl;
+    smartThermostat.execute(); // This will be empty for now, but tests the method call
+
+    // Final status check
+    std::cout << "Final status: " << smartThermostat.getStatus() << std::endl;
 }
 
-void testingCommand()
-{
-    
+
+
+void testingCommand() { // Edited
+    // Testing Smart Door Lock System
     std::cout << "=== Testing Smart Door Lock System ===" << std::endl;
     SmartDoorLockSystem doorLockSystem;
     LockAllDoors lockDoorsCommand(&doorLockSystem);
-    lockDoorsCommand.execute();  // This should lock all doors and print status
+    
+    // Test executing the command to lock all doors
+    lockDoorsCommand.execute();  
+    std::cout << "Current status after executing LockAllDoors: " << lockDoorsCommand.getStatus() << std::endl;
+
+    // Test updating with sensor data
+    std::cout << "Updating door lock system status..." << std::endl;
+    lockDoorsCommand.update("DoorSensor", "All doors locked");
+    std::cout << "Current status after update: " << lockDoorsCommand.getStatus() << std::endl;
+
+    // Testing performAction, getStatus, and getDeviceType methods for LockAllDoors
+    std::cout << "\nTesting performAction, getStatus, getDeviceType for LockAllDoors..." << std::endl;
+    lockDoorsCommand.performAction("Lock all doors");
+    std::cout << "Action performed: Lock all doors\n";
+    std::cout << "LockAllDoors Status: " << lockDoorsCommand.getStatus() << std::endl;
+    std::cout << "LockAllDoors Device Type: " << lockDoorsCommand.getDeviceType() << std::endl;
 
     std::cout << std::endl;
 
-    
+    // Testing Smart Lighting System
     std::cout << "=== Testing Smart Lighting System ===" << std::endl;
     SmartLightingSystem lightingSystem;
     TurnOffAllLights turnOffLightsCommand(&lightingSystem);
-    turnOffLightsCommand.execute();  // This should turn off all lights and print status
+    
+    // Test executing the command to turn off all lights
+    turnOffLightsCommand.execute();  
+    std::cout << "Current status after executing TurnOffAllLights: " << turnOffLightsCommand.getStatus() << std::endl;
+
+    // Test updating with sensor data
+    std::cout << "Updating lighting system status..." << std::endl;
+    turnOffLightsCommand.update("LightingSensor", "All lights turned off");
+    std::cout << "Current status after update: " << turnOffLightsCommand.getStatus() << std::endl;
+
+    // Testing performAction, getStatus, and getDeviceType methods for TurnOffAllLights
+    std::cout << "\nTesting performAction, getStatus, getDeviceType for TurnOffAllLights..." << std::endl;
+    turnOffLightsCommand.performAction("Turn off all lights");
+    std::cout << "Action performed: Turn off all lights\n";
+    std::cout << "TurnOffAllLights Status: " << turnOffLightsCommand.getStatus() << std::endl;
+    std::cout << "TurnOffAllLights Device Type: " << turnOffLightsCommand.getDeviceType() << std::endl;
 
     std::cout << std::endl;
 
-   
+    // Testing Macro Routine
     std::cout << "=== Testing Macro Routine ===" << std::endl;
     MacroRoutine macro("Night Routine");
 
-    
+    // Adding procedures to the macro
     macro.addProcedure(&lockDoorsCommand);
     macro.addProcedure(&turnOffLightsCommand);
+    std::cout << "Added procedures to the macro." << std::endl;
 
-    
+    // Saving the macro
     MacroRoutine::saveMacro("Night Routine", &macro);
-
-    
+    std::cout << "Saved macro: Night Routine." << std::endl;
     MacroRoutine::listSavedMacros();
 
     std::cout << std::endl;
 
-    
+    // Testing Executing Macro
+    std::cout << "=== Testing Executing the Macro Routine ===" << std::endl;
+    std::cout << "Executing Night Routine..." << std::endl;
+    macro.execute();
+
+    std::cout << std::endl;
+
+    // Testing Loaded Macro
     std::cout << "=== Testing Loaded Macro ===" << std::endl;
-    std::cout << "\nLoading and executing the saved Goodnight Routine..." << std::endl;
-    MacroRoutine* loadedMacro = MacroRoutine::loadMacro("Goodnight");
+    std::cout << "Loading and executing the saved Night Routine..." << std::endl;
+    MacroRoutine* loadedMacro = MacroRoutine::loadMacro("Night Routine");
     if (loadedMacro) {
         loadedMacro->execute();
+        std::cout << "Executed the loaded macro: " << std::endl;
+    } else {
+        std::cout << "Failed to load macro." << std::endl;
     }
 
     std::cout << std::endl;
 
-   
+    // Testing Removing Procedures from Macro
     std::cout << "=== Testing Removing Procedures from Macro ===" << std::endl;
     macro.removeProcedure(&lockDoorsCommand);
     macro.removeProcedure(&turnOffLightsCommand);
+    std::cout << "Removed procedures from the macro." << std::endl;
 
     // Ensure macros still list correctly after removal
     MacroRoutine::listSavedMacros();
 }
 
-void testingObserver()
-{
+
+
+void testingObserver() { // Edited
+    // Testing Motion Sensor
     std::cout << "----- Testing Motion Sensor -----\n";
 
-    
     MotionSensor motionSensor;
     Lights light;
     Alarm alarm;
 
-    
+    // Adding devices to the motion sensor
     motionSensor.addDevice(&light);
     motionSensor.addDevice(&alarm);
 
-   
     std::cout << "\nTesting motion detected...\n";
-    motionSensor.detectMotion();  // Expect both SmartLight and SmartAlarm to react
+    motionSensor.detectMotion();  // Expect both Light and Alarm to react (execute, update, notify)
 
-   
+    std::cout << "\nTesting notifyDevices function for Motion Sensor...\n";
+    motionSensor.notifyDevices();  // Expect both devices to be notified
+
     std::cout << "\nTesting motion cleared...\n";
-    motionSensor.clearMotion();  // Expect both SmartLight and SmartAlarm to react
+    motionSensor.clearMotion();  // Expect both Light and Alarm to react (execute, update)
 
-    
-    std::cout << "\nTesting after removing SmartAlarm...\n";
+    std::cout << "\nTesting after removing Alarm...\n";
     motionSensor.removeDevice(&alarm);
-    motionSensor.detectMotion();  // Expect only SmartLight to react
+    motionSensor.detectMotion();  // Expect only Light to react (execute, update)
 
+    std::cout << std::endl;
 
-    std::cout << "\n----- Testing Temperature Sensor -----\n";
+    // Testing Temperature Sensor
+    std::cout << "----- Testing Temperature Sensor -----\n";
 
-    
     TemperatureSensor tempSensor;
     Thermostat thermostat;
 
-    
+    // Adding device to the temperature sensor
     tempSensor.addDevice(&thermostat);
 
-    
     std::cout << "\nTesting high temperature detected...\n";
-    tempSensor.detectHighTemperature();  // Expect Thermostat to react to high temperature
+    tempSensor.detectHighTemperature();  // Expect Thermostat to react (execute, update)
 
-    
+    std::cout << "\nTesting notifyDevices function for Temperature Sensor...\n";
+    tempSensor.notifyDevices();  // Expect Thermostat to be notified
+
     std::cout << "\nTesting low temperature detected...\n";
-    tempSensor.detectLowTemperature(); 
+    tempSensor.detectLowTemperature();  // Ensure Thermostat reacts (execute, update)
 
-    
+    std::cout << std::endl;
 
-    std::cout << "\n----- Testing Humidity Sensor -----\n";
+    // Testing Humidity Sensor
+    std::cout << "----- Testing Humidity Sensor -----\n";
 
-    
     HumiditySensor humiditySensor;
     Dehumidifier dehumidifier;
 
-   
+    // Adding device to the humidity sensor
     humiditySensor.addDevice(&dehumidifier);
 
-    
     std::cout << "\nTesting high humidity detected...\n";
-    humiditySensor.detectHighHumidity();  // Expect Dehumidifier to react to high humidity
+    humiditySensor.detectHighHumidity();  // Expect Dehumidifier to react (execute, update)
 
-    
+    std::cout << "\nTesting notifyDevices function for Humidity Sensor...\n";
+    humiditySensor.notifyDevices();  // Expect Dehumidifier to be notified
+
     std::cout << "\nTesting low humidity detected...\n";
-    humiditySensor.detectLowHumidity(); 
+    humiditySensor.detectLowHumidity();  // Ensure Dehumidifier reacts (execute, update)
 
+    std::cout << std::endl;
 
+    // Testing performAction, getStatus, getDeviceType methods
+    std::cout << "----- Testing Devices -----\n";
+
+    // Testing Alarm
+    std::cout << "Testing Alarm...\n";
+    alarm.performAction("Activate");
+    std::cout << "Alarm Status: " << alarm.getStatus() << std::endl;
+    std::cout << "Device Type: " << alarm.getDeviceType() << std::endl;
+    alarm.execute();
+    std::cout << std::endl;
+
+    // Testing Light
+    std::cout << "Testing Light...\n";
+    light.performAction("Turn On");
+    std::cout << "Light Status: " << light.getStatus() << std::endl;
+    std::cout << "Device Type: " << light.getDeviceType() << std::endl;
+    light.execute();
+    std::cout << std::endl;
+
+    // Testing Thermostat
+    std::cout << "Testing Thermostat...\n";
+    thermostat.performAction("Set to 22 degrees");
+    std::cout << "Thermostat Status: " << thermostat.getStatus() << std::endl;
+    std::cout << "Device Type: " << thermostat.getDeviceType() << std::endl;
+    thermostat.execute();
+    std::cout << std::endl;
+
+    // Testing Dehumidifier
+    std::cout << "Testing Dehumidifier...\n";
+    dehumidifier.performAction("Activate");
+    std::cout << "Dehumidifier Status: " << dehumidifier.getStatus() << std::endl;
+    std::cout << "Device Type: " << dehumidifier.getDeviceType() << std::endl;
+    dehumidifier.execute();
 }
+
 
 
 
@@ -344,15 +460,12 @@ int main () {
     statetesting();
     std::cout << "TESTING COMPOSITE DESIGN PATTERN\n" << std::endl;
     compositetesting();
-    std::cout << "TESTING ADAPTER DESIGN PATTERN\n" << std::endl;
+    std::cout << "\nTESTING ADAPTER DESIGN PATTERN\n" << std::endl;
     adaptertesting();
-    std::cout << "TESTING COMMAND DESIGN PATTERN\n" << std::endl;
+    std::cout << "\nTESTING COMMAND DESIGN PATTERN\n" << std::endl;
     testingCommand();
-    std::cout << "TESTING OBSERVER DESIGN PATTERN\n" << std::endl;
+    std::cout << "\nTESTING OBSERVER DESIGN PATTERN\n" << std::endl;
     testingObserver();
-
-    std::cout << "ADDED TESTING FOR COVERAGE " << std::endl;
-
 
     return 0;
 }
