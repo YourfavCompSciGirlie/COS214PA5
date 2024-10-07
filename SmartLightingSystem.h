@@ -6,6 +6,7 @@
 #include <iostream>
 
 /**
+ * @file SmartLightingSystem.h
  * @brief Class representing a smart lighting system.
  */
 class SmartLightingSystem {

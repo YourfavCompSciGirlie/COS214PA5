@@ -3,6 +3,7 @@
 #include <chrono>   // for std::chrono::seconds
 
 /**
+ * @file SmartLightingSystem.cpp
  * @brief Turns off all lights in the smart lighting system.
  * Simulates the process of turning off the lights with status messages 
  * and delays to represent the operation.

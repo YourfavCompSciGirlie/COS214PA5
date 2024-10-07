@@ -1,6 +1,7 @@
 #include "TemperatureSensor.h"
 
 /**
+ * @file TemperatureSensor.cpp
  * @brief Adds a device to the list of observers.
  * 
  * This function registers a device (observer) to be notified of changes in temperature.

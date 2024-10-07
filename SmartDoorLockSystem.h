@@ -6,6 +6,7 @@
 #include <iostream>
 
 /**
+ * @file SmartDoorLockSystem.h
  * @brief Class representing a smart door lock system.
  */
 class SmartDoorLockSystem {

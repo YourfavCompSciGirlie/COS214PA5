@@ -3,6 +3,7 @@
 #include <chrono>   // for std::chrono::seconds
 
 /**
+ * @file SmartDoorLockSystem.cpp
  * @brief Locks all doors in the smart door lock system.
  * Simulates the locking process with status messages and delays 
  * to represent the operation.

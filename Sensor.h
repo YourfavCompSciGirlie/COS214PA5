@@ -6,6 +6,7 @@
 #include "Device.h"
 
 /**
+ * @file Sensor.h
  * @brief Abstract Subject class in the Observer pattern.
  * 
  * The Sensor class acts as a base class for concrete sensor types (e.g., motion sensor, humidity sensor).

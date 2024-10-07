@@ -6,6 +6,7 @@
 #include "Sensor.h"
 
 /**
+ * @file TemperatureSensor.h
  * @brief The TemperatureSensor class is a concrete subject in the Observer pattern.
  * 
  * This class is responsible for monitoring temperature changes and notifying
