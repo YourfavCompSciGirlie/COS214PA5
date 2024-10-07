@@ -1,0 +1,225 @@
+\hypertarget{classDevice}{}\doxysection{Device Class Reference}
+\label{classDevice}\index{Device@{Device}}
+
+
+Abstract base class for all devices in the composite structure.  
+
+
+
+
+{\ttfamily \#include $<$Device.\+h$>$}
+
+
+
+Inheritance diagram for Device\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{perform\+Action}} (const std\+::string \&action)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to perform an action on the device. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{get\+Status}} () const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to retrieve the current status of the device. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{get\+Device\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to retrieve the device type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classDevice_a6fef4f7180512c7517c9696cd95e503a}{$\sim$\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \mbox{\hyperlink{classDevice}{Device}} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a997450da944e3164e860a962fd398f6e}{add}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$ device)
+\begin{DoxyCompactList}\small\item\em Virtual method to add a child device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a3819ad486a62cdfb5e28ac55d07caebb}{remove}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$ device)
+\begin{DoxyCompactList}\small\item\em Virtual method to remove a child device. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$ \mbox{\hyperlink{classDevice_a8167b4cfb6b16d86729d9c61fbeb9976}{get\+Child}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Virtual method to get a child device by index. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classDevice_af3125e9431b731e44eb53715119b9364}{get\+Room\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Virtual method to retrieve the name of the room the device is in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDevice_afc33b28abdc9f4e7709484a5571dac97}\label{classDevice_afc33b28abdc9f4e7709484a5571dac97}} 
+virtual void {\bfseries execute} ()=0
+\item 
+\mbox{\Hypertarget{classDevice_ac02479229c1d346fe208388f7c90d22e}\label{classDevice_ac02479229c1d346fe208388f7c90d22e}} 
+virtual void {\bfseries update} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all devices in the composite structure. 
+
+The \mbox{\hyperlink{classDevice}{Device}} class serves as the Component in the Composite Pattern, providing common functionality for both leaf and composite nodes. It defines abstract methods for performing actions, retrieving status, and managing device types. Additionally, it provides virtual methods for adding, removing, and retrieving child devices, which can be overridden by composite classes (e.\+g., \mbox{\hyperlink{classRoom}{Room}}, \mbox{\hyperlink{classHouse}{House}}). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDevice_a6fef4f7180512c7517c9696cd95e503a}\label{classDevice_a6fef4f7180512c7517c9696cd95e503a}} 
+\index{Device@{Device}!````~Device@{$\sim$Device}}
+\index{````~Device@{$\sim$Device}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{$\sim$Device()}{~Device()}}
+{\footnotesize\ttfamily virtual Device\+::$\sim$\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for the \mbox{\hyperlink{classDevice}{Device}} class. 
+
+Ensures that derived classes are properly destroyed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDevice_a997450da944e3164e860a962fd398f6e}\label{classDevice_a997450da944e3164e860a962fd398f6e}} 
+\index{Device@{Device}!add@{add}}
+\index{add@{add}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily virtual void Device\+::add (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to add a child device. 
+
+This method can be overridden by composite classes to add a device to a collection (e.\+g., adding a \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} to a \mbox{\hyperlink{classRoom}{Room}}). The default implementation throws an exception, as leaf devices do not support this operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the device to be added. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the operation is not supported by the device (i.\+e., for leaf nodes). \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classHouse_ad309068c6c5c71820b810eda5b45a524}{House}}, and \mbox{\hyperlink{classRoom_a6da2b23d802607410d40ef7e582789df}{Room}}.
+
+\mbox{\Hypertarget{classDevice_a8167b4cfb6b16d86729d9c61fbeb9976}\label{classDevice_a8167b4cfb6b16d86729d9c61fbeb9976}} 
+\index{Device@{Device}!getChild@{getChild}}
+\index{getChild@{getChild}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classDevice}{Device}}$>$ Device\+::get\+Child (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to get a child device by index. 
+
+This method can be overridden by composite classes to retrieve a child device from a collection. The default implementation throws an exception, as leaf devices do not support this operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the child device. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the child device at the specified index. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the operation is not supported by the device (i.\+e., for leaf nodes). \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classRoom_a4d3bf9801ecbebf4f838b435f2866358}{Room}}, and \mbox{\hyperlink{classHouse_a9bafb52a63cef3904c0e3f2b3e24a580}{House}}.
+
+\mbox{\Hypertarget{classDevice_a480fd945432caba3eba016ef14efe276}\label{classDevice_a480fd945432caba3eba016ef14efe276}} 
+\index{Device@{Device}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily virtual std\+::string Device\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to retrieve the device type. 
+
+This method must be implemented by derived classes to return the type of the device (e.\+g., \char`\"{}\+Smart\+Light\char`\"{}).
+
+\begin{DoxyReturn}{Returns}
+A string representing the device type. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTurnOffAllLights_a372c2fda637b7fcebd8eb209f1e8e4c3}{Turn\+Off\+All\+Lights}}, \mbox{\hyperlink{classThermostat_a4708d00554ad6afe224f087e4bbaf078}{Thermostat}}, \mbox{\hyperlink{classSmartThermostatIntegrator_a13ea2faf27be4ede86cff5c91af506c5}{Smart\+Thermostat\+Integrator}}, \mbox{\hyperlink{classSmartThermostat_a3ade09f909c966fea0ed425fdf0695aa}{Smart\+Thermostat}}, \mbox{\hyperlink{classSmartLight_adf4a924ef3a1e200f97150b262c85f92}{Smart\+Light}}, \mbox{\hyperlink{classSmartDoorlock_a7f4b1daa1be6e75e934cffd8da787928}{Smart\+Doorlock}}, \mbox{\hyperlink{classRoom_a96c22b2590109ec4ce085d7ce71364c4}{Room}}, \mbox{\hyperlink{classLockAllDoors_a0dbb6e7e7809f1a6674da001cd2141ea}{Lock\+All\+Doors}}, \mbox{\hyperlink{classLights_a39da75e6e515aba2019405b3f2a135d3}{Lights}}, \mbox{\hyperlink{classHouse_a1019ecbff0b41247a6e3ca2420081a95}{House}}, \mbox{\hyperlink{classDehumidifier_ad3cd60c8569cbcbaa7a3a07ffd08c5cd}{Dehumidifier}}, \mbox{\hyperlink{classAlarm_a49b45c29a4ebc05552a47c690dab0957}{Alarm}}, and \mbox{\hyperlink{classSmartDevice_ae6e419f8c43ec9c3f25d6e5dc3e3ccc4}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classDevice_af3125e9431b731e44eb53715119b9364}\label{classDevice_af3125e9431b731e44eb53715119b9364}} 
+\index{Device@{Device}!getRoomName@{getRoomName}}
+\index{getRoomName@{getRoomName}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getRoomName()}{getRoomName()}}
+{\footnotesize\ttfamily virtual std\+::string Device\+::get\+Room\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to retrieve the name of the room the device is in. 
+
+The default implementation returns \char`\"{}\+Room\char`\"{}, which can be overridden by composite classes such as \mbox{\hyperlink{classRoom}{Room}} to return the specific room name.
+
+\begin{DoxyReturn}{Returns}
+A string representing the room name. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classRoom_a83744194213992dcae40a12e7fbc1baa}{Room}}.
+
+\mbox{\Hypertarget{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}\label{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}} 
+\index{Device@{Device}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily virtual std\+::string Device\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to retrieve the current status of the device. 
+
+This method must be implemented by derived classes to return the status of the device (e.\+g., on/off).
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status of the device. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTurnOffAllLights_a25780381d8ba8e8e57b17b353c77e5e3}{Turn\+Off\+All\+Lights}}, \mbox{\hyperlink{classThermostat_a39c9935af657bf40969f35421842f753}{Thermostat}}, \mbox{\hyperlink{classSmartThermostatIntegrator_a419799006c511ff6b4d182781deb5b76}{Smart\+Thermostat\+Integrator}}, \mbox{\hyperlink{classSmartThermostat_a60bffba5135886647c554ab45651e5bb}{Smart\+Thermostat}}, \mbox{\hyperlink{classSmartLight_aa5983e332551cc021845540e6f335689}{Smart\+Light}}, \mbox{\hyperlink{classSmartDoorlock_aac79c7e177838f4c36fd280616817d97}{Smart\+Doorlock}}, \mbox{\hyperlink{classRoom_a8ef31fe416eb6154f4ada7c3cdbee87a}{Room}}, \mbox{\hyperlink{classLockAllDoors_a21c3ba43678b62cf13df0a6da09e122e}{Lock\+All\+Doors}}, \mbox{\hyperlink{classLights_af16c1f72a904233c05c4028e96b0515d}{Lights}}, \mbox{\hyperlink{classHouse_a34afce7954262823cf29da4ab36246aa}{House}}, \mbox{\hyperlink{classDehumidifier_a18397fadce54e6f70275bbfbb9414d4d}{Dehumidifier}}, \mbox{\hyperlink{classAlarm_abfbf0e39c57ae097e9b199a2162bca06}{Alarm}}, and \mbox{\hyperlink{classSmartDevice_aa27c3aa04aaafebfd8c59830e28730b3}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}\label{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}} 
+\index{Device@{Device}!performAction@{performAction}}
+\index{performAction@{performAction}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily virtual void Device\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to perform an action on the device. 
+
+This method must be implemented by derived classes to perform an action (e.\+g., turning a device on/off).
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & A string representing the action to be performed on the device. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTurnOffAllLights_a9786a847bd7b5f743be22d2b544aa80f}{Turn\+Off\+All\+Lights}}, \mbox{\hyperlink{classThermostat_a216f08f8efeaecda81ac9e3a0191365c}{Thermostat}}, \mbox{\hyperlink{classSmartThermostatIntegrator_a7486f146305ff6370879d8339ccc03cc}{Smart\+Thermostat\+Integrator}}, \mbox{\hyperlink{classSmartThermostat_a319b2a22636d9e566872d626a805e5b8}{Smart\+Thermostat}}, \mbox{\hyperlink{classSmartLight_a2c17834c6005c5cbe070abb292f9a625}{Smart\+Light}}, \mbox{\hyperlink{classSmartDoorlock_a2a0b2e203c39d26d7fda50ab9c69173d}{Smart\+Doorlock}}, \mbox{\hyperlink{classRoom_abaa2c5f450f1cb9a7bfce3fe8aa63c82}{Room}}, \mbox{\hyperlink{classLockAllDoors_a3745a66bfa5a779ff480ff9906c3f22d}{Lock\+All\+Doors}}, \mbox{\hyperlink{classLights_a5474f5fbbb108bc596ec074ac9e2423d}{Lights}}, \mbox{\hyperlink{classHouse_a4d66a13d42162716917fe1eda8dcf040}{House}}, \mbox{\hyperlink{classDehumidifier_a499817aab5d3af055607397b60710e64}{Dehumidifier}}, \mbox{\hyperlink{classAlarm_aff0ab6eaa8b057d7fd7d71a92aa65824}{Alarm}}, and \mbox{\hyperlink{classSmartDevice_a2f42c12c61a9e94d1e86f459c2ea2ab0}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classDevice_a3819ad486a62cdfb5e28ac55d07caebb}\label{classDevice_a3819ad486a62cdfb5e28ac55d07caebb}} 
+\index{Device@{Device}!remove@{remove}}
+\index{remove@{remove}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily virtual void Device\+::remove (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to remove a child device. 
+
+This method can be overridden by composite classes to remove a device from a collection. The default implementation throws an exception, as leaf devices do not support this operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the device to be removed. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the operation is not supported by the device (i.\+e., for leaf nodes). \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classHouse_a5b0ee446b523c7adf9e17b4f7da13f2d}{House}}, and \mbox{\hyperlink{classRoom_a22ebbdc0b76e0e9e796b12b12b1e67bf}{Room}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Device_8h}{Device.\+h}}\end{DoxyCompactItemize}

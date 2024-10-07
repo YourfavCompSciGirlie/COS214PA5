@@ -1,0 +1,19 @@
+digraph "DeviceState"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="DeviceState",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Abstract base class representing a generic state of a smart device."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CoolingState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoolingState.html",tooltip="Concrete state representing the \"Cooling\" state of a smart device."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="HeatingState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHeatingState.html",tooltip="Concrete state representing the \"Heating\" state of a smart device."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="LockedState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLockedState.html",tooltip="Concrete state representing the \"Locked\" state of a smart device."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="OffState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOffState.html",tooltip="Concrete state representing the \"Off\" state of a smart device."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="OnState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOnState.html",tooltip="Concrete state representing the \"On\" state of a smart device."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnlockedState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUnlockedState.html",tooltip="Concrete state representing the \"Unlocked\" state of a smart device."];
+}

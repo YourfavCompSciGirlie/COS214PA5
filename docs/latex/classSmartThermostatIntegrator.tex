@@ -1,0 +1,205 @@
+\hypertarget{classSmartThermostatIntegrator}{}\doxysection{Smart\+Thermostat\+Integrator Class Reference}
+\label{classSmartThermostatIntegrator}\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+
+
+Integrates a legacy thermostat into the smart home system.  
+
+
+
+
+{\ttfamily \#include $<$Smart\+Thermostat\+Integrator.\+h$>$}
+
+
+
+Inheritance diagram for Smart\+Thermostat\+Integrator\+:
+% FIG 0
+
+
+Collaboration diagram for Smart\+Thermostat\+Integrator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSmartThermostatIntegrator_a4b1d98a156ac3310126f6288eb8c0eb5}{Smart\+Thermostat\+Integrator}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classLegacyThermostat}{Legacy\+Thermostat}} $>$ legacy\+Thermostat)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the \mbox{\hyperlink{classSmartThermostatIntegrator}{Smart\+Thermostat\+Integrator}} with a legacy thermostat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartThermostatIntegrator_a412bdf22aeb522e9a8b3e3b30f185b92}{set\+Temperature}} (float temp)
+\begin{DoxyCompactList}\small\item\em Sets the temperature on the integrated legacy thermostat. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSmartThermostatIntegrator_a3eb5588410b817ad8e68f6d7f5a28c4f}{get\+Temperature}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current temperature reading from the integrated legacy thermostat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartThermostatIntegrator_a7486f146305ff6370879d8339ccc03cc}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Performs an action on the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSmartThermostatIntegrator_a419799006c511ff6b4d182781deb5b76}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the status of the \mbox{\hyperlink{classSmartThermostatIntegrator}{Smart\+Thermostat\+Integrator}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSmartThermostatIntegrator_a13ea2faf27be4ede86cff5c91af506c5}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the type of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartThermostatIntegrator_af902e9955b83e7b34ff31153a2806e11}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the current command on the device (Command pattern). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartThermostatIntegrator_abc2801f0f72ef0adb2f47a0550d84d32}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data) override
+\begin{DoxyCompactList}\small\item\em Updates the smart device in response to sensor notifications (Observer pattern). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Integrates a legacy thermostat into the smart home system. 
+
+The \mbox{\hyperlink{classSmartThermostatIntegrator}{Smart\+Thermostat\+Integrator}} class adapts the legacy thermostat\textquotesingle{}s interface to the new smart device interface, allowing smart devices to interact with legacy thermostats. It provides methods to set and get temperature and perform actions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSmartThermostatIntegrator_a4b1d98a156ac3310126f6288eb8c0eb5}\label{classSmartThermostatIntegrator_a4b1d98a156ac3310126f6288eb8c0eb5}} 
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\doxysubsubsection{\texorpdfstring{SmartThermostatIntegrator()}{SmartThermostatIntegrator()}}
+{\footnotesize\ttfamily Smart\+Thermostat\+Integrator\+::\+Smart\+Thermostat\+Integrator (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classLegacyThermostat}{Legacy\+Thermostat}} $>$}]{legacy\+Thermostat }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the \mbox{\hyperlink{classSmartThermostatIntegrator}{Smart\+Thermostat\+Integrator}} with a legacy thermostat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em legacy\+Thermostat} & Shared pointer to the legacy thermostat. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSmartThermostatIntegrator_af902e9955b83e7b34ff31153a2806e11}\label{classSmartThermostatIntegrator_af902e9955b83e7b34ff31153a2806e11}} 
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!execute@{execute}}
+\index{execute@{execute}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Smart\+Thermostat\+Integrator\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the current command on the device (Command pattern). 
+
+This method will be implemented as part of command execution for the device. 
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+\mbox{\Hypertarget{classSmartThermostatIntegrator_a13ea2faf27be4ede86cff5c91af506c5}\label{classSmartThermostatIntegrator_a13ea2faf27be4ede86cff5c91af506c5}} 
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Smart\+Thermostat\+Integrator\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the type of the device. 
+
+This method returns the type of the device as a string.
+
+\begin{DoxyReturn}{Returns}
+A string representing the device type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+\mbox{\Hypertarget{classSmartThermostatIntegrator_a419799006c511ff6b4d182781deb5b76}\label{classSmartThermostatIntegrator_a419799006c511ff6b4d182781deb5b76}} 
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Smart\+Thermostat\+Integrator\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the status of the \mbox{\hyperlink{classSmartThermostatIntegrator}{Smart\+Thermostat\+Integrator}}. 
+
+This method returns a string representing the current status of the \mbox{\hyperlink{classSmartThermostatIntegrator}{Smart\+Thermostat\+Integrator}}, including the current temperature.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+\mbox{\Hypertarget{classSmartThermostatIntegrator_a3eb5588410b817ad8e68f6d7f5a28c4f}\label{classSmartThermostatIntegrator_a3eb5588410b817ad8e68f6d7f5a28c4f}} 
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily float Smart\+Thermostat\+Integrator\+::get\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current temperature reading from the integrated legacy thermostat. 
+
+This method retrieves the current temperature from the legacy thermostat.
+
+\begin{DoxyReturn}{Returns}
+The current temperature (in degrees Celsius). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSmartThermostatIntegrator_a7486f146305ff6370879d8339ccc03cc}\label{classSmartThermostatIntegrator_a7486f146305ff6370879d8339ccc03cc}} 
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!performAction@{performAction}}
+\index{performAction@{performAction}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Smart\+Thermostat\+Integrator\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs an action on the device. 
+
+This method handles actions such as increasing or decreasing the temperature of the legacy thermostat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to perform, such as \char`\"{}\+Increase\+Temperature\char`\"{} or \char`\"{}\+Decrease\+Temperature\char`\"{}.\\
+\hline
+\end{DoxyParams}
+This method handles actions such as increasing or decreasing the temperature of the legacy thermostat based on the provided action.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to perform, such as \char`\"{}\+Increase\+Temperature\char`\"{} or \char`\"{}\+Decrease\+Temperature\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+\mbox{\Hypertarget{classSmartThermostatIntegrator_a412bdf22aeb522e9a8b3e3b30f185b92}\label{classSmartThermostatIntegrator_a412bdf22aeb522e9a8b3e3b30f185b92}} 
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void Smart\+Thermostat\+Integrator\+::set\+Temperature (\begin{DoxyParamCaption}\item[{float}]{temp }\end{DoxyParamCaption})}
+
+
+
+Sets the temperature on the integrated legacy thermostat. 
+
+This method delegates the temperature setting to the legacy thermostat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & The temperature to set (in degrees Celsius). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSmartThermostatIntegrator_abc2801f0f72ef0adb2f47a0550d84d32}\label{classSmartThermostatIntegrator_abc2801f0f72ef0adb2f47a0550d84d32}} 
+\index{SmartThermostatIntegrator@{SmartThermostatIntegrator}!update@{update}}
+\index{update@{update}!SmartThermostatIntegrator@{SmartThermostatIntegrator}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Smart\+Thermostat\+Integrator\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the smart device in response to sensor notifications (Observer pattern). 
+
+This method will be implemented to handle sensor updates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & The type of the sensor (e.\+g., \char`\"{}\+Temperature\+Sensor\char`\"{}). \\
+\hline
+{\em sensor\+Data} & The data received from the sensor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SmartThermostatIntegrator_8h}{Smart\+Thermostat\+Integrator.\+h}}\item 
+\mbox{\hyperlink{SmartThermostatIntegrator_8cpp}{Smart\+Thermostat\+Integrator.\+cpp}}\end{DoxyCompactItemize}

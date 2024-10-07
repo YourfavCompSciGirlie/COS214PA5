@@ -1,0 +1,136 @@
+\hypertarget{classSmartLight}{}\doxysection{Smart\+Light Class Reference}
+\label{classSmartLight}\index{SmartLight@{SmartLight}}
+
+
+A concrete class representing a smart light device.  
+
+
+
+
+{\ttfamily \#include $<$Smart\+Light.\+h$>$}
+
+
+
+Inheritance diagram for Smart\+Light\+:
+% FIG 0
+
+
+Collaboration diagram for Smart\+Light\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSmartLight_a71394846fb08bd03e951826624ee121a}{Smart\+Light}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classSmartLight}{Smart\+Light}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartLight_a2c17834c6005c5cbe070abb292f9a625}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Perform an action on the smart light. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSmartLight_aa5983e332551cc021845540e6f335689}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current status of the smart light. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSmartLight_adf4a924ef3a1e200f97150b262c85f92}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the device type of the smart light. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A concrete class representing a smart light device. 
+
+The \mbox{\hyperlink{classSmartLight}{Smart\+Light}} class inherits from \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} and represents a single smart light. It implements methods for performing actions and getting the current status based on the state pattern. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSmartLight_a71394846fb08bd03e951826624ee121a}\label{classSmartLight_a71394846fb08bd03e951826624ee121a}} 
+\index{SmartLight@{SmartLight}!SmartLight@{SmartLight}}
+\index{SmartLight@{SmartLight}!SmartLight@{SmartLight}}
+\doxysubsubsection{\texorpdfstring{SmartLight()}{SmartLight()}}
+{\footnotesize\ttfamily Smart\+Light\+::\+Smart\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classSmartLight}{Smart\+Light}} object. 
+
+The constructor initializes the smart light with an \char`\"{}off\char`\"{} state.
+
+Initializes a new \mbox{\hyperlink{classSmartLight}{Smart\+Light}} device and sets its initial state to \char`\"{}off\char`\"{} by associating it with the \mbox{\hyperlink{classOffState}{Off\+State}} object. The device can transition between states using the perform\+Action method. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSmartLight_adf4a924ef3a1e200f97150b262c85f92}\label{classSmartLight_adf4a924ef3a1e200f97150b262c85f92}} 
+\index{SmartLight@{SmartLight}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!SmartLight@{SmartLight}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Smart\+Light\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the device type of the smart light. 
+
+This method returns the type of device, which is \char`\"{}\+Smart\+Light\char`\"{} for this class.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The string \char`\"{}\+Smart\+Light\char`\"{}.
+\end{DoxyReturn}
+This method returns a string indicating the type of device, which is \char`\"{}\+Smart\+Light\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The string \char`\"{}\+Smart\+Light\char`\"{}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_ae6e419f8c43ec9c3f25d6e5dc3e3ccc4}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classSmartLight_aa5983e332551cc021845540e6f335689}\label{classSmartLight_aa5983e332551cc021845540e6f335689}} 
+\index{SmartLight@{SmartLight}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!SmartLight@{SmartLight}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Smart\+Light\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current status of the smart light. 
+
+This method retrieves the status of the smart light based on its current state. The status could indicate whether the light is on or off.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current status of the smart light (e.\+g., \char`\"{}on\char`\"{} or \char`\"{}off\char`\"{}).
+\end{DoxyReturn}
+This method retrieves and returns the current status of the smart light, which is determined by the device\textquotesingle{}s current state. The possible statuses include \char`\"{}on\char`\"{} or \char`\"{}off\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current status of the smart light. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_aa27c3aa04aaafebfd8c59830e28730b3}{Smart\+Device}}.
+
+\mbox{\Hypertarget{classSmartLight_a2c17834c6005c5cbe070abb292f9a625}\label{classSmartLight_a2c17834c6005c5cbe070abb292f9a625}} 
+\index{SmartLight@{SmartLight}!performAction@{performAction}}
+\index{performAction@{performAction}!SmartLight@{SmartLight}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Smart\+Light\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform an action on the smart light. 
+
+This method delegates the action to the current state of the smart light. Possible actions include toggling the state from on to off or vice versa.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the smart light.\\
+\hline
+\end{DoxyParams}
+This method delegates the provided action to the current state of the smart light. Depending on the action, the state may toggle between on and off. The state pattern is used to determine the appropriate response based on the current state of the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed, such as \char`\"{}\+Toggle\+On\char`\"{} or \char`\"{}\+Toggle\+Off\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classSmartDevice_a2f42c12c61a9e94d1e86f459c2ea2ab0}{Smart\+Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SmartLight_8h}{Smart\+Light.\+h}}\item 
+\mbox{\hyperlink{SmartLight_8cpp}{Smart\+Light.\+cpp}}\end{DoxyCompactItemize}

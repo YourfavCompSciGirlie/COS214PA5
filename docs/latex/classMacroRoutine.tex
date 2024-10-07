@@ -1,0 +1,197 @@
+\hypertarget{classMacroRoutine}{}\doxysection{Macro\+Routine Class Reference}
+\label{classMacroRoutine}\index{MacroRoutine@{MacroRoutine}}
+
+
+Class representing a macro routine that can execute a series of Devices.  
+
+
+
+
+{\ttfamily \#include $<$Macro\+Routine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMacroRoutine_abe4db29f54f068db50b5a52d1f2688c8}{Macro\+Routine}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} with a given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMacroRoutine_a140913b4b866daaac30216895f0b5039}{add\+Procedure}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device)
+\begin{DoxyCompactList}\small\item\em Adds a procedure to the macro routine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMacroRoutine_a5cf4216914daabd1ac6c915723509cf4}{remove\+Procedure}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device)
+\begin{DoxyCompactList}\small\item\em Removes a procedure from the macro routine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMacroRoutine_a9be008e6776157d943f2c637c8003129}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes all procedures in the macro routine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMacroRoutine_a9abe17342df7ffc586308427c863793e}{$\sim$\+Macro\+Routine}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classMacroRoutine_a4171b5a139b9b8933f8a4dff9c33f116}{save\+Macro}} (const std\+::string \&name, \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} $\ast$macro)
+\begin{DoxyCompactList}\small\item\em Saves a macro routine for future use. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} $\ast$ \mbox{\hyperlink{classMacroRoutine_ad1bfb8ab850769e71e0926a8f0502d13}{load\+Macro}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Loads a saved macro routine. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classMacroRoutine_a1ffccb92e2fa72bf75f2263de933064a}{list\+Saved\+Macros}} ()
+\begin{DoxyCompactList}\small\item\em Lists all saved macros to the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a macro routine that can execute a series of Devices. 
+
+This class allows users to create macros composed of multiple \mbox{\hyperlink{classDevice}{Device}} procedures, providing functionality to add, remove, execute, save, and load macros. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMacroRoutine_abe4db29f54f068db50b5a52d1f2688c8}\label{classMacroRoutine_abe4db29f54f068db50b5a52d1f2688c8}} 
+\index{MacroRoutine@{MacroRoutine}!MacroRoutine@{MacroRoutine}}
+\index{MacroRoutine@{MacroRoutine}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{MacroRoutine()}{MacroRoutine()}}
+{\footnotesize\ttfamily Macro\+Routine\+::\+Macro\+Routine (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} with a given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the macro routine. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMacroRoutine_a9abe17342df7ffc586308427c863793e}\label{classMacroRoutine_a9abe17342df7ffc586308427c863793e}} 
+\index{MacroRoutine@{MacroRoutine}!````~MacroRoutine@{$\sim$MacroRoutine}}
+\index{````~MacroRoutine@{$\sim$MacroRoutine}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{$\sim$MacroRoutine()}{~MacroRoutine()}}
+{\footnotesize\ttfamily Macro\+Routine\+::$\sim$\+Macro\+Routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}}. 
+
+Cleans up resources used by the \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}}.
+
+Cleans up resources used by the \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}}. Note\+: The deletion of Devices is commented out to prevent extra deallocations. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMacroRoutine_a140913b4b866daaac30216895f0b5039}\label{classMacroRoutine_a140913b4b866daaac30216895f0b5039}} 
+\index{MacroRoutine@{MacroRoutine}!addProcedure@{addProcedure}}
+\index{addProcedure@{addProcedure}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{addProcedure()}{addProcedure()}}
+{\footnotesize\ttfamily void Macro\+Routine\+::add\+Procedure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})}
+
+
+
+Adds a procedure to the macro routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classDevice}{Device}}} & Pointer to the \mbox{\hyperlink{classDevice}{Device}} to be added to the macro.\\
+\hline
+\end{DoxyParams}
+This method appends a \mbox{\hyperlink{classDevice}{Device}} to the internal list of Devices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classDevice}{Device}}} & Pointer to the \mbox{\hyperlink{classDevice}{Device}} to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMacroRoutine_a9be008e6776157d943f2c637c8003129}\label{classMacroRoutine_a9be008e6776157d943f2c637c8003129}} 
+\index{MacroRoutine@{MacroRoutine}!execute@{execute}}
+\index{execute@{execute}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Macro\+Routine\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executes all procedures in the macro routine. 
+
+This method loops through all added Devices and calls their {\ttfamily \mbox{\hyperlink{classMacroRoutine_a9be008e6776157d943f2c637c8003129}{execute()}}} methods. \mbox{\Hypertarget{classMacroRoutine_a1ffccb92e2fa72bf75f2263de933064a}\label{classMacroRoutine_a1ffccb92e2fa72bf75f2263de933064a}} 
+\index{MacroRoutine@{MacroRoutine}!listSavedMacros@{listSavedMacros}}
+\index{listSavedMacros@{listSavedMacros}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{listSavedMacros()}{listSavedMacros()}}
+{\footnotesize\ttfamily void Macro\+Routine\+::list\+Saved\+Macros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lists all saved macros to the console. 
+
+This method provides a debug output of all currently saved macros. List all saved macros
+
+This method provides a debug output of all currently saved macros. If no macros are saved, it indicates that as well. \mbox{\Hypertarget{classMacroRoutine_ad1bfb8ab850769e71e0926a8f0502d13}\label{classMacroRoutine_ad1bfb8ab850769e71e0926a8f0502d13}} 
+\index{MacroRoutine@{MacroRoutine}!loadMacro@{loadMacro}}
+\index{loadMacro@{loadMacro}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{loadMacro()}{loadMacro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} $\ast$ Macro\+Routine\+::load\+Macro (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads a saved macro routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the macro to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}}, or nullptr if not found.
+\end{DoxyReturn}
+This method retrieves a \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} based on the given name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the macro to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}}, or nullptr if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMacroRoutine_a5cf4216914daabd1ac6c915723509cf4}\label{classMacroRoutine_a5cf4216914daabd1ac6c915723509cf4}} 
+\index{MacroRoutine@{MacroRoutine}!removeProcedure@{removeProcedure}}
+\index{removeProcedure@{removeProcedure}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{removeProcedure()}{removeProcedure()}}
+{\footnotesize\ttfamily void Macro\+Routine\+::remove\+Procedure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})}
+
+
+
+Removes a procedure from the macro routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classDevice}{Device}}} & Pointer to the \mbox{\hyperlink{classDevice}{Device}} to be removed from the macro.\\
+\hline
+\end{DoxyParams}
+This method searches for the specified \mbox{\hyperlink{classDevice}{Device}} in the internal list and removes it if found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classDevice}{Device}}} & Pointer to the \mbox{\hyperlink{classDevice}{Device}} to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMacroRoutine_a4171b5a139b9b8933f8a4dff9c33f116}\label{classMacroRoutine_a4171b5a139b9b8933f8a4dff9c33f116}} 
+\index{MacroRoutine@{MacroRoutine}!saveMacro@{saveMacro}}
+\index{saveMacro@{saveMacro}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{saveMacro()}{saveMacro()}}
+{\footnotesize\ttfamily void Macro\+Routine\+::save\+Macro (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} $\ast$}]{macro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves a macro routine for future use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name under which the macro will be saved. \\
+\hline
+{\em macro} & Pointer to the \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} to save.\\
+\hline
+\end{DoxyParams}
+This method associates a name with a \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} for later retrieval.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name under which the macro will be saved. \\
+\hline
+{\em macro} & Pointer to the \mbox{\hyperlink{classMacroRoutine}{Macro\+Routine}} to save. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Macro\+Routine.\+h\item 
+Macro\+Routine.\+cpp\end{DoxyCompactItemize}

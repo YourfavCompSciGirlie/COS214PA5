@@ -1,0 +1,283 @@
+\hypertarget{classHouse}{}\doxysection{House Class Reference}
+\label{classHouse}\index{House@{House}}
+
+
+Represents a composite of rooms in a smart house.  
+
+
+
+
+{\ttfamily \#include $<$House.\+h$>$}
+
+
+
+Inheritance diagram for House\+:
+% FIG 0
+
+
+Collaboration diagram for House\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHouse_a90e161e8ba10e1a2ae9227217a47f0f8}{House}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classHouse}{House}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHouse_ad309068c6c5c71820b810eda5b45a524}{add}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$ room) override
+\begin{DoxyCompactList}\small\item\em Add a room to the house. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHouse_a5b0ee446b523c7adf9e17b4f7da13f2d}{remove}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$ room) override
+\begin{DoxyCompactList}\small\item\em Remove a room from the house. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$ \mbox{\hyperlink{classHouse_a9bafb52a63cef3904c0e3f2b3e24a580}{get\+Child}} (size\+\_\+t index) const override
+\begin{DoxyCompactList}\small\item\em Remove a room from the house. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHouse_a4d66a13d42162716917fe1eda8dcf040}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Perform an action on all rooms in the house. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classHouse_a34afce7954262823cf29da4ab36246aa}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Get the status of all rooms in the house. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classHouse_a1019ecbff0b41247a6e3ca2420081a95}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHouse_a2195d0babb090c7df95e4671080a3fd6}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes a command on the house. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHouse_a93f06492edf8393155a871f66bb41e22}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data) override
+\begin{DoxyCompactList}\small\item\em Updates the house based on sensor data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a composite of rooms in a smart house. 
+
+The \mbox{\hyperlink{classHouse}{House}} class serves as a composite element in the design pattern, allowing for the management and operation of multiple rooms. Each room can contain various devices, and the \mbox{\hyperlink{classHouse}{House}} class provides methods to add, remove, and perform actions on these rooms collectively. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHouse_a90e161e8ba10e1a2ae9227217a47f0f8}\label{classHouse_a90e161e8ba10e1a2ae9227217a47f0f8}} 
+\index{House@{House}!House@{House}}
+\index{House@{House}!House@{House}}
+\doxysubsubsection{\texorpdfstring{House()}{House()}}
+{\footnotesize\ttfamily House\+::\+House (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classHouse}{House}} object. 
+
+Initializes a \mbox{\hyperlink{classHouse}{House}} with the given name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the house, used for identification.\\
+\hline
+\end{DoxyParams}
+Initializes a new \mbox{\hyperlink{classHouse}{House}} object with a specified name. The house will act as a container for \mbox{\hyperlink{classRoom}{Room}} objects and allow actions and status checks across all contained rooms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the house for identification purposes. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHouse_ad309068c6c5c71820b810eda5b45a524}\label{classHouse_ad309068c6c5c71820b810eda5b45a524}} 
+\index{House@{House}!add@{add}}
+\index{add@{add}!House@{House}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void House\+::add (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$}]{room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Add a room to the house. 
+
+This method adds a room to the house\textquotesingle{}s collection of rooms. Only \mbox{\hyperlink{classRoom}{Room}} objects can be added, ensuring type safety.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & A shared pointer to a \mbox{\hyperlink{classDevice}{Device}}, which should be a \mbox{\hyperlink{classRoom}{Room}}.\\
+\hline
+\end{DoxyParams}
+Adds a new \mbox{\hyperlink{classRoom}{Room}} object to the house, enabling the house to perform actions on the room as part of its composite structure. The room is added to an internal collection of rooms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & A shared pointer to a \mbox{\hyperlink{classDevice}{Device}}, which is expected to be of type \mbox{\hyperlink{classRoom}{Room}}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classDevice_a997450da944e3164e860a962fd398f6e}{Device}}.
+
+\mbox{\Hypertarget{classHouse_a2195d0babb090c7df95e4671080a3fd6}\label{classHouse_a2195d0babb090c7df95e4671080a3fd6}} 
+\index{House@{House}!execute@{execute}}
+\index{execute@{execute}!House@{House}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void House\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes a command on the house. 
+
+This stub function is part of the Command Design Pattern, and will eventually execute a command that affects all rooms in the house. 
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+\mbox{\Hypertarget{classHouse_a9bafb52a63cef3904c0e3f2b3e24a580}\label{classHouse_a9bafb52a63cef3904c0e3f2b3e24a580}} 
+\index{House@{House}!getChild@{getChild}}
+\index{getChild@{getChild}!House@{House}}
+\doxysubsubsection{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$ House\+::get\+Child (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Remove a room from the house. 
+
+Get a room by its index.
+
+This method removes a specified room from the house\textquotesingle{}s collection of rooms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & A shared pointer to a \mbox{\hyperlink{classDevice}{Device}}, which should be a \mbox{\hyperlink{classRoom}{Room}}.\\
+\hline
+\end{DoxyParams}
+Retrieves a shared pointer to a \mbox{\hyperlink{classRoom}{Room}} object from the house\textquotesingle{}s internal collection based on its index. This allows direct access to a specific room.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the room to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Device$>$ A shared pointer to the requested \mbox{\hyperlink{classRoom}{Room}}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if the index is out of the bounds of the room collection. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{classDevice_a8167b4cfb6b16d86729d9c61fbeb9976}{Device}}.
+
+\mbox{\Hypertarget{classHouse_a1019ecbff0b41247a6e3ca2420081a95}\label{classHouse_a1019ecbff0b41247a6e3ca2420081a95}} 
+\index{House@{House}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!House@{House}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string House\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of device. 
+
+This method indicates the type of device represented by this class.
+
+\begin{DoxyReturn}{Returns}
+std\+::string \char`\"{}\+House\char`\"{}, specifying the device type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+\mbox{\Hypertarget{classHouse_a34afce7954262823cf29da4ab36246aa}\label{classHouse_a34afce7954262823cf29da4ab36246aa}} 
+\index{House@{House}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!House@{House}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string House\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the status of all rooms in the house. 
+
+Collects the status of each room and combines them into a single status report.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The combined status of all rooms within the house.
+\end{DoxyReturn}
+Gathers and combines the status of each room in the house to form a summary of the house\textquotesingle{}s overall status. This includes the status of all devices in each room.
+
+\begin{DoxyReturn}{Returns}
+std\+::string A summary of the statuses of all rooms in the house. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+\mbox{\Hypertarget{classHouse_a4d66a13d42162716917fe1eda8dcf040}\label{classHouse_a4d66a13d42162716917fe1eda8dcf040}} 
+\index{House@{House}!performAction@{performAction}}
+\index{performAction@{performAction}!House@{House}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void House\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform an action on all rooms in the house. 
+
+This method iterates through all rooms and delegates the specified action to each room.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on each room.\\
+\hline
+\end{DoxyParams}
+Iterates through all rooms in the house and delegates the specified action to each room. This enables actions (such as turning on devices) to be performed across all rooms simultaneously.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on all rooms in the house. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+\mbox{\Hypertarget{classHouse_a5b0ee446b523c7adf9e17b4f7da13f2d}\label{classHouse_a5b0ee446b523c7adf9e17b4f7da13f2d}} 
+\index{House@{House}!remove@{remove}}
+\index{remove@{remove}!House@{House}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void House\+::remove (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDevice}{Device}} $>$}]{room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Remove a room from the house. 
+
+This method removes a specified room from the house\textquotesingle{}s collection of rooms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & A shared pointer to a \mbox{\hyperlink{classDevice}{Device}}, which should be a \mbox{\hyperlink{classRoom}{Room}}.\\
+\hline
+\end{DoxyParams}
+Removes a specific room from the house\textquotesingle{}s internal collection. This prevents further actions from being performed on the room as part of the house composite.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & A shared pointer to a \mbox{\hyperlink{classDevice}{Device}}, which is expected to be of type \mbox{\hyperlink{classRoom}{Room}}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classDevice_a3819ad486a62cdfb5e28ac55d07caebb}{Device}}.
+
+\mbox{\Hypertarget{classHouse_a93f06492edf8393155a871f66bb41e22}\label{classHouse_a93f06492edf8393155a871f66bb41e22}} 
+\index{House@{House}!update@{update}}
+\index{update@{update}!House@{House}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void House\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the house based on sensor data. 
+
+This stub function is part of the Observer Design Pattern, and will eventually handle updates from sensors, affecting the rooms and devices in the house.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & The type of sensor that triggered the update. \\
+\hline
+{\em sensor\+Data} & The data provided by the sensor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{House_8h}{House.\+h}}\item 
+\mbox{\hyperlink{House_8cpp}{House.\+cpp}}\end{DoxyCompactItemize}

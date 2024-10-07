@@ -1,0 +1,157 @@
+\hypertarget{classAlarm}{}\doxysection{Alarm Class Reference}
+\label{classAlarm}\index{Alarm@{Alarm}}
+
+
+Concrete \mbox{\hyperlink{classAlarm}{Alarm}} class that responds to sensor notifications by triggering an alarm.  
+
+
+
+
+{\ttfamily \#include $<$Alarm.\+h$>$}
+
+
+
+Inheritance diagram for Alarm\+:
+% FIG 0
+
+
+Collaboration diagram for Alarm\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classAlarm_a4d367c7af3f6801bc4abc1f8b4fa5034}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the alarm\textquotesingle{}s core functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAlarm_a32f5a8b26cf95ce2e53e18d3c3618fc8}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data)
+\begin{DoxyCompactList}\small\item\em Responds to a sensor notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAlarm_aff0ab6eaa8b057d7fd7d71a92aa65824}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Stub method to perform an action on the alarm. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAlarm_abfbf0e39c57ae097e9b199a2162bca06}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Stub method to get the current status of the alarm. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAlarm_a49b45c29a4ebc05552a47c690dab0957}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Stub method to get the device type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete \mbox{\hyperlink{classAlarm}{Alarm}} class that responds to sensor notifications by triggering an alarm. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAlarm_a4d367c7af3f6801bc4abc1f8b4fa5034}\label{classAlarm_a4d367c7af3f6801bc4abc1f8b4fa5034}} 
+\index{Alarm@{Alarm}!execute@{execute}}
+\index{execute@{execute}!Alarm@{Alarm}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Alarm\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the alarm\textquotesingle{}s core functionality. 
+
+This function initiates the alarm\textquotesingle{}s activation or deactivation based on the most recent sensor notifications. 
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+\mbox{\Hypertarget{classAlarm_a49b45c29a4ebc05552a47c690dab0957}\label{classAlarm_a49b45c29a4ebc05552a47c690dab0957}} 
+\index{Alarm@{Alarm}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!Alarm@{Alarm}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Alarm\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stub method to get the device type. 
+
+Retrieves the type of the device.
+
+\begin{DoxyReturn}{Returns}
+A string representing the type of the device (e.\+g., \char`\"{}\+Alarm\char`\"{}).
+\end{DoxyReturn}
+This function returns the device type as a string, in this case, \char`\"{}\+Alarm\char`\"{}. It identifies the kind of device being managed.
+
+\begin{DoxyReturn}{Returns}
+A string representing the type of the device (e.\+g., \char`\"{}\+Alarm\char`\"{}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+\mbox{\Hypertarget{classAlarm_abfbf0e39c57ae097e9b199a2162bca06}\label{classAlarm_abfbf0e39c57ae097e9b199a2162bca06}} 
+\index{Alarm@{Alarm}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Alarm@{Alarm}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Alarm\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stub method to get the current status of the alarm. 
+
+Retrieves the current status of the alarm.
+
+\begin{DoxyReturn}{Returns}
+A string representing the status (e.\+g., \char`\"{}\+Activated\char`\"{}, \char`\"{}\+Deactivated\char`\"{}).
+\end{DoxyReturn}
+This function provides the current state of the alarm, such as \char`\"{}\+Activated\char`\"{} or \char`\"{}\+Deactivated\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status of the alarm. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+\mbox{\Hypertarget{classAlarm_aff0ab6eaa8b057d7fd7d71a92aa65824}\label{classAlarm_aff0ab6eaa8b057d7fd7d71a92aa65824}} 
+\index{Alarm@{Alarm}!performAction@{performAction}}
+\index{performAction@{performAction}!Alarm@{Alarm}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Alarm\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stub method to perform an action on the alarm. 
+
+Perform a specified action on the alarm (e.\+g., Activate or Deactivate).
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed (e.\+g., \char`\"{}\+Activate\char`\"{}, \char`\"{}\+Deactivate\char`\"{}).\\
+\hline
+\end{DoxyParams}
+This method takes a string action and performs the respective operation on the alarm system. The action could be \char`\"{}\+Activate\char`\"{}, \char`\"{}\+Deactivate\char`\"{}, or any other valid operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the alarm. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+\mbox{\Hypertarget{classAlarm_a32f5a8b26cf95ce2e53e18d3c3618fc8}\label{classAlarm_a32f5a8b26cf95ce2e53e18d3c3618fc8}} 
+\index{Alarm@{Alarm}!update@{update}}
+\index{update@{update}!Alarm@{Alarm}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Alarm\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Responds to a sensor notification. 
+
+This function is triggered when a sensor detects a change in its state. Depending on the type of alert and data received, it will simulate an alarm being triggered or cleared.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & The type of sensor (e.\+g., \char`\"{}motion\char`\"{}). \\
+\hline
+{\em sensor\+Data} & The data received from the sensor (e.\+g., \char`\"{}detected\char`\"{}, \char`\"{}clear\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Alarm.\+h\item 
+Alarm.\+cpp\end{DoxyCompactItemize}

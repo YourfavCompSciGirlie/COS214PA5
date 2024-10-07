@@ -1,0 +1,92 @@
+\hypertarget{classDeviceState}{}\doxysection{Device\+State Class Reference}
+\label{classDeviceState}\index{DeviceState@{DeviceState}}
+
+
+Abstract base class representing a generic state of a smart device.  
+
+
+
+
+{\ttfamily \#include $<$Device\+State.\+h$>$}
+
+
+
+Inheritance diagram for Device\+State\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classDeviceState_ac36f071fd8bb60d90f5895033ca41f8c}{perform\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} $>$ device, const std\+::string \&action)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function that performs an action on the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}}. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classDeviceState_a842ceb468fae2550bf21678ed56d7e7d}{get\+Status}} () const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual function that returns the current status of the state. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classDeviceState_a64fafe9970444646a939679112b4a1ef}{$\sim$\+Device\+State}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class representing a generic state of a smart device. 
+
+The \mbox{\hyperlink{classDeviceState}{Device\+State}} class is part of the State design pattern, providing an interface for various states a smart device can be in. Concrete state classes will inherit from this class and define specific behaviors for devices. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDeviceState_a64fafe9970444646a939679112b4a1ef}\label{classDeviceState_a64fafe9970444646a939679112b4a1ef}} 
+\index{DeviceState@{DeviceState}!````~DeviceState@{$\sim$DeviceState}}
+\index{````~DeviceState@{$\sim$DeviceState}!DeviceState@{DeviceState}}
+\doxysubsubsection{\texorpdfstring{$\sim$DeviceState()}{~DeviceState()}}
+{\footnotesize\ttfamily virtual Device\+State\+::$\sim$\+Device\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+The virtual destructor ensures that the destructor of the derived class is called when a \mbox{\hyperlink{classDeviceState}{Device\+State}} pointer is deleted, allowing proper cleanup of resources. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDeviceState_a842ceb468fae2550bf21678ed56d7e7d}\label{classDeviceState_a842ceb468fae2550bf21678ed56d7e7d}} 
+\index{DeviceState@{DeviceState}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!DeviceState@{DeviceState}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily virtual std\+::string Device\+State\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function that returns the current status of the state. 
+
+This function is responsible for providing the current status of the state (e.\+g., \char`\"{}on\char`\"{}, \char`\"{}off\char`\"{}).
+
+\begin{DoxyReturn}{Returns}
+A string representing the status of the state. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUnlockedState_acb5171d77cef0636c204ff07a4fff797}{Unlocked\+State}}, \mbox{\hyperlink{classOnState_ac45d53c3c509bd6e5f603ed720740eea}{On\+State}}, \mbox{\hyperlink{classOffState_a5c228375b6f51fe9e26d8a35378a0eab}{Off\+State}}, \mbox{\hyperlink{classLockedState_a771389716a90301df7329c4e5906cb8b}{Locked\+State}}, \mbox{\hyperlink{classHeatingState_a47752aa19c126cf68b89e79e99cd12e0}{Heating\+State}}, and \mbox{\hyperlink{classCoolingState_aab66b63d067a81571640d0c17bf4c997}{Cooling\+State}}.
+
+\mbox{\Hypertarget{classDeviceState_ac36f071fd8bb60d90f5895033ca41f8c}\label{classDeviceState_ac36f071fd8bb60d90f5895033ca41f8c}} 
+\index{DeviceState@{DeviceState}!performAction@{performAction}}
+\index{performAction@{performAction}!DeviceState@{DeviceState}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily virtual void Device\+State\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} $>$}]{device,  }\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function that performs an action on the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}}. 
+
+This function is responsible for performing state-\/specific actions on the device. The concrete state classes will define how the device should behave for a given action.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A shared pointer to the \mbox{\hyperlink{classSmartDevice}{Smart\+Device}} that this state belongs to. \\
+\hline
+{\em action} & The action to be performed (e.\+g., \char`\"{}\+Toggle\+On\char`\"{}, \char`\"{}\+Toggle\+Off\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classUnlockedState_ad3312542cea8ba7f243b46042dee1172}{Unlocked\+State}}, \mbox{\hyperlink{classOnState_a2b6a280f623a6feafc1eec272e112eee}{On\+State}}, \mbox{\hyperlink{classOffState_a5f66b1366f876fcdb9356cfa455b9e8d}{Off\+State}}, \mbox{\hyperlink{classLockedState_adadfc063ffe805f94ae49fa2645c5c00}{Locked\+State}}, \mbox{\hyperlink{classHeatingState_a8f0c4b6b09103033ef72d767ab8de5f8}{Heating\+State}}, and \mbox{\hyperlink{classCoolingState_a78e88e68cfcdc844150eb202eb980448}{Cooling\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DeviceState_8h}{Device\+State.\+h}}\end{DoxyCompactItemize}

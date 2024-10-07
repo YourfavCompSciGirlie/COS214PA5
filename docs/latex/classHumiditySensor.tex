@@ -1,0 +1,142 @@
+\hypertarget{classHumiditySensor}{}\doxysection{Humidity\+Sensor Class Reference}
+\label{classHumiditySensor}\index{HumiditySensor@{HumiditySensor}}
+
+
+The \mbox{\hyperlink{classHumiditySensor}{Humidity\+Sensor}} class, a concrete subject that detects and notifies devices about humidity changes.  
+
+
+
+
+{\ttfamily \#include $<$Humidity\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Humidity\+Sensor\+:
+% FIG 0
+
+
+Collaboration diagram for Humidity\+Sensor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classHumiditySensor_a6af07f76aafcc1ce85792ae75171ce6b}{add\+Device}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Adds a device to the list of observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHumiditySensor_abc1c8602faa97e1b3b425c15bd29a039}{remove\+Device}} (\mbox{\hyperlink{classDevice}{Device}} $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Removes a device from the list of observers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHumiditySensor_a2a3d16483f3a972c0005907ac72e316d}{notify\+Devices}} () override
+\begin{DoxyCompactList}\small\item\em Notifies all registered devices of a change in humidity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHumiditySensor_a96c4955ff5f3d853fd2e99ad8c2fcf66}{detect\+High\+Humidity}} ()
+\begin{DoxyCompactList}\small\item\em Simulates detection of high humidity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHumiditySensor_a302a8c7cf8a759d2d444ba6b61091f86}{detect\+Low\+Humidity}} ()
+\begin{DoxyCompactList}\small\item\em Simulates detection of low humidity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classHumiditySensor}{Humidity\+Sensor}} class, a concrete subject that detects and notifies devices about humidity changes. 
+
+This class inherits from the \mbox{\hyperlink{classSensor}{Sensor}} class and represents a humidity sensor. It maintains a list of registered devices (observers) and notifies them when humidity levels change, triggering specific actions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHumiditySensor_a6af07f76aafcc1ce85792ae75171ce6b}\label{classHumiditySensor_a6af07f76aafcc1ce85792ae75171ce6b}} 
+\index{HumiditySensor@{HumiditySensor}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!HumiditySensor@{HumiditySensor}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}}
+{\footnotesize\ttfamily void Humidity\+Sensor\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a device to the list of observers. 
+
+Registers a device to be notified when a change in humidity is detected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A pointer to the device that should be added to the observer list.\\
+\hline
+\end{DoxyParams}
+This method registers a device (observer) to the humidity sensor, allowing the sensor to notify the device when a change in humidity is detected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A pointer to the device that needs to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensor_a20ad14293b71dbd6244b72390c0916c5}{Sensor}}.
+
+\mbox{\Hypertarget{classHumiditySensor_a96c4955ff5f3d853fd2e99ad8c2fcf66}\label{classHumiditySensor_a96c4955ff5f3d853fd2e99ad8c2fcf66}} 
+\index{HumiditySensor@{HumiditySensor}!detectHighHumidity@{detectHighHumidity}}
+\index{detectHighHumidity@{detectHighHumidity}!HumiditySensor@{HumiditySensor}}
+\doxysubsubsection{\texorpdfstring{detectHighHumidity()}{detectHighHumidity()}}
+{\footnotesize\ttfamily void Humidity\+Sensor\+::detect\+High\+Humidity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simulates detection of high humidity. 
+
+This method changes the sensor state to \char`\"{}high\char`\"{} and notifies all registered devices.
+
+This method sets the sensor\textquotesingle{}s state to \char`\"{}high\char`\"{} and notifies all registered devices that the humidity level is high. \mbox{\Hypertarget{classHumiditySensor_a302a8c7cf8a759d2d444ba6b61091f86}\label{classHumiditySensor_a302a8c7cf8a759d2d444ba6b61091f86}} 
+\index{HumiditySensor@{HumiditySensor}!detectLowHumidity@{detectLowHumidity}}
+\index{detectLowHumidity@{detectLowHumidity}!HumiditySensor@{HumiditySensor}}
+\doxysubsubsection{\texorpdfstring{detectLowHumidity()}{detectLowHumidity()}}
+{\footnotesize\ttfamily void Humidity\+Sensor\+::detect\+Low\+Humidity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simulates detection of low humidity. 
+
+This method changes the sensor state to \char`\"{}low\char`\"{} and notifies all registered devices.
+
+This method sets the sensor\textquotesingle{}s state to \char`\"{}low\char`\"{} and notifies all registered devices that the humidity level is low. \mbox{\Hypertarget{classHumiditySensor_a2a3d16483f3a972c0005907ac72e316d}\label{classHumiditySensor_a2a3d16483f3a972c0005907ac72e316d}} 
+\index{HumiditySensor@{HumiditySensor}!notifyDevices@{notifyDevices}}
+\index{notifyDevices@{notifyDevices}!HumiditySensor@{HumiditySensor}}
+\doxysubsubsection{\texorpdfstring{notifyDevices()}{notifyDevices()}}
+{\footnotesize\ttfamily void Humidity\+Sensor\+::notify\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Notifies all registered devices of a change in humidity. 
+
+This function iterates through all the registered devices and updates them with the current humidity state (\char`\"{}high\char`\"{} or \char`\"{}low\char`\"{}).
+
+This method iterates through all the registered devices (observers) and sends an update to each one, indicating the current state of humidity (either high or low). 
+
+Implements \mbox{\hyperlink{classSensor_a129501bd5f35310e8a155d8758b16f80}{Sensor}}.
+
+\mbox{\Hypertarget{classHumiditySensor_abc1c8602faa97e1b3b425c15bd29a039}\label{classHumiditySensor_abc1c8602faa97e1b3b425c15bd29a039}} 
+\index{HumiditySensor@{HumiditySensor}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!HumiditySensor@{HumiditySensor}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}}
+{\footnotesize\ttfamily void Humidity\+Sensor\+::remove\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a device from the list of observers. 
+
+Unregisters a device so it will no longer receive notifications about humidity changes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A pointer to the device that should be removed from the observer list.\\
+\hline
+\end{DoxyParams}
+This method unregisters a device (observer) from the humidity sensor, so the device will no longer receive notifications of humidity changes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A pointer to the device that needs to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensor_aed23ce034c7354ef46dcb24312ef4c3a}{Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Humidity\+Sensor.\+h\item 
+Humidity\+Sensor.\+cpp\end{DoxyCompactItemize}

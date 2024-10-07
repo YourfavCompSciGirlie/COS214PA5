@@ -1,0 +1,178 @@
+\hypertarget{classDehumidifier}{}\doxysection{Dehumidifier Class Reference}
+\label{classDehumidifier}\index{Dehumidifier@{Dehumidifier}}
+
+
+The \mbox{\hyperlink{classDehumidifier}{Dehumidifier}} class, a concrete observer that reacts to changes in sensor data.  
+
+
+
+
+{\ttfamily \#include $<$Dehumidifier.\+h$>$}
+
+
+
+Inheritance diagram for Dehumidifier\+:
+% FIG 0
+
+
+Collaboration diagram for Dehumidifier\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDehumidifier_a857ce078cb800ac30fd40615cec1a711}{update}} (const std\+::string \&sensor\+Type, const std\+::string \&sensor\+Data) override
+\begin{DoxyCompactList}\small\item\em Respond to a sensor notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDehumidifier_ab5270e93ea6acf57e036f47774aafaf2}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the dehumidifier\textquotesingle{}s core functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDehumidifier_a499817aab5d3af055607397b60710e64}{perform\+Action}} (const std\+::string \&action) override
+\begin{DoxyCompactList}\small\item\em Perform an action on the dehumidifier (e.\+g., Adjust humidity). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDehumidifier_a18397fadce54e6f70275bbfbb9414d4d}{get\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current status of the dehumidifier (e.\+g., On/\+Off status). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDehumidifier_ad3cd60c8569cbcbaa7a3a07ffd08c5cd}{get\+Device\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the device type (e.\+g., \char`\"{}\+Dehumidifier\char`\"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classDehumidifier}{Dehumidifier}} class, a concrete observer that reacts to changes in sensor data. 
+
+This class inherits from the \mbox{\hyperlink{classDevice}{Device}} class and represents a dehumidifier. It responds to changes in humidity levels and takes actions accordingly, such as activating or deactivating the dehumidifier. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDehumidifier_ab5270e93ea6acf57e036f47774aafaf2}\label{classDehumidifier_ab5270e93ea6acf57e036f47774aafaf2}} 
+\index{Dehumidifier@{Dehumidifier}!execute@{execute}}
+\index{execute@{execute}!Dehumidifier@{Dehumidifier}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Dehumidifier\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the dehumidifier\textquotesingle{}s core functionality. 
+
+This method runs the dehumidifier\textquotesingle{}s logic, managing its state based on the latest sensor notifications. It can trigger actions like activating or deactivating the device.
+
+This function handles the dehumidifier\textquotesingle{}s actions based on the latest sensor data, such as activating or deactivating the device in response to humidity levels. 
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+\mbox{\Hypertarget{classDehumidifier_ad3cd60c8569cbcbaa7a3a07ffd08c5cd}\label{classDehumidifier_ad3cd60c8569cbcbaa7a3a07ffd08c5cd}} 
+\index{Dehumidifier@{Dehumidifier}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!Dehumidifier@{Dehumidifier}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Dehumidifier\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the device type (e.\+g., \char`\"{}\+Dehumidifier\char`\"{}). 
+
+Retrieves the type of the device.
+
+This method returns the type of the device as a string, identifying it as a \char`\"{}\+Dehumidifier\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+A string representing the device type.
+\end{DoxyReturn}
+This function returns the device type as a string, in this case, \char`\"{}\+Dehumidifier\char`\"{}. It identifies the kind of device being managed.
+
+\begin{DoxyReturn}{Returns}
+A string representing the type of the device (e.\+g., \char`\"{}\+Dehumidifier\char`\"{}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a480fd945432caba3eba016ef14efe276}{Device}}.
+
+\mbox{\Hypertarget{classDehumidifier_a18397fadce54e6f70275bbfbb9414d4d}\label{classDehumidifier_a18397fadce54e6f70275bbfbb9414d4d}} 
+\index{Dehumidifier@{Dehumidifier}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Dehumidifier@{Dehumidifier}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Dehumidifier\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current status of the dehumidifier (e.\+g., On/\+Off status). 
+
+Retrieves the current status of the dehumidifier.
+
+This function returns the current operational state of the dehumidifier, such as whether it is turned on or off.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status of the dehumidifier.
+\end{DoxyReturn}
+This function returns the current operational state of the dehumidifier, such as \char`\"{}\+On\char`\"{} or \char`\"{}\+Off\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current status of the dehumidifier. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_a35bf839b99c57fb2f273441f13c5dbbe}{Device}}.
+
+\mbox{\Hypertarget{classDehumidifier_a499817aab5d3af055607397b60710e64}\label{classDehumidifier_a499817aab5d3af055607397b60710e64}} 
+\index{Dehumidifier@{Dehumidifier}!performAction@{performAction}}
+\index{performAction@{performAction}!Dehumidifier@{Dehumidifier}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Dehumidifier\+::perform\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform an action on the dehumidifier (e.\+g., Adjust humidity). 
+
+Perform a specified action on the dehumidifier (e.\+g., Adjust humidity).
+
+This method allows external commands to control the dehumidifier, such as \char`\"{}\+Activate\char`\"{} or \char`\"{}\+Deactivate\char`\"{}. The actions may involve adjusting the humidity levels or other relevant operations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the dehumidifier.\\
+\hline
+\end{DoxyParams}
+This method takes a string action and performs the respective operation on the dehumidifier system. The action could be \char`\"{}\+Activate\char`\"{}, \char`\"{}\+Deactivate\char`\"{}, or any other valid operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the dehumidifier. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_acdac599f8c1c8a2978e2d3b882b43f09}{Device}}.
+
+\mbox{\Hypertarget{classDehumidifier_a857ce078cb800ac30fd40615cec1a711}\label{classDehumidifier_a857ce078cb800ac30fd40615cec1a711}} 
+\index{Dehumidifier@{Dehumidifier}!update@{update}}
+\index{update@{update}!Dehumidifier@{Dehumidifier}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Dehumidifier\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+Type,  }\item[{const std\+::string \&}]{sensor\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Respond to a sensor notification. 
+
+Responds to a sensor notification.
+
+This function is called when the dehumidifier receives an update from the sensor. It checks the type of sensor and the associated data to either activate or deactivate the dehumidifier based on humidity levels.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & The type of sensor (e.\+g., \char`\"{}humidity\char`\"{}). \\
+\hline
+{\em sensor\+Data} & The data received from the sensor (e.\+g., \char`\"{}high\char`\"{}, \char`\"{}low\char`\"{}).\\
+\hline
+\end{DoxyParams}
+This function is triggered when a sensor detects a change in humidity levels. Based on the sensor data, the dehumidifier either activates or deactivates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Type} & The type of sensor (e.\+g., \char`\"{}humidity\char`\"{}). \\
+\hline
+{\em sensor\+Data} & The data received from the sensor (e.\+g., \char`\"{}high\char`\"{}, \char`\"{}low\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Dehumidifier.\+h\item 
+Dehumidifier.\+cpp\end{DoxyCompactItemize}
